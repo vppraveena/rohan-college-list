@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Srinivas's College List — Business Programs</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1 id="profile-name">College List</h1>
+    <p class="subtitle" id="profile-school"></p>
+
+    <div class="profile-grid">
+      <div class="stat-pill">
+        <div class="label">SAT</div>
+        <div class="value" id="stat-sat"></div>
+      </div>
+      <div class="stat-pill">
+        <div class="label">Unweighted GPA</div>
+        <div class="value" id="stat-gpa-uw"></div>
+      </div>
+      <div class="stat-pill">
+        <div class="label">Weighted GPA</div>
+        <div class="value" id="stat-gpa-w"></div>
+      </div>
+    </div>
+
+    <ul class="spike-list" id="spike-list"></ul>
+  </div>
+</header>
+
+<main>
+  <div class="methodology">
+    <strong>Methodology:</strong> Colleges are drawn from the
+    <a href="https://www.usnews.com/best-graduate-schools/top-business-schools/mba-rankings" target="_blank" rel="noopener">US News MBA program rankings</a>,
+    worked through to rank #48, then checked for whether that same university offers an undergraduate
+    <strong>BS, BSBA, or BBA</strong> business degree (not just an Economics major, not a minor/certificate,
+    and not a BA-only program). MBA-ranked schools that don't confer a BS/BSBA/BBA still get a card in the
+    BA-Level &amp; Business-Adjacent section (Economics majors, certificates, minors, or BA business degrees),
+    each linking to both the main program page and a syllabus/curriculum page where one exists separately.
+    Schools that aren't in the MBA top 48 at all — including previously-covered strong fits like Babson,
+    Bentley, and Santa Clara, plus additional co-op/entrepreneurship/tech-forward programs worth
+    considering — are grouped in their own "Beyond the MBA Ranking" section further down.
+    SAT and GPA ranges are approximate middle-50% bands for directional planning, not admissions guarantees.
+    Reach / Target / Likely / Safety reflects Srinivas's current 1300 SAT / 3.4 UW GPA against each school's typical
+    admitted range, plus how well the school's programs match his entrepreneurship, AI/ML, fintech-sales, and
+    performing-arts profile.
+  </div>
+
+  <section class="list-section" id="bs-business">
+    <h2>Undergraduate Business Programs (BS / BSBA / BBA)</h2>
+    <p class="section-desc">US News MBA top-48-ranked schools of business, filtered to BS/BSBA/BBA-conferring undergraduate programs only. Schools outside the MBA ranking are in the "Beyond the MBA Ranking" section below.</p>
+    <div class="controls" id="bs-business-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="reach">Reach</button>
+      <button class="filter-btn" data-filter="target">Target</button>
+      <button class="filter-btn" data-filter="likely">Likely</button>
+      <button class="filter-btn" data-filter="safety">Safety</button>
+    </div>
+    <div class="card-grid" id="bs-business-grid"></div>
+  </section>
+
+  <section class="list-section" id="business-tech">
+    <h2>Business + Technology Programs (Including Dual Degrees)</h2>
+    <p class="section-desc">Combined business/tech majors and formal dual-BS-degree programs pairing a business school with engineering, CS, or data science.</p>
+    <div class="controls" id="business-tech-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="reach">Reach</button>
+      <button class="filter-btn" data-filter="target">Target</button>
+      <button class="filter-btn" data-filter="likely">Likely</button>
+    </div>
+    <div class="card-grid" id="business-tech-grid"></div>
+  </section>
+
+  <section class="list-section" id="ba-programs">
+    <h2>BA-Level &amp; Business-Adjacent Programs</h2>
+    <p class="section-desc">At schools whose undergrad side doesn't confer a BS/BSBA/BBA, this is the closest real business-related option — an Economics major, a business certificate/minor, or (for UW and Rice) a full business major that happens to grant a BA. Each card links to both the main program page and, where the school publishes one separately, the syllabus/curriculum/requirements page.</p>
+    <div class="controls" id="ba-programs-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="reach">Reach</button>
+    </div>
+    <div class="card-grid" id="ba-programs-grid"></div>
+  </section>
+
+  <section class="list-section" id="beyond-mba">
+    <h2>Beyond the US News MBA Ranking</h2>
+    <p class="section-desc">Real BS/BSBA/BBA business programs at schools whose university doesn't run a nationally ranked full-time MBA program. Includes co-op-heavy schools (Northeastern, Drexel), entrepreneurship-first programs (Babson, Butler, Elon, Iowa State), test-blind/test-optional options (USD, Menlo, Champlain), and one deliberate outlier — Berklee's audition-free business/entrepreneurship track for the creative industries, given the performing-arts thread in the profile (note: Berklee's program is a BA, not a BS/BSBA/BBA).</p>
+    <div class="controls" id="beyond-mba-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="reach">Reach</button>
+      <button class="filter-btn" data-filter="target">Target</button>
+      <button class="filter-btn" data-filter="likely">Likely</button>
+      <button class="filter-btn" data-filter="safety">Safety</button>
+    </div>
+    <div class="card-grid" id="beyond-mba-grid"></div>
+  </section>
+
+  <section class="list-section" id="excluded-section">
+    <h2>Quick Reference — Why These Schools Aren't in the Main BS/BBA List</h2>
+    <p class="section-desc">These universities have MBA programs ranked in the US News top 48 but don't confer a BS/BSBA/BBA to undergrads. Each one's actual closest business-related option (Economics major, certificate, minor, or BA business degree) is in the BA-level section above.</p>
+    <div id="excluded-list"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  Built from US News rankings, official .edu program pages, and Srinivas's resume + creative portfolio. For planning purposes only — verify current admissions stats and exact degree titles directly with each school.
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
