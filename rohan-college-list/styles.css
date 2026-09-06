@@ -99,7 +99,38 @@ main {
   padding: 14px 18px;
   font-size: 0.88rem;
   color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.legend-row {
+  display: flex;
+  gap: 10px;
   margin-bottom: 28px;
+}
+
+.legend-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+.legend-label.legend-pink {
+  background: #fdeef3;
+  border: 1px solid #f3a8c3;
+  color: #b03368;
+}
+
+.legend-label.legend-green {
+  background: #eef8f1;
+  border: 1px solid #a8dcbb;
+  color: #1f6b40;
+}
+
+.legend-label.legend-blue {
+  background: #eaf2fb;
+  border: 1px solid #a9c9ec;
+  color: #1f5fa8;
 }
 
 section.list-section { margin-bottom: 44px; }
@@ -154,6 +185,24 @@ section.list-section .section-desc {
   box-shadow: 0 1px 2px rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
+}
+
+.college-card.highlight-pink {
+  background: #fdeef3;
+  border: 1px solid #f3a8c3;
+  border-left: 5px solid #e0568f;
+}
+
+.college-card.highlight-green {
+  background: #eef8f1;
+  border: 1px solid #a8dcbb;
+  border-left: 5px solid #2e8b57;
+}
+
+.college-card.highlight-blue {
+  background: #eaf2fb;
+  border: 1px solid #a9c9ec;
+  border-left: 5px solid #1f6f8b;
 }
 
 .college-card .card-top {

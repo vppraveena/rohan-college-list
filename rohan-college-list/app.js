@@ -18,8 +18,9 @@ function renderCard(item, showMbaRank) {
   const improvesAt1450 = badge === "reach" && item.becomesTargetAt1450 === true;
   const visualBadge = improvesAt1450 ? "reach-improves" : badge;
   const programsHtml = item.programs.map(renderProgramRow).join("");
+  const highlightClass = item.highlightColor ? `highlight-${item.highlightColor}` : "";
   return `
-    <div class="college-card" data-category="${badge}">
+    <div class="college-card ${highlightClass}" data-category="${badge}">
       <div class="card-top">
         <h3>${item.school}</h3>
         <span class="badge ${visualBadge}">${item.category}</span>

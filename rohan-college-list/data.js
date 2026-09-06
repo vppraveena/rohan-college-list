@@ -7,7 +7,7 @@
 // to rank #48, then checked for whether the same university actually offers an undergraduate BS,
 // BSBA, or BBA degree. Schools without one are listed in EXCLUDED_SCHOOLS, with the closest real
 // BA-level/business-adjacent option covered in BA_PROGRAMS. A handful of strong-fit schools outside
-// the MBA top 48 (Babson, Bentley, Chapman, LMU, Santa Clara, Denver, Arizona, Drexel, Alabama, Menlo,
+// the MBA top 48 (Babson, Bentley, Chapman, LMU, Santa Clara, Denver, Arizona, Drexel, Menlo,
 // Pacific) are included too since they're well-matched to Rohan's profile.
 //
 // Each school appears as ONE card. If a school has more than one relevant program, they're listed
@@ -52,19 +52,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "Massachusetts Institute of Technology",
-    knownFor: "Extreme quantitative rigor",
-    mbaRank: "#6",
-    category: "Reach",
-    sat: "1520–1570",
-    gpa: "Extreme rigor; nearly all admits 4.0 UW",
-    fit: "Strong thematic overlap with the AI/ML capstone and the Blue Stamp AI weather-station project, but MIT's quantitative admissions bar sits far above current GPA/SAT — reach in the truest sense.",
-    sat1450Effect: "Still below MIT's range (1520+) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "MIT Sloan — Course 15-2, BS in Business Analytics", url: "https://mitsloan.mit.edu/programs/undergraduate/15-2-business-analytics" }
-    ]
-  },
-  {
     school: "New York University",
     knownFor: "NYC fintech/finance pipeline",
     mbaRank: "#7 (tie)",
@@ -75,19 +62,6 @@ const BS_BUSINESS = [
     sat1450Effect: "1450 sits just below Stern's 25th percentile (1470) — a meaningful improvement that narrows the reach considerably, though it's still technically below the middle 50%.",
     programs: [
       { name: "Stern School of Business — BS", url: "https://www.stern.nyu.edu/programs-admissions/undergraduate/academics/bs-degree-business" }
-    ]
-  },
-  {
-    school: "UC Berkeley",
-    knownFor: "Entrepreneurship & tech (joint M.E.T. program with Engineering)",
-    mbaRank: "#10",
-    category: "Reach (extreme)",
-    sat: "Test-blind — the entire UC system does not consider SAT/ACT scores under current policy (in effect through at least this application cycle; under active faculty review, with a decision on possibly reinstating testing expected by June 2027)",
-    gpa: "~3.9+ UC-recalculated weighted GPA (UC's own GPA formula counts only 10th–11th grade grades plus capped honors/AP bonus points — this differs from the standard weighted GPA and should be checked separately)",
-    fit: "Haas is a straight-line Bay Area upgrade from Santa Clara/Menlo with the same startup ecosystem access — but Haas undergrad admits internally at roughly 3%, making it the single hardest business admit in the state regardless of testing policy.",
-    sat1450Effect: "Not applicable — UC is currently test-blind, so no SAT score changes this assessment either way. Haas's ~3% internal admit rate (driven by GPA, coursework rigor, and the Personal Insight Questions) is the real bottleneck.",
-    programs: [
-      { name: "Haas School of Business — BS in Business Administration", url: "https://haas.berkeley.edu/undergrad/academics/curriculum/degree-requirements/" }
     ]
   },
   {
@@ -119,19 +93,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "Cornell University",
-    knownFor: "Quant finance/analytics core",
-    mbaRank: "#15",
-    category: "Reach",
-    sat: "1470–1550",
-    gpa: "~3.85+ UW",
-    fit: "Dyson's quant finance/analytics core pairs well with the AI/ML background, but Dyson admits around 7-9% within an already-selective Cornell — a clear reach.",
-    sat1450Effect: "1450 is still just below Dyson's 25th percentile (1470) — a meaningful improvement, but this stays a reach given Cornell's overall selectivity.",
-    programs: [
-      { name: "Dyson School of Applied Economics and Management — BS", url: "https://business.cornell.edu/programs/bs-aem/" }
-    ]
-  },
-  {
     school: "Carnegie Mellon University",
     knownFor: "Unusually quantitative, management-science-heavy business degree",
     mbaRank: "#16 (tie)",
@@ -160,6 +121,7 @@ const BS_BUSINESS = [
   },
   {
     school: "Indiana University Bloomington",
+    highlightColor: "green",
     knownFor: "One of the only dedicated undergraduate Professional Sales programs in the country",
     mbaRank: "#21 (tie)",
     category: "Target / Reach",
@@ -243,20 +205,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "Georgia Institute of Technology",
-    knownFor: "\"Tech-savvy, business-smart\" — IT management, supply chain, analytics",
-    mbaRank: "#27 (tie)",
-    category: "Reach",
-    sat: "1400–1540",
-    gpa: "~3.85+ UW",
-    fit: "Scheller markets itself as 'tech-savvy, business-smart,' with IT management and analytics certificates layered onto the BSBA — a strong pairing with the AI/ML background and the 4.0 in AP Statistics. Georgia Tech's overall admissions bar keeps this a reach.",
-    sat1450Effect: "1450 falls within Scheller's middle 50% (1400–1540) — this would shift the assessment from Reach to Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Scheller College of Business — BSBA", url: "https://www.scheller.gatech.edu/explore-programs/undergraduate/index.html" }
-    ]
-  },
-  {
     school: "Washington University in St. Louis",
     knownFor: "Consulting (Taylor Community Consulting Program)",
     mbaRank: "#27 (tie)",
@@ -271,6 +219,7 @@ const BS_BUSINESS = [
   },
   {
     school: "Arizona State University",
+    highlightColor: "blue",
     knownFor: "Supply Chain Management ranked top-5 nationally",
     mbaRank: "#29 (tie)",
     category: "Likely / Safety",
@@ -337,20 +286,8 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Notre Dame",
-    knownFor: "Accountancy (98% placement)",
-    mbaRank: "#34 (tie)",
-    category: "Reach",
-    sat: "1450–1550",
-    gpa: "~3.9+ UW",
-    fit: "Mendoza's accountancy program (98% placement) is excellent, but Notre Dame's overall admissions bar is well above current stats — a clear reach.",
-    sat1450Effect: "1450 sits right at Mendoza's 25th percentile (1450) — a meaningful improvement, though Notre Dame's overall selectivity keeps this a reach.",
-    programs: [
-      { name: "Mendoza College of Business — BBA", url: "https://mendoza.nd.edu/undergraduate/" }
-    ]
-  },
-  {
     school: "Southern Methodist University",
+    highlightColor: "green",
     knownFor: "Entrepreneurship Club; student-run $5M Boulevard Investment Group fund",
     mbaRank: "#36 (tie)",
     category: "Target",
@@ -379,6 +316,7 @@ const BS_BUSINESS = [
   },
   {
     school: "Iowa State University",
+    highlightColor: "blue",
     knownFor: "Entrepreneurship ranked #9 worldwide (Princeton Review)",
     mbaRank: "#38",
     category: "Likely / Safety",
@@ -432,6 +370,7 @@ const BS_BUSINESS = [
   },
   {
     school: "University of Utah",
+    highlightColor: "pink",
     knownFor: "Goff Strategic Sales Program",
     mbaRank: "#39 (tie)",
     category: "Likely",
@@ -445,6 +384,7 @@ const BS_BUSINESS = [
   },
   {
     school: "University of Maryland, College Park",
+    highlightColor: "green",
     knownFor: "Pitch Dingman Competition (student entrepreneurship pitch contest)",
     mbaRank: "#43 (tie)",
     category: "Target / Reach",
@@ -566,30 +506,6 @@ const BUSINESS_TECH = [
     ]
   },
   {
-    school: "UC Berkeley",
-    knownFor: "M.E.T. — the most selective business+tech dual degree in the Bay Area",
-    category: "Reach (extreme, <5%)",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "~3.95+ UC-recalculated weighted GPA (see UC GPA-formula note on the Haas entry above)",
-    fit: "A formal, single-admission dual-BS combining Haas business with an ABET-accredited engineering major — arguably the best-matched business+tech program to the founder/AI/ML profile anywhere on this list, but M.E.T. is one of the most selective undergraduate programs in the country regardless of testing policy.",
-    sat1450Effect: "Not applicable — UC is currently test-blind. M.E.T.'s selective internal admit (GPA, rigor, essays) is the real bottleneck regardless of any SAT score.",
-    programs: [
-      { name: "Management, Entrepreneurship & Technology (M.E.T.) — joint Haas BS + College of Engineering BS, 4-year dual degree", url: "https://met.berkeley.edu/" }
-    ]
-  },
-  {
-    school: "Massachusetts Institute of Technology",
-    knownFor: "Extreme quantitative rigor",
-    category: "Reach (extreme)",
-    sat: "1520–1570",
-    gpa: "Extreme rigor",
-    fit: "Cross-listed from the main Business section — a business degree that is inherently technical, matching the AI/ML capstone work directly.",
-    sat1450Effect: "Still below MIT's range (1520–1570) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "Sloan Course 15-2 — BS in Business Analytics", url: "https://mitsloan.mit.edu/programs/undergraduate/15-2-business-analytics" }
-    ]
-  },
-  {
     school: "University of Southern California",
     knownFor: "Arts + Technology + Business hybrid, portfolio-based admission",
     category: "Reach",
@@ -616,6 +532,7 @@ const BUSINESS_TECH = [
   },
   {
     school: "Indiana University Bloomington",
+    highlightColor: "green",
     knownFor: "Newly launched combined Business Intelligence & Data Science BS (2025)",
     category: "Target / Reach (newly launched program, 2025)",
     sat: "1250–1430",
@@ -641,6 +558,7 @@ const BUSINESS_TECH = [
   },
   {
     school: "University of Utah",
+    highlightColor: "pink",
     knownFor: "Goff Strategic Sales Program's technology/CRM curriculum",
     category: "Likely",
     sat: "1150–1350",
@@ -655,14 +573,6 @@ const BUSINESS_TECH = [
 // Schools ranked in the US News MBA Top 48 that don't offer a qualifying BS/BSBA/BBA business degree.
 // The closest real business-related option at each is covered in BA_PROGRAMS below.
 const EXCLUDED_SCHOOLS = [
-  { school: "Stanford University (GSB) — MBA #1", reason: "No undergraduate business major of any kind. Undergrads pursue Economics or Management Science & Engineering instead." },
-  { school: "University of Chicago (Booth) — MBA #3", reason: "No standalone undergraduate business degree. Economics majors can add a 'Business Economics' specialization using some Booth courses, but it's a track within Economics, not a business degree." },
-  { school: "Northwestern University (Kellogg) — MBA #4 (tie)", reason: "No undergraduate business major. Kellogg offers a 4-course non-degree Certificate Program for Undergraduates (Financial Economics or Managerial Analytics) only." },
-  { school: "Harvard University (HBS) — MBA #4 (tie)", reason: "No undergraduate business major. Harvard College undergrads pursue Economics instead." },
-  { school: "Columbia University (CBS) — MBA #7 (tie)", reason: "No undergraduate business degree. The 'Special Program in Business' is an add-on that requires a separate primary major, not a business degree itself." },
-  { school: "Dartmouth College (Tuck) — MBA #9", reason: "No undergraduate business major or minor. Tuck offers three open-enrollment courses any undergrad can take, but no degree." },
-  { school: "Yale University (SOM) — MBA #11 (tie)", reason: "No undergraduate business major. Yale College undergrads pursue Economics instead." },
-  { school: "Duke University (Fuqua) — MBA #14", reason: "No undergraduate business major. Duke offers a 'Markets & Management Studies' certificate run outside Fuqua, not a business degree." },
   { school: "Vanderbilt University (Owen) — MBA #16 (tie)", reason: "No undergraduate business major. Owen offers a minor only; the closest full degree is Peabody College's Human & Organizational Development BS, which isn't a business degree." },
   { school: "UCLA (Anderson) — MBA #18 (tie)", reason: "Anderson is graduate-only. UCLA's closest undergraduate option is a 'Business Economics' BA run by the Economics department (not Anderson) — a BA, not a qualifying BS/BSBA/BBA." },
   { school: "University of Washington (Foster) — MBA #20", reason: "Foster does offer a full undergraduate business major, but the degree conferred is officially a BA (Bachelor of Arts in Business Administration), not a BS/BSBA/BBA." },
@@ -672,114 +582,8 @@ const EXCLUDED_SCHOOLS = [
 // Section D: BA-level and business-adjacent programs at schools whose undergraduate side does not
 // offer a BS/BSBA/BBA. Each entry keeps the main program page link and adds a syllabus/curriculum/
 // requirements link where the school publishes one separately. Schools with more than one relevant
-// program (Stanford, Northwestern, Vanderbilt) are listed once with multiple programs underneath.
+// program (Vanderbilt) are listed once with multiple programs underneath.
 const BA_PROGRAMS = [
-  {
-    school: "Stanford University",
-    knownFor: "No undergraduate business school exists — Economics and Management Science & Engineering are the two closest paths",
-    mbaRank: "MBA #1",
-    category: "Reach (extreme)",
-    sat: "1520–1570",
-    gpa: "~3.95+ UW",
-    fit: "Stanford's ~4% admit rate puts this far beyond current stats regardless of major. MS&E is arguably a closer thematic match to the AI/ML + founder profile than Economics — and the Statistics 4.0 supports that quantitative angle better than the B in AP Microeconomics supports the pure-Econ path.",
-    sat1450Effect: "Still below Stanford's range (1520+) regardless of major — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "Economics — BA", url: "https://economics.stanford.edu/undergraduate/major", syllabusUrl: "https://economics.stanford.edu/undergraduate/major/economics-ba" },
-      { name: "Management Science & Engineering (MS&E) — BS", url: "https://msande.stanford.edu/academics-admissions/undergraduate/undergraduate-major", syllabusUrl: "https://bulletin.stanford.edu/programs/MGTSC-BS" }
-    ]
-  },
-  {
-    school: "University of Chicago",
-    knownFor: "Business Economics specialization uses actual Booth courses",
-    mbaRank: "MBA #3",
-    category: "Reach (extreme)",
-    sat: "1520–1560",
-    gpa: "~3.9+ UW",
-    fit: "Lets Economics majors take a set of Booth courses as a formal specialization — the closest UChicago undergrads get to Booth. Extreme reach given UChicago's overall admissions bar; a B in AP Microeconomics is also a modest signal for a program built entirely on economics coursework.",
-    sat1450Effect: "Still below UChicago's range (1520–1560) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "Economics — Business Economics Specialization (BA)", url: "https://economics.uchicago.edu/undergraduate-study/curriculum/business-economics-specialization", syllabusUrl: "https://economics.uchicago.edu/undergraduate-study/curriculum/business-economics-specialization" }
-    ]
-  },
-  {
-    school: "Northwestern University",
-    knownFor: "Kellogg-taught undergraduate certificates (Financial Economics and Managerial Analytics)",
-    mbaRank: "MBA #4 (tie)",
-    category: "Reach (extreme)",
-    sat: "1500–1550",
-    gpa: "~3.9+ UW",
-    fit: "Two 4-course certificate tracks taught by Kellogg faculty, layered onto any Northwestern major. Financial Economics overlaps directly with the active fintech-sales internship; Managerial Analytics pairs well with the AI/ML coding background. Still requires admission to a highly selective university first.",
-    sat1450Effect: "Still below Northwestern's range (1500–1550) — 1450 doesn't meaningfully change this; still an extreme reach, independent of which certificate track.",
-    programs: [
-      { name: "Kellogg Certificate Program for Undergraduates — Financial Economics track", url: "https://www.kellogg.northwestern.edu/programs/certificate/", syllabusUrl: "https://www.kellogg.northwestern.edu/programs/certificate/academics/financial-economics-certificate/" },
-      { name: "Kellogg Certificate Program for Undergraduates — Managerial Analytics track", url: "https://www.kellogg.northwestern.edu/programs/certificate/", syllabusUrl: "https://www.kellogg.northwestern.edu/programs/certificate/academics/managerial-analytics-certificate/" }
-    ]
-  },
-  {
-    school: "Harvard University",
-    knownFor: "Effectively the only business-adjacent path at Harvard College",
-    mbaRank: "MBA #4 (tie)",
-    category: "Reach (extreme)",
-    sat: "1520–1580",
-    gpa: "~3.95+ UW",
-    fit: "A ~3% admit rate makes this the longest of long shots on the list regardless of program fit; the B in AP Microeconomics doesn't help the case for a pure Economics concentration either.",
-    sat1450Effect: "Still below Harvard's range (1520–1580) — 1450 doesn't meaningfully change this; still an extreme reach given the ~3% admit rate.",
-    programs: [
-      { name: "Economics Concentration — BA", url: "https://www.economics.harvard.edu/concentrating-economics", syllabusUrl: "https://www.economics.harvard.edu/concentrator-guide" }
-    ]
-  },
-  {
-    school: "Columbia University",
-    knownFor: "Adds real CBS-taught coursework on top of a Columbia College major",
-    mbaRank: "MBA #7 (tie)",
-    category: "Reach (extreme)",
-    sat: "1510–1560",
-    gpa: "~3.9+ UW",
-    fit: "Requires a competitive in-college GPA (3.4+) to even declare, on top of Columbia's ~4% admit rate.",
-    sat1450Effect: "Still below Columbia's range (1510–1560) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "Special Program in Business Management (secondary credential alongside a BA)", url: "https://bulletin.columbia.edu/columbia-college/departments-instruction/business/", syllabusUrl: "https://bulletin.columbia.edu/columbia-college/departments-instruction/business/" }
-    ]
-  },
-  {
-    school: "Dartmouth College",
-    knownFor: "Any undergrad can take real Tuck MBA-style courses without declaring a major",
-    mbaRank: "MBA #9",
-    category: "Reach (extreme)",
-    sat: "1500–1560",
-    gpa: "~3.9+ UW",
-    fit: "Financial Accounting, Marketing, and Business Strategy courses are open-enrollment — a nice practical option if admitted, but admission itself is the entire challenge here.",
-    sat1450Effect: "Still below Dartmouth's range (1500–1560) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "Tuck Undergraduate Courses (open-enrollment, no major required)", url: "https://undergrad.tuck.dartmouth.edu/", syllabusUrl: "https://dartmouth.smartcatalogiq.com/en/current/orc/departments-programs-undergraduate/tuck-undergraduate/tuck-tuck-undergraduate/" }
-    ]
-  },
-  {
-    school: "Yale University",
-    knownFor: "Standard business-adjacent path at a school with no undergraduate business school",
-    mbaRank: "MBA #11 (tie)",
-    category: "Reach (extreme)",
-    sat: "1510–1560",
-    gpa: "~3.9+ UW",
-    fit: "Extreme reach given Yale's ~4-5% admit rate, independent of program fit; the AP Microeconomics B is a minor data point either way at this admit rate.",
-    sat1450Effect: "Still below Yale's range (1510–1560) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "Economics Major — BA", url: "https://economics.yale.edu/undergraduate/undergraduate", syllabusUrl: "https://economics.yale.edu/undergraduate/major-requirements" }
-    ]
-  },
-  {
-    school: "Duke University",
-    knownFor: "Interdisciplinary business certificate run outside Fuqua",
-    mbaRank: "MBA #14",
-    category: "Reach (extreme)",
-    sat: "1510–1570",
-    gpa: "~3.9+ UW",
-    fit: "A 7-course certificate (gateway + core + 4 electives + capstone) — the closest thing to a business minor at Duke. Still requires clearing Duke's very selective overall admissions bar.",
-    sat1450Effect: "Still below Duke's range (1510–1570) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "Markets & Management Studies (MMS) Certificate", url: "https://markets.duke.edu/about", syllabusUrl: "https://markets.duke.edu/certificate/requirements" }
-    ]
-  },
   {
     school: "Vanderbilt University",
     knownFor: "Owen-taught business minor; HOD BS is the closest full business-adjacent degree",
@@ -838,7 +642,7 @@ const BA_PROGRAMS = [
 
 // Section E: Colleges & programs NOT in the US News MBA top-48 ranking. Includes the previously-listed
 // non-MBA-ranked schools (Babson, Bentley, Fordham, Chapman, LMU, Santa Clara, Denver, Arizona, Drexel,
-// Alabama, Menlo, Pacific — consolidated into single cards here) plus additional schools worth
+// Menlo, Pacific — consolidated into single cards here) plus additional schools worth
 // considering given Srinivas's profile: strong co-op/entrepreneurship/tech-forward business programs
 // at a range of selectivity levels, plus one niche performing-arts/business crossover pick (Berklee).
 const BEYOND_MBA_RANKING = [
@@ -872,6 +676,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Fordham University",
+    highlightColor: "pink",
     knownFor: "NYC finance/fintech internship density",
     mbaRank: "Not in MBA top 48; regionally strong AACSB business school",
     category: "Target",
@@ -899,6 +704,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Loyola Marymount University",
+    highlightColor: "green",
     knownFor: "LA entertainment-industry ties",
     mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
     category: "Target",
@@ -913,6 +719,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Santa Clara University",
+    highlightColor: "green",
     knownFor: "Silicon Valley startup/VC ecosystem access",
     mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
     category: "Target (upper end)",
@@ -928,6 +735,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "University of Denver",
+    highlightColor: "pink",
     knownFor: "Experiential Bridge Project",
     mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
     category: "Target / Likely",
@@ -942,6 +750,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "University of Arizona",
+    highlightColor: "pink",
     knownFor: "McGuire Center for Entrepreneurship",
     mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
     category: "Likely",
@@ -956,6 +765,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Drexel University",
+    highlightColor: "pink",
     knownFor: "Mandatory 6-month co-op (paid, structured placement)",
     mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
     category: "Likely",
@@ -966,18 +776,6 @@ const BEYOND_MBA_RANKING = [
     programs: [
       { name: "LeBow College of Business — BSBA (with mandatory co-op)", url: "https://www.lebow.drexel.edu/academics/undergraduate/degrees-programs/business-administration" },
       { name: "LeBow Business & Engineering dual-degree option (with co-op)", url: "https://www.lebow.drexel.edu/academics/undergraduate/degrees-programs/business-administration" }
-    ]
-  },
-  {
-    school: "University of Alabama",
-    knownFor: "Endowed undergraduate Professional Sales program; large automatic merit-aid ladder",
-    mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
-    category: "Likely",
-    sat: "1150–1340",
-    gpa: "3.5–4.0 (large automatic merit-scholarship ladder at these bands)",
-    fit: "Strong likely admit with substantial automatic merit aid at this GPA/SAT band. Culverhouse also runs one of the only endowed undergraduate Professional Sales programs in the country — a direct match to the active Founders' Pool sales internship.",
-    programs: [
-      { name: "Culverhouse College of Business — BS", url: "https://culverhouse.ua.edu/programs/undergraduate/" }
     ]
   },
   {
@@ -1059,6 +857,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Elon University",
+    highlightColor: "pink",
     knownFor: "Dedicated Entrepreneurship & Innovation major; ~100% internship completion rate",
     mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
     category: "Target / Likely",
@@ -1244,6 +1043,7 @@ const BEYOND_MBA_RANKING = [
   },
 {
     school: "Pennsylvania State University",
+    highlightColor: "green",
     knownFor: "Nationally top-ranked Supply Chain & Risk Management/Insurance programs; huge corporate recruiting pipeline",
     mbaRank: "Penn State has no MBA program in the US News full-time top 48",
     category: "Reach",
@@ -1258,6 +1058,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Virginia Tech",
+    highlightColor: "green",
     knownFor: "Business Information Technology major; strong consulting/tech recruiting",
     mbaRank: "Virginia Tech has no MBA program in the US News full-time top 48",
     category: "Target",
@@ -1286,6 +1087,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "University of Massachusetts Amherst",
+    highlightColor: "green",
     knownFor: "#1-ranked Sport Management program; strong retailing track",
     mbaRank: "UMass Amherst has no MBA program in the US News full-time top 48",
     category: "Target",
@@ -1426,6 +1228,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "University of Oregon",
+    highlightColor: "blue",
     knownFor: "Sports Product Management major (Nike/Knight legacy) — a strong entrepreneurship angle",
     mbaRank: "Oregon has no MBA program in the US News full-time top 48",
     category: "Likely",
@@ -1439,6 +1242,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "University of Colorado Boulder",
+    highlightColor: "pink",
     knownFor: "Deming Center for Entrepreneurship — #1 GCEC award for entrepreneurship education, active student venture fund",
     mbaRank: "CU Boulder has no MBA program in the US News full-time top 48",
     category: "Target",
@@ -1453,6 +1257,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Syracuse University",
+    highlightColor: "green",
     knownFor: "#21 US News undergraduate Entrepreneurship ranking; Blackstone LaunchPad + Couri Hatchery incubator",
     mbaRank: "Syracuse has no MBA program in the US News full-time top 48",
     category: "Target",
@@ -1546,6 +1351,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Loyola University Chicago",
+    highlightColor: "pink",
     knownFor: "Chicago finance/consulting proximity; Baumhart Center for Social Enterprise",
     mbaRank: "Loyola Chicago has no MBA program in the US News full-time top 48",
     category: "Target / Likely",
@@ -1584,6 +1390,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Texas Christian University",
+    highlightColor: "pink",
     knownFor: "Strong national Entrepreneurship ranking; Values-Based Leadership emphasis",
     mbaRank: "TCU has no MBA program in the US News full-time top 48",
     category: "Target / Likely",
@@ -1624,6 +1431,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Oregon State University",
+    highlightColor: "blue",
     knownFor: "Very accessible admit bar with a large, broad club ecosystem (20+ student orgs)",
     mbaRank: "Oregon State has no MBA program in the US News full-time top 48",
     category: "Likely / Safety",
@@ -1637,6 +1445,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "University of Cincinnati",
+    highlightColor: "blue",
     knownFor: "Birthplace of the cooperative education (co-op) model — multiple paid, full-time work rotations built into the degree",
     mbaRank: "Cincinnati has no MBA program in the US News full-time top 48",
     category: "Target / Likely",
@@ -1650,6 +1459,7 @@ const BEYOND_MBA_RANKING = [
   },
   {
     school: "Purdue University",
+    highlightColor: "pink",
     knownFor: "Boiler Blockchain and the Purdue Fintech Center — a genuine AI-fintech club ecosystem, though selectivity has risen sharply",
     mbaRank: "Purdue has no MBA program in the US News full-time top 48",
     category: "Reach",
