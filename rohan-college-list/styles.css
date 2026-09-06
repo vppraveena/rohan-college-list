@@ -236,6 +236,34 @@ section.list-section .section-desc {
   color: var(--text);
 }
 
+.clubs-text {
+  font-size: 0.82rem;
+  color: var(--text);
+  background: #eef5f2;
+  border-left: 3px solid var(--likely);
+  padding: 8px 10px;
+  margin: 0 0 12px;
+}
+
+.clubs-text strong {
+  color: var(--navy);
+}
+
+.why-link {
+  display: block;
+  width: fit-content;
+  margin-top: 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.why-link:hover {
+  border-bottom-color: var(--accent);
+}
+
 .program-list {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
 // College list data for Rohan
-// Profile: Moreau Catholic HS, Class of 2027 | SAT 1300 | GPA 3.4 UW / 3.6 W
+// Profile: Moreau Catholic HS, Class of 2027 | SAT 1360 | GPA 3.4 UW / 3.6 W
 // Spike: founder/entrepreneurship, AI/ML, active fintech sales internship (The Founders' Pool), performing arts/comedy, marketing & web dev
 //
 // Ranking basis: schools are drawn from the full US News Best Business Schools (MBA) ranking
@@ -20,7 +20,7 @@ const PROFILE = {
   name: "Srinivas",
   school: "Moreau Catholic High School, Fremont, CA",
   grad: "Class of 2027",
-  sat: 1300,
+  sat: 1360,
   gpaUW: "3.4",
   gpaW: "3.6",
   spike: [
@@ -108,11 +108,11 @@ const BS_BUSINESS = [
     school: "University of Michigan",
     knownFor: "Entrepreneurship (Zell Lurie Institute) and sales/marketing electives",
     mbaRank: "#13",
-    category: "Reach",
+    category: "Target / Reach",
     sat: "1360–1530",
     gpa: "~3.85+ UW",
-    fit: "Ross's Zell Lurie Institute for Entrepreneurial Studies and a strong sales/marketing elective track match the founder + fintech-sales internship experience well, but Michigan's overall admit rate (~18%) and Ross's competitive sophomore-year admit process put this firmly in reach territory at current stats.",
-    sat1450Effect: "1450 falls within Ross's middle 50% (1360–1530) — this would shift the assessment from Reach to Target.",
+    fit: "Ross's Zell Lurie Institute for Entrepreneurial Studies and a strong sales/marketing elective track match the founder + fintech-sales internship experience well, and 1360 now sits right at the floor of Ross's middle 50% — but Michigan's overall admit rate (~18%) and Ross's competitive sophomore-year admit process keep this a genuine stretch even with stats technically in range.",
+    sat1450Effect: "1450 would sit comfortably within Ross's middle 50% (rather than right at the floor) — this would further solidify the assessment as a clear Target.",
     becomesTargetAt1450: true,
     programs: [
       { name: "Ross School of Business — BBA", url: "https://michiganross.umich.edu/undergraduate/bba/curriculum" }
@@ -166,6 +166,7 @@ const BS_BUSINESS = [
     sat: "1220–1420 (IU overall; Kelley direct-admit skews higher)",
     gpa: "~3.6–3.9 (IU overall admits ~80%; Kelley direct-admit is the harder bar)",
     fit: "Kelley runs one of the only dedicated undergraduate Professional Sales programs in the country — a direct match to the now-active Founders' Pool AI-finance sales internship. IU's overall accessibility plus a competitive-but-reachable Kelley direct-admit bar make this the strongest reach-with-real-upside on the list.",
+    clubsDeepDive: "Kelley's Sales Club, run through the Center for Global Sales Leadership, is as close to a formal extension of the Founders' Pool internship as any club on this list, and the selective 60-student Global Sales Workshop cohort (weekly meetings, competitions, corporate site visits) turns that experience into structured, repeatable skill-building. Kelley also hosts the National Team Selling Competition itself — 24 teams, a $6,000 prize pool — tied directly to its Professional Sales major, making this less a club to join and more a discipline to formally study.",
     sat1450Effect: "1450 sits well above Kelley's typical direct-admit range — this would solidify the assessment as a clear Target rather than Target/Reach.",
     becomesTargetAt1450: true,
     programs: [
@@ -275,6 +276,7 @@ const BS_BUSINESS = [
     category: "Likely / Safety",
     sat: "1080–1320",
     gpa: "3.3–3.8",
+    clubsDeepDive: "W.P. Carey's ProSales Club and Sales Scholars program plug directly into the Founders' Pool sales internship, with real competitions like the Sun Devil Sales Pitch and the 15-school Arizona Collegiate Sales Competition. The New Venture Challenge — an 8-week accelerator that has funded past winners $25K-$40K — and Venture Devils (university-wide mentorship plus a Demo Day for $250K+ in funding) are a strong structured next step for Orderly, turning a personal project into something pitched for real investment. The AI in Business Club rounds it out, giving the AI/ML coding background a home inside the business school itself.",
     fit: "ASU is highly accessible (~90% overall admit) with a nationally top-5 Supply Chain Management program — a real safety net with genuine program strength. Note the intended major must be one of the ~12 BS-granting tracks (Finance, Accountancy, Supply Chain, Data Analytics, etc.); the general 'Business Administration' major is a BA, not a BS.",
     programs: [
       { name: "W.P. Carey School of Business — BS majors (Finance, Accountancy, Supply Chain Management, Business Data Analytics, and others)", url: "https://degrees.apps.asu.edu/bachelors/major/ASU00/BABUSBA/business" }
@@ -314,7 +316,7 @@ const BS_BUSINESS = [
     category: "Target",
     sat: "1320–1480",
     gpa: "3.6–3.9",
-    fit: "Carlson's marketing analytics track pairs reasonably with the AI/ML and sales interests; 1300 SAT sits near the lower end of Carlson's admitted range.",
+    fit: "Carlson's marketing analytics track pairs reasonably with the AI/ML and sales interests; 1360 SAT sits near the lower end of Carlson's admitted range.",
     sat1450Effect: "1450 sits near the top of Carlson's range (1320–1480) — this would strengthen the assessment well within Target.",
     programs: [
       { name: "Carlson School of Management — BSB", url: "https://carlsonschool.umn.edu/undergraduate" }
@@ -354,7 +356,8 @@ const BS_BUSINESS = [
     category: "Target",
     sat: "1250–1430",
     gpa: "~3.7 average enrolled GPA",
-    fit: "Cox's Entrepreneurship Club and student-run $5M Boulevard Investment Group fund pair well with the Orderly/CheqIn founder story and the fintech-sales internship experience; Dallas's Global 500 business hub also means dense finance/sales internship access. 1300 SAT sits near the middle of Cox's admitted range.",
+    fit: "Cox's Entrepreneurship Club and student-run $5M Boulevard Investment Group fund pair well with the Orderly/CheqIn founder story and the fintech-sales internship experience; Dallas's Global 500 business hub also means dense finance/sales internship access. 1360 SAT sits near the middle of Cox's admitted range.",
+    clubsDeepDive: "The SMU Sales Club is a direct extension of the Founders' Pool sales internship, and the Cox Marketing Academy is a credible next step for the marketing and promotion skills built running Bldg18 Comedy Club's outreach. The PEVC Club (private equity/venture capital) adds a fintech-adjacent angle, while the Caruth Institute's Startup Launch and Elevator Pitch Competitions give Orderly another live pitching stage — all inside a Dallas business hub with dense real-world sales and finance internship access.",
     sat1450Effect: "1450 sits above Cox's typical range (1250–1430) — this would strengthen the assessment well into Likely territory.",
     programs: [
       { name: "Cox School of Business — BBA", url: "https://www.smu.edu/cox/business-degrees/undergraduate/bachelor-business-administration" }
@@ -382,6 +385,7 @@ const BS_BUSINESS = [
     sat: "1080–1320",
     gpa: "3.3–3.7",
     fit: "Ivy's entrepreneurship program is ranked #9 worldwide by the Princeton Review — an unusually strong founder-fit at a very accessible admit bar (Iowa State overall admits ~85%).",
+    clubsDeepDive: "Iowa State's Entrepreneur Club (E-Club) gives direct access to real entrepreneurs and hands-on venture-building conversations, while the Ivy College of Business round of the College-by-College Pitch Off — a fast, 90-second pitch format with $5,000/$2,500/$1,500 prizes run through the Pappajohn Center — rewards exactly the kind of concise, high-energy pitching built through Blue Ocean and BIZWORLD. Combined with Iowa State's very accessible admit bar at current stats, this is a place to lead clubs rather than just join them.",
     programs: [
       { name: "Ivy College of Business — BBA", url: "https://www.ivybusiness.iastate.edu/academics/undergraduate-programs/bachelor-of-business-administration/" }
     ]
@@ -420,7 +424,7 @@ const BS_BUSINESS = [
     category: "Target",
     sat: "1340–1470",
     gpa: "3.6–3.9",
-    fit: "Herbert is ranked #1 in the South for entrepreneurship — a direct match to the founder story — plus a strong real estate track; 1300 SAT sits at the lower end of the admitted range.",
+    fit: "Herbert is ranked #1 in the South for entrepreneurship — a direct match to the founder story — plus a strong real estate track; 1360 SAT sits at the lower end of the admitted range.",
     sat1450Effect: "1450 sits above Herbert's typical range (1340–1470) — this would strengthen the assessment toward Likely.",
     programs: [
       { name: "Herbert Business School — General Business (BBA; BSBA track available for more quantitative majors)", url: "https://www.herbert.miami.edu/undergraduate/degrees-majors-minors/bba-in-general-business.html" }
@@ -434,6 +438,7 @@ const BS_BUSINESS = [
     sat: "1150–1350",
     gpa: "3.4–3.8",
     fit: "Eccles runs the Goff Strategic Sales Program, a dedicated undergraduate sales curriculum — a very direct match to the active Founders' Pool sales internship, at an accessible admit bar.",
+    clubsDeepDive: "Eccles' Fintech Club is about as direct a match to the Founders' Pool AI-fintech internship as any club on this entire list, and the University Venture Fund lets students make real venture capital investment decisions alongside actual entrepreneurs and investors. The Lassonde Entrepreneur Institute is ranked top-10 nationally and supports 500+ startup teams a year — genuinely serious infrastructure for continuing to build Orderly — while the Crimson Quant Club and Student Investment Fund add further quantitative depth that pairs well with the AI/ML certification.",
     programs: [
       { name: "David Eccles School of Business — BS in Business Administration", url: "https://eccles.utah.edu/programs/undergraduate/business-administration/" }
     ]
@@ -446,6 +451,7 @@ const BS_BUSINESS = [
     sat: "1360–1500",
     gpa: "3.6–3.9",
     fit: "Smith's Pitch Dingman Competition is a direct parallel to the Blue Ocean/BIZWORLD/Conrad Challenge competition track already on the resume — strong founder fit, though Maryland's out-of-state admit bar leans toward reach.",
+    clubsDeepDive: "The Pitch Dingman Competition is one of the most well-funded student venture competitions on this entire list — $170,000+ across its fall semifinals and winter finals — and it's an almost exact parallel to the Blue Ocean/BIZWORLD/Conrad Challenge track already on the resume. The Collegiate Entrepreneurship Network is the club home behind it, and the Dingman Center's Mentor Network and Spark Fund add mentorship and small grants for student-run events.",
     sat1450Effect: "1450 falls within Smith's middle 50% (1360–1500) — this would shift the assessment solidly into Target.",
     becomesTargetAt1450: true,
     programs: [
@@ -843,7 +849,7 @@ const BEYOND_MBA_RANKING = [
     category: "Target",
     sat: "1290–1450",
     gpa: "3.5–3.9 (holistic, EC-weighted)",
-    fit: "Best fit on the entire list. Babson's admissions process explicitly rewards founder experience, competition results, and a demonstrated business track record — directly rewarding the Orderly/CheqIn CEO role, Blue Ocean Top 100 finish, BIZWORLD final, and Conrad Challenge. A 1300 SAT sits right at Babson's median.",
+    fit: "Best fit on the entire list. Babson's admissions process explicitly rewards founder experience, competition results, and a demonstrated business track record — directly rewarding the Orderly/CheqIn CEO role, Blue Ocean Top 100 finish, BIZWORLD final, and Conrad Challenge. A 1360 SAT sits right at Babson's median.",
     sat1450Effect: "1450 sits at the very top of Babson's range — this would push the profile from a comfortable Target toward Likely, especially combined with the founder-story extracurriculars.",
     programs: [
       { name: "BS in Business Administration — Entrepreneurship concentration", url: "https://www.babson.edu/undergraduate/academics/concentrations/entrepreneurship/" },
@@ -857,7 +863,7 @@ const BEYOND_MBA_RANKING = [
     category: "Target / Likely",
     sat: "1210–1390",
     gpa: "3.5–3.8",
-    fit: "A business-only campus with a strong Information Design & Corporate Communication / Computer Information Systems pipeline that plays to the AI/ML coding background; 1300 SAT sits above Bentley's median.",
+    fit: "A business-only campus with a strong Information Design & Corporate Communication / Computer Information Systems pipeline that plays to the AI/ML coding background; 1360 SAT sits comfortably above Bentley's median.",
     sat1450Effect: "1450 sits well above Bentley's typical admitted range — this would comfortably flip the profile to Likely.",
     programs: [
       { name: "BS in Corporate Finance and Accounting", url: "https://www.bentley.edu/academics/undergraduate-programs/corporate-finance-accounting" },
@@ -872,6 +878,7 @@ const BEYOND_MBA_RANKING = [
     sat: "1310–1470",
     gpa: "3.6–3.9",
     fit: "NYC placement gives direct access to the fintech-startup and sales-internship ecosystem that The Founders' Pool (where he now interns) sits in; Gabelli's finance offerings plus NYC internship density fit the sales+fintech spike.",
+    clubsDeepDive: "Fordham's Entrepreneurship Society and the Fordham Foundry (the university's entrepreneurship incubator) give Orderly a natural next home, while the PEVCC (Private Equity/Venture Capital Club) connects directly to the fintech angle behind the Founders' Pool internship. The Fordham Marketing Association, an official collegiate AMA chapter, is also a credible landing spot for the marketing/promotion skills already built running Bldg18 Comedy Club's outreach — and NYC placement means these clubs come with real industry proximity.",
     sat1450Effect: "1450 sits near the top of Gabelli's range — strengthens this well within Target, close to Likely.",
     programs: [
       { name: "Gabelli School of Business — BS", url: "https://www.fordham.edu/gabelli-school-of-business/academic-programs-and-admissions/undergraduate-programs/" }
@@ -898,6 +905,7 @@ const BEYOND_MBA_RANKING = [
     sat: "1200–1370",
     gpa: "3.6–3.9",
     fit: "LA entertainment-industry ties plus a growing entrepreneurship program suit the performing-arts/business hybrid brand built up in the creative portfolio. Note: confirm exact degree title (BS vs. BBA) for the intended major directly with LMU CBA admissions.",
+    clubsDeepDive: "The LMU Entrepreneurship Society, housed in the Fred Kiesner Center, and the LMU Marketing Society both give direct homes for Orderly and for the promotional skills built through Bldg18 Comedy Club. The Kiesner Center's New Idea Pitch Competition, alongside Startup Weekend and the POWER Summit, add multiple live pitching venues in a single academic year. Combined with LA's entertainment-industry proximity, LMU is one of the few schools on this list where a comedy/marketing background and a startup founder story can genuinely reinforce each other on campus.",
     sat1450Effect: "1450 sits above LMU's typical range entirely — this would flip to Likely.",
     programs: [
       { name: "College of Business Administration — BS/BBA in Business Administration", url: "https://cba.lmu.edu/academics/undergrad/" }
@@ -911,6 +919,7 @@ const BEYOND_MBA_RANKING = [
     sat: "1330–1480",
     gpa: "3.7–4.0",
     fit: "25 minutes from home in Fremont and embedded in Silicon Valley's startup/VC ecosystem — Leavey's entrepreneurship programming and tech proximity match the Orderly/CheqIn founder story and AI/ML background directly. Stats sit at/slightly below the middle 50%, so this is the stretchier side of target.",
+    clubsDeepDive: "The Bronco Venture Accelerator is a real, equity-free summer accelerator ending in a VC/angel Demo Day — about as close to a scaled-up version of the Orderly journey as exists on this list, run right in Silicon Valley. The Venture Capital Association gives a club home for the fintech/investing side of the Founders' Pool internship, and the Global Social Benefit Incubator connects social-impact entrepreneurship to the volunteer work already done with Community Seva — a genuine, less-obvious thread tying the whole profile together in one place.",
     sat1450Effect: "1450 sits comfortably within Leavey's middle 50% — this would move the profile from the stretchier side of Target to a solid, comfortable Target, and would also open the door to the 5-year Commerce+Engineering double degree.",
     programs: [
       { name: "Leavey School of Business — BS in Commerce", url: "https://www.scu.edu/business/undergraduates/academics/" },
@@ -925,6 +934,7 @@ const BEYOND_MBA_RANKING = [
     sat: "1180–1360",
     gpa: "3.5–3.8",
     fit: "Daniels' small class sizes and project-based Bridge Project suit a portfolio-heavy, EC-driven applicant; a solid target with good merit-aid potential.",
+    clubsDeepDive: "Daniels' Pioneer Venture Group is DU's first fully student-run venture capital fund — students actually source and evaluate real startup investments, a genuinely rare hands-on credential for an undergraduate. The Pioneer Sales Club is a direct extension of the active Founders' Pool sales internship, and DO U gives a general entrepreneurship home for continuing to build out Orderly. Between a real student-managed VC fund and a dedicated sales club, Daniels offers an unusually concrete path from the current internship and founder experience into resume-ready college credentials.",
     sat1450Effect: "1450 sits well above Daniels' typical range — this would comfortably flip to Likely.",
     programs: [
       { name: "Daniels College of Business — BSBA", url: "https://daniels.du.edu/undergraduate-programs/" }
@@ -938,6 +948,7 @@ const BEYOND_MBA_RANKING = [
     sat: "1140–1350",
     gpa: "3.5–3.9 (Honors College admission would be a reach)",
     fit: "Eller's McGuire Center for Entrepreneurship and a direct-admit BSBA pathway make this a comfortable likely with real program depth rather than just a fallback.",
+    clubsDeepDive: "Eller's Professional Sales Club and its Suit Up Sales Challenge (plus entries in the Arizona and National Collegiate Sales Competitions) plug directly into the Founders' Pool sales internship with real, judged 15-minute sales-call competitions — about as literal a translation of that internship into campus life as exists on this list. The Student Entrepreneurship Association, based out of the McGuire Center, adds a general founder-community home for Orderly, rounding out a campus that treats sales as a serious, competitive discipline rather than an afterthought.",
     programs: [
       { name: "Eller College of Management — BSBA", url: "https://eller.arizona.edu/programs/undergraduate/academics/business-majors" },
       { name: "Eller College of Management — BSBA + Management Information Systems (MIS) dual path", url: "https://eller.arizona.edu/programs/undergraduate/academics/business-majors" }
@@ -951,6 +962,7 @@ const BEYOND_MBA_RANKING = [
     sat: "1200–1390",
     gpa: "3.5–3.8",
     fit: "Drexel's mandatory 6-month co-op converts the internship experience already gained at The Founders' Pool into a structured, resume-building placement cycle.",
+    clubsDeepDive: "Drexel's Business Analytics Club is a strong extension of the AI/ML coding background, and the Close School of Entrepreneurship's Close Club plus the Baiada Institute for Entrepreneurship (mentorship, funding, and competitions) give Orderly real infrastructure to grow inside. A Drexel Sales Club is also listed on LeBow's own site, though worth confirming its current activity level directly since public detail beyond the page itself was limited — a reasonable thing to ask about on a campus visit given how directly it would connect to the Founders' Pool internship.",
     programs: [
       { name: "LeBow College of Business — BSBA (with mandatory co-op)", url: "https://www.lebow.drexel.edu/academics/undergraduate/degrees-programs/business-administration" },
       { name: "LeBow Business & Engineering dual-degree option (with co-op)", url: "https://www.lebow.drexel.edu/academics/undergraduate/degrees-programs/business-administration" }
@@ -1053,6 +1065,7 @@ const BEYOND_MBA_RANKING = [
     sat: "avg ~1244 (test-optional)",
     gpa: "3.4–3.7",
     fit: "Elon's dedicated Entrepreneurship & Innovation major and near-universal internship placement are a strong founder-story fit at an accessible admit bar.",
+    clubsDeepDive: "Elon's Chandler Family Professional Sales Center is a dedicated hub for sales competitions and training, a near-exact match to the active Founders' Pool sales internship, with Pi Sigma Epsilon (the co-ed sales/marketing fraternity) as a social extension of the same skill set. The Center for Organizational Analytics runs real-company data projects and case competitions that connect well to the AI/ML background, and the Doherty Center for Creativity, Innovation and Entrepreneurship's pop-up shops and micro-business support give Orderly a genuine low-stakes place to keep growing.",
     sat1450Effect: "1450 sits well above Elon's typical admitted average — this would flip the profile solidly to Likely.",
     programs: [
       { name: "Martha and Spencer Love School of Business — BSBA", url: "https://www.elon.edu/u/academics/business/programs/" }
@@ -1237,6 +1250,7 @@ const BEYOND_MBA_RANKING = [
     sat: "Test-optional; submitters run ~1360–1470",
     gpa: "~3.8+ UW recommended; Smeal direct-admit runs ~18%",
     fit: "Smeal's recruiting pipeline is enormous, but the recommended GPA/SAT band for direct admission sits above current stats — a real reach despite Penn State's large overall class size.",
+    clubsDeepDive: "The Nittany AI Student Society and the associated Nittany AI Challenge — a $30,000-prize-pool competition spanning agriculture, health, and education applications — are a direct, well-funded home for the AI/ML coding background. The Farrell Center's Propel Business program is a venture-creation hub for turning an idea like Orderly into something formally built out with mentorship, and the Happy Valley Pitch Competition adds another live pitching venue.",
     sat1450Effect: "1450 falls within Smeal's typical submitter range — this would meaningfully improve the odds and shift the assessment toward Target.",
     programs: [
       { name: "Smeal College of Business — BS", url: "https://undergrad.smeal.psu.edu/apply" }
@@ -1249,7 +1263,8 @@ const BEYOND_MBA_RANKING = [
     category: "Target",
     sat: "University middle 50% ~1250–1420 (SAT reinstated as a requirement for the 2025–26 cycle)",
     gpa: "3.5–3.8",
-    fit: "Pamplin's Business Information Technology major pairs business with real tech coursework — a good match for the AI/ML background. 1300 sits within the university's typical range.",
+    fit: "Pamplin's Business Information Technology major pairs business with real tech coursework — a good match for the AI/ML background. 1360 sits within the university's typical range, closer to the middle than before.",
+    clubsDeepDive: "The Virginia Tech Entrepreneur Challenge, run through the Apex Center, offers $60,000 in total prizes including a $25,000 grand prize — a serious step up from Blue Ocean or BIZWORLD for Orderly. AMA@VT is a standout: a real, student-run full-service marketing agency (not just a discussion club) operating since 2015, a near-exact structural match to the marketing/ops work already done for Bldg18 Comedy Club. Add Pi Sigma Epsilon, the sales/marketing professional fraternity, and the general E-Club, and Pamplin covers entrepreneurship, sales, and applied marketing as real, active organizations.",
     sat1450Effect: "1450 sits in the upper half of Virginia Tech's range — this would strengthen the assessment toward Likely.",
     programs: [
       { name: "Pamplin College of Business — BS / BSBUS", url: "https://pamplin.vt.edu/ug/admissions.html" }
@@ -1273,12 +1288,12 @@ const BEYOND_MBA_RANKING = [
     school: "University of Massachusetts Amherst",
     knownFor: "#1-ranked Sport Management program; strong retailing track",
     mbaRank: "UMass Amherst has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
+    category: "Target",
     sat: "University 1290–1450; Isenberg-specific average ~1375",
     gpa: "3.6–3.9",
-    fit: "Isenberg admits more selectively (~37%) than the university overall (~64%), and 1300 sits below its internal average — a real but reachable stretch given the general university range includes current stats.",
-    sat1450Effect: "1450 sits right at Isenberg's average — this would shift the assessment solidly into Target.",
-    becomesTargetAt1450: true,
+    fit: "Isenberg admits more selectively (~37%) than the university overall (~64%), but 1360 now sits nearly at its internal average (~1375) — a real, comfortably-positioned target rather than a stretch.",
+    clubsDeepDive: "Isenberg's Entrepreneurship Club has real momentum (it won the 2024 and 2025 Sammy Awards for campus impact), and the Berthiaume Center's Minute Pitch Competition — a 60-second, no-slides format — rewards the same tight, high-pressure delivery skill built through stand-up comedy and competitive pitching alike. The Isenberg Stock Pitch Competition, tied to the student-managed Minutemen Equity Fund, adds a genuinely quantitative credential that pairs well with the AI/ML background.",
+    sat1450Effect: "1450 would sit right at Isenberg's average — a further, though now marginal, improvement over the already-close 1360.",
     programs: [
       { name: "Isenberg School of Management — BBA", url: "https://www.isenberg.umass.edu/admissions" }
     ]
@@ -1287,10 +1302,10 @@ const BEYOND_MBA_RANKING = [
     school: "University of South Carolina",
     knownFor: "Perennial #1-ranked undergraduate International Business program (US News)",
     mbaRank: "South Carolina has no MBA program in the US News full-time top 48",
-    category: "Target",
-    sat: "Moore School average SAT ~1294 — right at current stats",
+    category: "Target / Likely",
+    sat: "Moore School average SAT ~1294 — now meaningfully above current stats",
     gpa: "3.5–3.8",
-    fit: "1300 sits almost exactly at Moore's average admitted SAT — one of the closest stats matches on the entire list — and the #1-ranked International Business program (with heavy study-abroad integration) is a genuine standout credential.",
+    fit: "1360 sits comfortably above Moore's average admitted SAT (~1294) — one of the more favorable stats comparisons on the entire list — and the #1-ranked International Business program (with heavy study-abroad integration) is a genuine standout credential.",
     sat1450Effect: "1450 would sit meaningfully above Moore's average — this would strengthen the assessment to a comfortable Likely.",
     programs: [
       { name: "Darla Moore School of Business — BS", url: "https://sc.edu/study/colleges_schools/moore/" }
@@ -1300,10 +1315,10 @@ const BEYOND_MBA_RANKING = [
     school: "Louisiana State University",
     knownFor: "Stephenson Entrepreneurship Institute",
     mbaRank: "LSU has no MBA program in the US News full-time top 48",
-    category: "Likely / Target",
+    category: "Likely",
     sat: "University average 1150–1330 (~74% overall acceptance)",
     gpa: "3.3–3.7",
-    fit: "1300 sits within LSU's typical range, and the Stephenson Entrepreneurship Institute is a reasonable founder-story fit at an accessible admit bar. Note the internal business gate (30 credit hours, minimum grades in pre-business core courses) applies after matriculation.",
+    fit: "1360 now sits above LSU's typical range, and the Stephenson Entrepreneurship Institute is a reasonable founder-story fit at a very accessible admit bar. Note the internal business gate (30 credit hours, minimum grades in pre-business core courses) applies after matriculation, but is unrelated to admissions test scores.",
     programs: [
       { name: "E.J. Ourso College of Business — BS", url: "https://www.lsu.edu/business/" }
     ]
@@ -1315,7 +1330,7 @@ const BEYOND_MBA_RANKING = [
     category: "Likely",
     sat: "Test-optional; recent class average ~1210",
     gpa: "3.4–3.7",
-    fit: "1300 sits above Kentucky's recent average, and the Von Allmen Center gives real entrepreneurship programming at an accessible admit bar. Students enter pre-major and gain full admission sophomore year via College Readiness Indicators.",
+    fit: "1360 sits further above Kentucky's recent average, and the Von Allmen Center gives real entrepreneurship programming at an accessible admit bar. Students enter pre-major and gain full admission sophomore year via College Readiness Indicators.",
     programs: [
       { name: "Gatton College of Business & Economics — BSBA", url: "https://gatton.uky.edu/BSBA" }
     ]
@@ -1327,7 +1342,7 @@ const BEYOND_MBA_RANKING = [
     category: "Likely",
     sat: "University average ~1175",
     gpa: "3.3–3.6",
-    fit: "1300 sits comfortably above Mizzou's average, making this an accessible likely; the two-tier admission (undeclared freshman year, then upper-level application at 45–60 credit hours with a 2.6 GPA minimum) is a manageable, low-risk path.",
+    fit: "1360 sits even more comfortably above Mizzou's average, making this an accessible likely; the two-tier admission (undeclared freshman year, then upper-level application at 45–60 credit hours with a 2.6 GPA minimum) is a manageable, low-risk path.",
     programs: [
       { name: "Trulaske College of Business — BSBA", url: "https://business.missouri.edu/" }
     ]
@@ -1364,7 +1379,7 @@ const BEYOND_MBA_RANKING = [
     category: "Target",
     sat: "University middle 50% 1240–1390",
     gpa: "3.5–3.8",
-    fit: "1300 sits within FSU's typical range. Admission works by certifying into the business major after general FSU admission, adding a manageable second step rather than a separate competitive gate.",
+    fit: "1360 sits within FSU's typical range, now in its upper half. Admission works by certifying into the business major after general FSU admission, adding a manageable second step rather than a separate competitive gate.",
     sat1450Effect: "1450 sits in the upper half of FSU's range — this would strengthen the assessment toward Likely.",
     programs: [
       { name: "College of Business (Wertheim) — BS", url: "https://wertheim.fsu.edu/" }
@@ -1376,8 +1391,8 @@ const BEYOND_MBA_RANKING = [
     mbaRank: "Iowa has no MBA program in the US News full-time top 48",
     category: "Target / Reach",
     sat: "Direct-admit threshold: SAT 1230+ / ACT 26+",
-    gpa: "Iowa's stated direct-admit GPA threshold is 3.6+ unweighted — worth flagging directly, since current unweighted GPA is 3.4, meaning the guaranteed direct-admit path may not apply even though the SAT (1300) clears the floor; this would need verifying directly with Tippie admissions rather than assumed.",
-    fit: "Tippie's guaranteed direct-admit business program is attractive on paper, and 1300 clears the stated SAT floor — but the stated 3.6 unweighted GPA threshold is above the current 3.4 unweighted, which is the real risk factor here, not the test score.",
+    gpa: "Iowa's stated direct-admit GPA threshold is 3.6+ unweighted — worth flagging directly, since current unweighted GPA is 3.4, meaning the guaranteed direct-admit path may not apply even though the SAT (1360) clears the floor; this would need verifying directly with Tippie admissions rather than assumed.",
+    fit: "Tippie's guaranteed direct-admit business program is attractive on paper, and 1360 clears the stated SAT floor with more room to spare — but the stated 3.6 unweighted GPA threshold is above the current 3.4 unweighted, which is the real risk factor here, not the test score.",
     sat1450Effect: "The SAT isn't the limiting factor for Tippie's direct-admit threshold — the stated 3.6 unweighted GPA bar matters more here, and a higher SAT wouldn't offset a GPA below that threshold.",
     programs: [
       { name: "Tippie College of Business — BBA", url: "https://tippie.uiowa.edu/undergraduate/admissions" }
@@ -1390,7 +1405,7 @@ const BEYOND_MBA_RANKING = [
     category: "Target",
     sat: "University middle 50% ~1240–1390",
     gpa: "3.4–3.7",
-    fit: "1300 sits within Auburn's typical range, and the Harbert supply-chain program is nationally strong — a solid target with a manageable pre-business-then-declare structure.",
+    fit: "1360 sits within Auburn's typical range, now in its upper half, and the Harbert supply-chain program is nationally strong — a solid target with a manageable pre-business-then-declare structure.",
     sat1450Effect: "1450 sits in the upper half of Auburn's range — this would strengthen the assessment toward Likely.",
     programs: [
       { name: "Harbert College of Business — BSBA", url: "https://harbert.auburn.edu/" }
@@ -1403,7 +1418,7 @@ const BEYOND_MBA_RANKING = [
     category: "Target / Reach",
     sat: "University middle 50% 1240–1400 (business is among Clemson's more competitive intended majors)",
     gpa: "3.5–3.8",
-    fit: "1300 sits within Clemson's overall range, but business is one of the university's more competitive intended majors internally — worth treating as a slight stretch relative to the university-wide numbers.",
+    fit: "1360 sits within Clemson's overall range, now closer to its upper end, but business is one of the university's more competitive intended majors internally — worth treating as a slight stretch relative to the university-wide numbers.",
     sat1450Effect: "1450 sits in the upper half of Clemson's range — this would meaningfully improve odds for the more competitive business major specifically.",
     programs: [
       { name: "Wilbur O. and Ann Powers College of Business — BS", url: "https://www.clemson.edu/business/" }
@@ -1417,6 +1432,7 @@ const BEYOND_MBA_RANKING = [
     sat: "Test-optional; university range ~1130–1360",
     gpa: "3.0+ UW guarantees major admission — comfortably cleared by current stats",
     fit: "A 3.0 GPA guarantees admission to the business major outright, which the current 3.4 UW clears comfortably. The Sports Product Management major (tied to Nike's Oregon roots) is a distinctive entrepreneurship-adjacent option.",
+    clubsDeepDive: "The Oregon Founders Club gives early access to entrepreneurship workshops and founder speakers, while the Operations and Business Analytics Club is a natural fit for the AI/ML coding background applied to real business data. The standout is the Oregon Innovation Challenge — a pitch/venture competition that has supported over 750 student startups through the Lundquist Center for Entrepreneurship, the kind of track record Orderly could plug into directly alongside the founder experience already built through Blue Ocean, BIZWORLD, and the Conrad Challenge.",
     programs: [
       { name: "Lundquist College of Business — BS", url: "https://business.uoregon.edu/" }
     ]
@@ -1428,7 +1444,8 @@ const BEYOND_MBA_RANKING = [
     category: "Target",
     sat: "University ~1180–1390 (a separate Business Honors track exists at 1450+/3.9 GPA, not relevant at current stats)",
     gpa: "3.4–3.7",
-    fit: "The Deming Center is genuinely one of the strongest entrepreneurship programs on this whole list, complete with a student-run venture fund — an excellent founder-story fit at 1300, which sits comfortably within Leeds' typical range.",
+    fit: "The Deming Center is genuinely one of the strongest entrepreneurship programs on this whole list, complete with a student-run venture fund — an excellent founder-story fit at 1360, which sits comfortably within the upper half of Leeds' typical range.",
+    clubsDeepDive: "The Deming Center's Spark CU program runs Spark FOUNDERS, a student-run incubator cohort of just 5-6 ventures a year — genuinely selective, hands-on infrastructure for Orderly. The New Venture Challenge funds winning teams up to $100,000, a serious step beyond Blue Ocean or BIZWORLD, and the student-managed Deming Center Venture Fund gives real investment-decision experience most undergrads never get. Leeds was also named the #1 program nationally for entrepreneurship education by the GCEC, so this club ecosystem is the school's core identity, not a side feature.",
     sat1450Effect: "1450 would open the door to CU Boulder's separate Business Honors track (1450+/3.9 GPA, not otherwise relevant at current stats) in addition to strengthening the standard Leeds admission.",
     programs: [
       { name: "Leeds School of Business — BSBA", url: "https://www.colorado.edu/business/" }
@@ -1438,12 +1455,12 @@ const BEYOND_MBA_RANKING = [
     school: "Syracuse University",
     knownFor: "#21 US News undergraduate Entrepreneurship ranking; Blackstone LaunchPad + Couri Hatchery incubator",
     mbaRank: "Syracuse has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
+    category: "Target",
     sat: "Average ~1349",
     gpa: "3.5–3.8",
-    fit: "Whitman's Blackstone LaunchPad and Couri Hatchery incubator are real, active startup resources — a strong founder-story fit, though the ~37% business-school acceptance rate and average SAT sit a bit above current stats.",
-    sat1450Effect: "1450 sits above Whitman's average — this would shift the assessment solidly into Target.",
-    becomesTargetAt1450: true,
+    fit: "Whitman's Blackstone LaunchPad and Couri Hatchery incubator are real, active startup resources — a strong founder-story fit, and 1360 now sits slightly above Whitman's average SAT, though the ~37% business-school acceptance rate keeps this a genuine (not guaranteed) target.",
+    clubsDeepDive: "Blackstone LaunchPad has a genuine decade-long track record (6,000+ students engaged) and runs the annual Ideas Fest pitch competition, a strong venue for Orderly. The Couri Hatchery Student Business Incubator goes further, offering mentorship, workspace, and funding that feed directly into the Orange Tank Pitch Competition and the Panasci Business Plan Competition — meaning there isn't just one pitch opportunity here but a full pipeline from incubation to competition, a meaningfully deeper level of startup infrastructure than most schools on this list offer.",
+    sat1450Effect: "1450 would extend the lead over Whitman's average further, though the ~37% internal acceptance rate remains the bigger factor regardless of score.",
     programs: [
       { name: "Whitman School of Management — BS", url: "https://whitman.syracuse.edu/" }
     ]
@@ -1455,7 +1472,7 @@ const BEYOND_MBA_RANKING = [
     category: "Likely / Target",
     sat: "Average ~1264; university range 1210–1440",
     gpa: "3.3+ plus a required accounting-course gate",
-    fit: "The new STEM-designated FinTech program is a strong direct match to the active Founders' Pool internship, and Hartford's insurance-industry density adds real actuarial/finance career access — all at an accessible admit bar given 1300 sits above UConn's average.",
+    fit: "The new STEM-designated FinTech program is a strong direct match to the active Founders' Pool internship, and Hartford's insurance-industry density adds real actuarial/finance career access — all at an accessible admit bar given 1360 sits further above UConn's average.",
     programs: [
       { name: "School of Business — BS, FinTech program available", url: "https://www.business.uconn.edu/" }
     ]
@@ -1534,7 +1551,8 @@ const BEYOND_MBA_RANKING = [
     category: "Target / Likely",
     sat: "Test-optional; university range 1180–1370",
     gpa: "3.4–3.7",
-    fit: "1300 sits within Loyola's typical range, and Chicago placement adds real finance/consulting internship density at a comfortable (~68%) overall admit rate.",
+    fit: "1360 sits within Loyola's typical range, now near its upper end, and Chicago placement adds real finance/consulting internship density at a comfortable (~68%) overall admit rate.",
+    clubsDeepDive: "Loyola Future Founders gives a straightforward entrepreneurship home for Orderly, while the Loyola AI Society is a direct, named landing spot for the AI/ML coding background inside the business school. The Rambler Investment Fund — a real, roughly $1.6 million student-managed endowment — and the Rambler Consulting Group offer serious quantitative/analytical credibility beyond pitch competitions alone, and the Quinlan AMA chapter is a natural fit for the marketing experience already built through Bldg18 Comedy Club's promotion work.",
     programs: [
       { name: "Quinlan School of Business — BBA", url: "https://www.luc.edu/quinlan/" }
     ]
@@ -1543,10 +1561,10 @@ const BEYOND_MBA_RANKING = [
     school: "DePaul University",
     knownFor: "Coleman Entrepreneurship Center — one of the oldest, most established entrepreneurship centers in the country",
     mbaRank: "DePaul has no MBA program in the US News full-time top 48",
-    category: "Likely",
+    category: "Likely / Safety",
     sat: "Test-optional; university range ~1100–1300",
     gpa: "3.2–3.6",
-    fit: "1300 sits at the top of DePaul's typical range, and the Loop location plus the well-regarded Coleman Entrepreneurship Center make this a comfortable likely with real founder-relevant programming, not just a fallback.",
+    fit: "1360 now sits above DePaul's typical range, and the Loop location plus the well-regarded Coleman Entrepreneurship Center make this a very comfortable likely with real founder-relevant programming, not just a fallback.",
     programs: [
       { name: "Driehaus College of Business — BS", url: "https://business.depaul.edu/" }
     ]
@@ -1558,7 +1576,7 @@ const BEYOND_MBA_RANKING = [
     category: "Target",
     sat: "Test-optional; university range ~1210–1400",
     gpa: "3.5–3.8",
-    fit: "The Baugh Center is one of the more nationally recognized entrepreneurship programs on this entire list, with a real student incubator (1846) and launch program — a strong founder-story fit, with 1300 sitting within Baylor's typical range.",
+    fit: "The Baugh Center is one of the more nationally recognized entrepreneurship programs on this entire list, with a real student incubator (1846) and launch program — a strong founder-story fit, with 1360 sitting within Baylor's typical range, now in its upper half.",
     sat1450Effect: "1450 sits in the upper half of Baylor's range — this would strengthen the assessment toward Likely.",
     programs: [
       { name: "Hankamer School of Business — BBA", url: "https://hankamer.baylor.edu/" }
@@ -1568,11 +1586,12 @@ const BEYOND_MBA_RANKING = [
     school: "Texas Christian University",
     knownFor: "Strong national Entrepreneurship ranking; Values-Based Leadership emphasis",
     mbaRank: "TCU has no MBA program in the US News full-time top 48",
-    category: "Target",
+    category: "Target / Likely",
     sat: "University range ~1240–1340 (per TCU's own Fall 2025 figures)",
     gpa: "3.5–3.8",
-    fit: "1300 sits within TCU's typical range, and Neeley's national entrepreneurship ranking plus its Values-Based Leadership emphasis are a reasonable fit for the founder story, though direct-admit is highly competitive within TCU overall.",
-    sat1450Effect: "1450 sits above TCU's typical range — this would strengthen the assessment toward Likely.",
+    clubsDeepDive: "TCU's E-ship Club runs FrogShop, an actual pop-up retail experience for students to practice running a business, and the Richards Barrentine Values and Ventures Competition is an international pitch competition for 'conscious capitalism' ventures with $5,000+ in prizes — a strong stage for Orderly. The CREATE Program goes further, running fall workshops into a spring pitch competition for up to $50,000 in funding, a genuinely substantial step up from Blue Ocean and BIZWORLD. The CEO and AMA chapters round out a surprisingly deep club bench for a mid-sized program.",
+    fit: "1360 now sits above TCU's typical range, and Neeley's national entrepreneurship ranking plus its Values-Based Leadership emphasis are a reasonable fit for the founder story, though direct-admit is highly competitive within TCU overall regardless of the university-wide range.",
+    sat1450Effect: "Already above TCU's typical range at 1360 — 1450 would extend that further, solidifying this as a comfortable Likely.",
     programs: [
       { name: "Neeley School of Business — BBA", url: "https://www.neeley.tcu.edu/" }
     ]
@@ -1595,12 +1614,55 @@ const BEYOND_MBA_RANKING = [
     school: "Marquette University",
     knownFor: "Kohler Center for Entrepreneurship; Milwaukee corporate ties (Northwestern Mutual — actuarial/insurance)",
     mbaRank: "Marquette has no MBA program in the US News full-time top 48",
-    category: "Target / Likely",
+    category: "Likely",
     sat: "Test-optional; university range 1220–1350",
     gpa: "3.4–3.7",
-    fit: "1300 sits within Marquette's typical range, with direct-admit into the business college at matriculation. The Kohler Center gives real entrepreneurship programming, and Milwaukee's insurance-industry presence (Northwestern Mutual) adds an actuarial/finance angle.",
+    fit: "1360 now sits above Marquette's typical range, with direct-admit into the business college at matriculation. The Kohler Center gives real entrepreneurship programming, and Milwaukee's insurance-industry presence (Northwestern Mutual) adds an actuarial/finance angle.",
     programs: [
       { name: "College of Business Administration — BS", url: "https://www.marquette.edu/business/undergraduate/" }
+    ]
+  },
+  {
+    school: "Oregon State University",
+    knownFor: "Very accessible admit bar with a large, broad club ecosystem (20+ student orgs)",
+    mbaRank: "Oregon State has no MBA program in the US News full-time top 48",
+    category: "Likely / Safety",
+    sat: "University-wide test-optional; middle 50% ~1080–1290 (avg ~1250)",
+    gpa: "~3.15+ recommended for admission to the business major; university average ~3.6",
+    fit: "1360 sits comfortably above OSU's typical range, and the College of Business recommends only a 3.15 GPA for major admission — a genuinely accessible safety with real room to lead rather than just join campus organizations. Note the degree is titled Business Administration (BA/BS), with Honors BA/BS options — worth confirming the specific concentration's exact degree letter before applying.",
+    clubsDeepDive: "Oregon State's College of Business runs over 20 student clubs, though the school doesn't publish a full public roster — worth checking OSU's current club portal directly rather than assuming a specific one exists. What's verifiable is the admit bar: 1360 clears the university's typical range comfortably, and the business major only requires a 3.15 GPA to declare, meaning there's real room to build a leadership track record from freshman year instead of competing just to get in the door. Given the Orderly founder story and the Founders' Pool sales internship, the practical move here is arriving with intent to found or lead a sales, analytics, or entrepreneurship club rather than assuming the right one is already waiting.",
+    programs: [
+      { name: "College of Business — Business Administration (BA/BS; Honors BA/BS also available)", url: "https://business.oregonstate.edu/programs/undergraduate" }
+    ]
+  },
+  {
+    school: "University of Cincinnati",
+    knownFor: "Birthplace of the cooperative education (co-op) model — multiple paid, full-time work rotations built into the degree",
+    mbaRank: "Cincinnati has no MBA program in the US News full-time top 48",
+    category: "Target / Likely",
+    sat: "University-wide middle 50% ~1150–1360 (avg ~1250); Lindner uses holistic review, no separate published cutoff",
+    gpa: "3.3–3.7",
+    fit: "1360 sits right at the top of Cincinnati's typical range, and Lindner's direct-admit process is holistic rather than cutoff-driven. UC essentially invented the co-op model, meaning the degree itself builds in multiple paid, full-time work rotations — a structural advantage that converts the internship-seeking pattern already shown at The Founders' Pool into a formal part of the curriculum rather than something squeezed in around classes.",
+    clubsDeepDive: "Cincinnati literally invented the cooperative education model, and Lindner's co-op program would turn the internship-seeking pattern already shown at The Founders' Pool into multiple full-time, paid, resume-building rotations before graduation — a structural advantage few other schools on this list can match. On the club side, the Sales Leadership Club is a direct extension of the active sales internship, the Cryptocurrency Club and Business Analytics Club connect to the AI-fintech angle, the American Marketing Association chapter runs an in-house agency and case competitions, and UC Startup Weekend offers a 3-day format to prototype and pitch a new venture, similar in spirit to the Orderly build-and-pitch cycle.",
+    programs: [
+      { name: "Carl H. Lindner College of Business — Business Administration, BBA", url: "https://www.business.uc.edu/future-students/admissions-requirements.html" }
+    ]
+  },
+  {
+    school: "Purdue University",
+    knownFor: "Boiler Blockchain and the Purdue Fintech Center — a genuine AI-fintech club ecosystem, though selectivity has risen sharply",
+    mbaRank: "Purdue has no MBA program in the US News full-time top 48",
+    category: "Reach",
+    sat: "Fall 2025 incoming class average ~1397; acceptance rate has fallen to roughly 23%",
+    gpa: "3.6–3.9",
+    fit: "Purdue's Mitchell E. Daniels School of Business has become notably more selective in the last few admissions cycles — the average admitted SAT (~1397) now sits meaningfully above 1360, and the acceptance rate has dropped to roughly 23%. This is a real reach today in a way it may not have been a few years ago, so it's worth treating as a genuine stretch rather than a safe state-school pick.",
+    sat1450Effect: "1450 would sit above Purdue Daniels' recent average admitted SAT (~1397) — this would meaningfully improve the odds and shift the assessment toward Target.",
+    becomesTargetAt1450: true,
+    clubsDeepDive: "Boiler Blockchain, a 100+ member student-run fintech/blockchain organization, and the Purdue Fintech Center's AI/fintech conference programming are close matches to the Founders' Pool AI-fintech internship, while the university-wide Purdue Center for Professional Selling (technically housed in a different college but open to Daniels students) runs a full sales-competition circuit. The Entrepreneurship and Innovations Club rounds out a home for Orderly. The bigger story, though, is Daniels' rapid rise in selectivity — average admitted SAT has jumped to roughly 1397 in the most recent cycle, so this now reads as a genuine reach rather than the more accessible state-school option it might have been a few years ago.",
+    whyEssayUrl: "purdue-why.html",
+    communityEssayUrl: "purdue-community-essay.html",
+    programs: [
+      { name: "Mitchell E. Daniels, Jr. School of Business — BS", url: "https://business.purdue.edu/undergraduate/" }
     ]
   }
 ];

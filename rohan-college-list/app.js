@@ -32,7 +32,10 @@ function renderCard(item, showMbaRank) {
       </div>
       <p class="fit-text">${item.fit}</p>
       ${item.sat1450Effect ? `<p class="sat1450-text"><strong>At a 1450 SAT:</strong> ${item.sat1450Effect}</p>` : ""}
+      ${item.clubsDeepDive ? `<p class="clubs-text"><strong>Clubs &amp; specialties:</strong> ${item.clubsDeepDive}</p>` : ""}
       <div class="program-list">${programsHtml}</div>
+      ${item.whyEssayUrl ? `<a class="why-link" href="${item.whyEssayUrl}" target="_blank" rel="noopener">Why this college? &rarr;</a>` : ""}
+      ${item.communityEssayUrl ? `<a class="why-link" href="${item.communityEssayUrl}" target="_blank" rel="noopener">Supplement Essay - Community &rarr;</a>` : ""}
     </div>
   `;
 }
