@@ -451,18 +451,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Arkansas",
-    knownFor: "Retail/supply-chain proximity (Walmart, Tyson, J.B. Hunt)",
-    mbaRank: "#48 (tie)",
-    category: "Likely / Safety",
-    sat: "1130–1330",
-    gpa: "3.4–3.7",
-    fit: "Walton's retail/supply-chain program benefits from direct Walmart/Tyson/J.B. Hunt proximity; a comfortable, generously-aided likely.",
-    programs: [
-      { name: "Sam M. Walton College of Business — BSBA", url: "https://walton.uark.edu/future-students/program-overview.php" }
-    ]
-  },
-  {
     school: "University of Pittsburgh",
     knownFor: "Trading-floor Financial Analysis Laboratory",
     mbaRank: "#48 (tie)",
@@ -933,47 +921,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "California Institute of Technology (Caltech)",
-    knownFor: "Business, Economics, and Management (BEM) option — a genuinely quantitative BS business degree run through the Linde Institute",
-    mbaRank: "Caltech has no MBA program and isn't in the US News MBA ranking at all",
-    category: "Reach (extreme)",
-    sat: "1540–1580 (near-perfect Math section expected)",
-    gpa: "Effectively 4.0 UW with the most demanding STEM course load available at the high school",
-    fit: "On paper, BEM is an unusually strong thematic match: it fuses economics/finance with computer science and advanced math, and the Linde Institute actively supports student entrepreneurship, which lines up with the Orderly/CheqIn founder story and the AI/ML background better than almost anything else on this list. The catch isn't just the SAT/GPA gap — Caltech's admissions process is built around demonstrated STEM competition and research excellence (USAMO/Olympiad-tier math, research publications) rather than the extracurricular breadth and entrepreneurial/creative-portfolio profile this list is otherwise built around. That makes this a longer shot than the Ivy-tier reaches even before accounting for stats. A single AP Statistics 4.0 is a nice signal but far short of the depth of quantitative coursework/competition record a typical Caltech admit shows.",
-    sat1450Effect: "Still well below Caltech's range (1540+), and more importantly, a higher SAT alone doesn't address the bigger gap — Caltech weighs STEM competition/research achievement far more heavily than the entrepreneurship/business-competition profile built up here. This stays an extreme reach independent of the SAT.",
-    programs: [
-      { name: "Business, Economics, and Management (BEM) Option — BS", url: "https://www.admissions.caltech.edu/why-caltech/academics/majors-minors/business-economics-and-management", syllabusUrl: "https://catalog.caltech.edu/current/information-for-undergraduate-students/graduation-requirements-all-options/business-economics-and-management-option-bem/" }
-    ]
-  },
-  {
-    school: "UC Davis",
-    knownFor: "Brand-new STEM-designated BS in Business (launched Fall 2025) with Marketing & Business Analytics / Strategy & Management tracks",
-    mbaRank: "Davis runs an MBA through its Graduate School of Management, but it isn't in the US News full-time MBA top 48",
-    category: "Reach",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules (see the Haas entry in the main Business section for the policy caveat)",
-    gpa: "~3.9–4.2 UC-recalculated weighted GPA in recent snapshots — but this is a brand-new major (Fall 2025 launch), so admit patterns are still settling; verify current-cycle data directly with UC Davis",
-    fit: "The most quantitatively-branded 'Business' degree in the UC system — STEM-designated, with a Marketing & Business Analytics track that pairs directly with the AI/ML background and the AP Statistics 4.0. The long-established Managerial Economics BS is a solid fallback within the same department. Because the major is so new, admit competitiveness is a genuine unknown rather than a settled data point.",
-    sat1450Effect: "Not applicable — UC is currently test-blind. GPA, coursework rigor, and the Personal Insight Questions are what matter here.",
-    programs: [
-      { name: "Business — BS (Marketing & Business Analytics / Strategy & Management tracks)", url: "https://gsm.ucdavis.edu/undergraduate/business-major", syllabusUrl: "https://catalog.ucdavis.edu/departments-programs-degrees/graduate-school-management/business-bs/" },
-      { name: "Managerial Economics — BS (established alternative, Business Economics concentration available)", url: "https://managerialeconomics.ucdavis.edu/major" }
-    ]
-  },
-  {
-    school: "UC Santa Barbara",
-    knownFor: "No formal business major — the Technology Management Certificate runs an annual New Venture Competition for student startups",
-    mbaRank: "UCSB has no MBA program and isn't in the US News MBA ranking",
-    category: "Reach",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "~3.96–4.28 UC-recalculated weighted GPA in recent snapshots — one of the more competitive UC campuses",
-    fit: "Worth flagging clearly: UCSB has no standalone undergraduate business major. Economics (BA or BS) is the closest full degree, and the Technology Management Certificate — explicitly built for 'driven, innovative, entrepreneurial students,' with cash prizes at its New Venture Competition — is a strong bolt-on credential for a founder profile, but it's a certificate layered onto another major, not a business degree itself.",
-    sat1450Effect: "Not applicable — UC is currently test-blind either way.",
-    programs: [
-      { name: "Economics — BA/BS (closest substitute to a business major)", url: "https://econ.ucsb.edu/" },
-      { name: "Technology Management Certificate (entrepreneurship-focused bolt-on, not a standalone major)", url: "https://tmp.ucsb.edu/academics/undergraduate-certificate-program" }
-    ]
-  },
-  {
     school: "UC Santa Cruz",
     knownFor: "Business Management Economics major with a formal Accounting concentration",
     mbaRank: "UC Santa Cruz has no MBA program and isn't in the US News MBA ranking",
@@ -984,33 +931,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "Not applicable — UC is currently test-blind either way.",
     programs: [
       { name: "Business Management Economics — BA", url: "https://programmaps.ucsc.edu/program/business-management-economics/", syllabusUrl: "https://catalog.ucsc.edu/en/current/general-catalog/academic-units/social-sciences-division/economics/business-management-economics-ba/" }
-    ]
-  },
-  {
-    school: "UC Irvine",
-    knownFor: "Full AACSB-accredited business school (Merage) with 6 emphases including Finance and Marketing",
-    mbaRank: "UC Irvine runs an MBA through the Merage School, but it isn't in the US News full-time MBA top 48",
-    category: "Reach",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "~3.96–4.26 UC-recalculated weighted GPA in recent snapshots — a competitive UC tier",
-    fit: "A genuinely full-featured undergraduate business school with Finance, Marketing, Information Systems, and Organization & Management emphases — solid all-around fit for a sales/marketing-leaning profile. Note the degree conferred is a BA, not a BS, despite Merage being a real AACSB business school.",
-    sat1450Effect: "Not applicable — UC is currently test-blind either way.",
-    programs: [
-      { name: "Business Administration — BA (Paul Merage School of Business)", url: "https://merage.uci.edu/programs/undergraduate/index.html", syllabusUrl: "https://catalogue.uci.edu/thepaulmerageschoolofbusiness/businessadministration_ba/" }
-    ]
-  },
-  {
-    school: "UC San Diego",
-    knownFor: "Business Analytics & Data Science major run jointly with the Halıcıoğlu Data Science Institute",
-    mbaRank: "UC San Diego's Rady School runs an MBA, but it isn't in the US News full-time MBA top 48",
-    category: "Reach",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "~4.03–4.28 UC-recalculated weighted GPA in recent snapshots — the most competitive of the UC campuses covered here",
-    fit: "Rady's Business Analytics & Data Science major is a near-direct match to the AI/ML coding background, and San Diego's biotech/tech startup density feeds a real undergraduate entrepreneurship pipeline. Business Economics is the more traditional BS alternative within the same school. Both are genuine BS degrees, not BAs — a rarer combination among the UC's business-adjacent programs.",
-    sat1450Effect: "Not applicable — UC is currently test-blind either way.",
-    programs: [
-      { name: "Business Analytics & Data Science — BS (Rady School / Halıcıoğlu Data Science Institute)", url: "https://rady.ucsd.edu/programs/undergraduate/majors/" },
-      { name: "Business Economics — BS", url: "https://economics.ucsd.edu/undergraduate-program/major-minor-requirements/BusEcon.html" }
     ]
   },
   {
@@ -1150,19 +1070,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "University of Central Florida",
-    knownFor: "Entertainment Management minor (cross-listed with Orlando's entertainment industry)",
-    mbaRank: "UCF has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
-    sat: "BSBA-specific mid-range ~1310–1430",
-    gpa: "Reported minimum weighted GPA around 4.1 on UCF's own recalculated scale for limited-access BSBA entry — this is a different scale than the standard 3.6 weighted GPA and should be verified directly with UCF admissions before relying on it",
-    fit: "The Entertainment Management minor (tied to Orlando's theme-park/entertainment industry, cross-listed with Rosen College and Arts & Humanities) is a genuinely unusual match for the performing-arts/business hybrid built up in the creative portfolio — but UCF's limited-access BSBA entry is more competitive internally than the university at large, and the GPA bar quoted is on UCF's own weighted scale, not directly comparable to the standard 3.6.",
-    sat1450Effect: "1450 sits within UCF Business's mid-range — this would meaningfully improve the odds, though the GPA gate (on UCF's own scale) is the bigger unknown to verify directly.",
-    programs: [
-      { name: "College of Business Administration — BSBA, Entertainment Management minor available", url: "https://business.ucf.edu/" }
-    ]
-  },
-  {
     school: "University of South Florida",
     knownFor: "New STEM-designated FinTech certificate; Tampa Bay financial-services hub",
     mbaRank: "USF has no MBA program in the US News full-time top 48",
@@ -1266,6 +1173,7 @@ const BEYOND_MBA_RANKING = [
     fit: "Whitman's Blackstone LaunchPad and Couri Hatchery incubator are real, active startup resources — a strong founder-story fit, and 1360 now sits slightly above Whitman's average SAT, though the ~37% business-school acceptance rate keeps this a genuine (not guaranteed) target.",
     clubsDeepDive: "Blackstone LaunchPad has a genuine decade-long track record (6,000+ students engaged) and runs the annual Ideas Fest pitch competition, a strong venue for Orderly. The Couri Hatchery Student Business Incubator goes further, offering mentorship, workspace, and funding that feed directly into the Orange Tank Pitch Competition and the Panasci Business Plan Competition — meaning there isn't just one pitch opportunity here but a full pipeline from incubation to competition, a meaningfully deeper level of startup infrastructure than most schools on this list offer.",
     sat1450Effect: "1450 would extend the lead over Whitman's average further, though the ~37% internal acceptance rate remains the bigger factor regardless of score.",
+    whyEssayUrl: "syracuse-why.html",
     programs: [
       { name: "Whitman School of Management — BS", url: "https://whitman.syracuse.edu/" }
     ]
@@ -1294,19 +1202,6 @@ const BEYOND_MBA_RANKING = [
     becomesTargetAt1450: true,
     programs: [
       { name: "Lerner College of Business & Economics — BS, dedicated FinTech major", url: "https://lerner.udel.edu/" }
-    ]
-  },
-  {
-    school: "Tulane University",
-    knownFor: "New Orleans startup ecosystem; unique Legal Studies in Business major",
-    mbaRank: "Tulane has no MBA program in the US News full-time top 48",
-    category: "Reach",
-    sat: "Test-optional; middle 50% 1410–1500 (Tulane recommends only submitting scores above ~1450)",
-    gpa: "3.7–3.9",
-    fit: "Freeman's New Orleans startup ties are a reasonable founder-story fit, but Tulane's rising selectivity puts current stats meaningfully below the middle 50% — a genuine reach.",
-    sat1450Effect: "1450 sits right at the bottom of Tulane's range, and is also the score Tulane itself recommends as the floor for submitting — this would meaningfully improve the odds and is close to the threshold where submitting a score becomes worthwhile at all.",
-    programs: [
-      { name: "A.B. Freeman School of Business — BSM (Bachelor of Science in Management)", url: "https://freeman.tulane.edu/undergraduate/bachelor-science-management" }
     ]
   },
   {
@@ -1401,20 +1296,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "Already above TCU's typical range at 1360 — 1450 would extend that further, solidifying this as a comfortable Likely.",
     programs: [
       { name: "Neeley School of Business — BBA", url: "https://www.neeley.tcu.edu/" }
-    ]
-  },
-  {
-    school: "Pepperdine University",
-    knownFor: "Malibu/LA location — a natural entertainment-industry crossover, similar in spirit to Chapman and LMU",
-    mbaRank: "Pepperdine has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
-    sat: "Test-optional; university range ~1285–1480",
-    gpa: "3.5–3.8",
-    fit: "The Business Administration major sits within Seaver College (the liberal arts college) rather than a standalone named business school, but Malibu/LA placement gives the same entertainment-industry adjacency that made Chapman and LMU strong fits for the performing-arts/business hybrid built up in the creative portfolio. Full major admission requires 48 completed units and a 2.5 GPA, a manageable second step.",
-    sat1450Effect: "1450 sits in the upper half of Pepperdine's range — this would strengthen the assessment toward Likely.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Seaver College — Business Administration, BS", url: "https://seaver.pepperdine.edu/business/undergraduate/business/" }
     ]
   },
   {
