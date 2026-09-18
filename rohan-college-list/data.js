@@ -52,19 +52,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "New York University",
-    knownFor: "NYC fintech/finance pipeline",
-    mbaRank: "#7 (tie)",
-    category: "Reach",
-    sat: "1470–1540",
-    gpa: "~3.8+ UW",
-    fit: "NYC's fintech/finance pipeline is a natural extension of the active Founders' Pool sales internship, but Stern's admitted middle 50% sits comfortably above current stats.",
-    sat1450Effect: "1450 sits just below Stern's 25th percentile (1470) — a meaningful improvement that narrows the reach considerably, though it's still technically below the middle 50%.",
-    programs: [
-      { name: "Stern School of Business — BS", url: "https://www.stern.nyu.edu/programs-admissions/undergraduate/academics/bs-degree-business" }
-    ]
-  },
-  {
     school: "University of Virginia",
     knownFor: "Team-based consulting projects (Integrated Core)",
     mbaRank: "#11 (tie)",
@@ -90,19 +77,6 @@ const BS_BUSINESS = [
     becomesTargetAt1450: true,
     programs: [
       { name: "Ross School of Business — BBA", url: "https://michiganross.umich.edu/undergraduate/bba/curriculum" }
-    ]
-  },
-  {
-    school: "Carnegie Mellon University",
-    knownFor: "Unusually quantitative, management-science-heavy business degree",
-    mbaRank: "#16 (tie)",
-    category: "Reach",
-    sat: "1500–1560",
-    gpa: "~3.9+ UW",
-    fit: "Tepper's business degree is unusually quantitative, a strong thematic match for the AI/ML certification, and the 4.0 in AP Statistics is a genuinely useful data point here — but CMU's admissions bar overall makes this a clear reach.",
-    sat1450Effect: "Still below Tepper's range (1500+) — 1450 doesn't meaningfully change this; still a reach.",
-    programs: [
-      { name: "Tepper School of Business — BS in Business Administration", url: "https://www.cmu.edu/tepper/programs/undergraduate-business/curriculum/majors-and-minors.html" }
     ]
   },
   {
@@ -229,19 +203,6 @@ const BS_BUSINESS = [
     fit: "ASU is highly accessible (~90% overall admit) with a nationally top-5 Supply Chain Management program — a real safety net with genuine program strength. Note the intended major must be one of the ~12 BS-granting tracks (Finance, Accountancy, Supply Chain, Data Analytics, etc.); the general 'Business Administration' major is a BA, not a BS.",
     programs: [
       { name: "W.P. Carey School of Business — BS majors (Finance, Accountancy, Supply Chain Management, Business Data Analytics, and others)", url: "https://degrees.apps.asu.edu/bachelors/major/ASU00/BABUSBA/business" }
-    ]
-  },
-  {
-    school: "Georgetown University",
-    knownFor: "#3 nationally in International Business",
-    mbaRank: "#31",
-    category: "Reach",
-    sat: "1440–1540",
-    gpa: "~3.9+ UW",
-    fit: "McDonough is #3 nationally in International Business, and DC's policy/fintech overlap is a plausible fit for the finance-sales interest — but Georgetown's overall selectivity puts current stats well below the middle 50%.",
-    sat1450Effect: "1450 sits right at McDonough's 25th percentile (1440) — a meaningful improvement that narrows the reach considerably, though Georgetown's overall selectivity keeps this competitive.",
-    programs: [
-      { name: "McDonough School of Business — BSBA", url: "https://msb.georgetown.edu/undergraduate/" }
     ]
   },
   {
@@ -399,31 +360,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Tennessee, Knoxville",
-    knownFor: "Supply chain program (top-10 among publics)",
-    mbaRank: "#43 (tie)",
-    category: "Likely",
-    sat: "1180–1380",
-    gpa: "3.4–3.8",
-    fit: "Haslam's supply chain program is top-10 among publics; overall admissions are accessible relative to current stats.",
-    programs: [
-      { name: "Haslam College of Business — BSBA", url: "https://haslam.utk.edu/undergraduate/" }
-    ]
-  },
-  {
-    school: "American University",
-    knownFor: "DC placement for policy-adjacent fintech/consulting internships",
-    mbaRank: "#46 (tie)",
-    category: "Target / Likely",
-    sat: "1220–1390",
-    gpa: "3.5–3.8",
-    fit: "DC placement gives access to policy-adjacent fintech and consulting internships; Kogod's business analytics track suits the AI/ML background at an accessible admit bar.",
-    sat1450Effect: "1450 sits well above Kogod's typical range — this would strengthen the assessment to a comfortable Likely.",
-    programs: [
-      { name: "Kogod School of Business — BSBA", url: "https://kogod.american.edu/programs-admissions/undergraduate/business-administration" }
-    ]
-  },
-  {
     school: "Boston University",
     knownFor: "Entrepreneurship concentration",
     mbaRank: "#46 (tie)",
@@ -561,8 +497,6 @@ const BUSINESS_TECH = [
 // Schools ranked in the US News MBA Top 48 that don't offer a qualifying BS/BSBA/BBA business degree.
 // The closest real business-related option at each is covered in BA_PROGRAMS below.
 const EXCLUDED_SCHOOLS = [
-  { school: "Vanderbilt University (Owen) — MBA #16 (tie)", reason: "No undergraduate business major. Owen offers a minor only; the closest full degree is Peabody College's Human & Organizational Development BS, which isn't a business degree." },
-  { school: "UCLA (Anderson) — MBA #18 (tie)", reason: "Anderson is graduate-only. UCLA's closest undergraduate option is a 'Business Economics' BA run by the Economics department (not Anderson) — a BA, not a qualifying BS/BSBA/BBA." },
   { school: "University of Washington (Foster) — MBA #20", reason: "Foster does offer a full undergraduate business major, but the degree conferred is officially a BA (Bachelor of Arts in Business Administration), not a BS/BSBA/BBA." },
   { school: "Rice University (Jones) — MBA #29 (tie)", reason: "Rice launched a real undergraduate business major in 2021 (Finance, Management, or Marketing concentrations), but the degree conferred is a BA, not a BS/BSBA/BBA. See the BA-level section below for its program and syllabus links." }
 ];
@@ -572,33 +506,6 @@ const EXCLUDED_SCHOOLS = [
 // requirements link where the school publishes one separately. Schools with more than one relevant
 // program (Vanderbilt) are listed once with multiple programs underneath.
 const BA_PROGRAMS = [
-  {
-    school: "Vanderbilt University",
-    knownFor: "Owen-taught business minor; HOD BS is the closest full business-adjacent degree",
-    mbaRank: "MBA #16 (tie)",
-    category: "Reach (extreme)",
-    sat: "1500–1560",
-    gpa: "~3.9+ UW",
-    fit: "The Hoogland minor is real Owen-taught business coursework layered onto any major. HOD's leadership/organizational-development focus maps well onto the comedy-club operations & marketing leadership experience. Both still require clearing Vanderbilt's overall admissions bar, which sits far above current stats.",
-    sat1450Effect: "Still below Vanderbilt's range (1500–1560) — 1450 doesn't meaningfully change this; still an extreme reach, for either the minor or the HOD degree.",
-    programs: [
-      { name: "Hoogland Undergraduate Business Program — Business Minor (Owen Graduate School)", url: "https://business.vanderbilt.edu/business-minor/", syllabusUrl: "https://business.vanderbilt.edu/business-minor/curriculum/" },
-      { name: "Human & Organizational Development (HOD), Peabody College — BS", url: "https://peabody.vanderbilt.edu/academics/undergraduate-majors/human-organizational-development/", syllabusUrl: "https://peabody.vanderbilt.edu/departments/hod/undergraduate-program/hod_core_requirements.php" }
-    ]
-  },
-  {
-    school: "UCLA",
-    knownFor: "Closest thing to a business major, run by Economics (not Anderson)",
-    mbaRank: "MBA #18 (tie)",
-    category: "Reach",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "~3.85+ UC-recalculated weighted GPA (see UC GPA-formula note on the Haas entry in the main Business section)",
-    fit: "UCLA's overall admit rate (~9% for out-of-state) still makes this a clear reach regardless of testing policy. Worth noting for a Business Economics major specifically: AP Microeconomics came in at a B, while AP Statistics' 4.0 is the stronger supporting data point.",
-    sat1450Effect: "Not applicable — UC is currently test-blind, so no SAT score factors into this at all. UCLA's low overall admit rate is driven entirely by GPA, coursework, and the Personal Insight Questions.",
-    programs: [
-      { name: "Business Economics — BA", url: "https://economics.ucla.edu/undergraduate/current-students/majors-and-minors/business-economics", syllabusUrl: "https://economics.ucla.edu/wp-content/uploads/2024/10/9-Bus-Econ-Major-Requirement-Worksheet-2020-2022.pdf" }
-    ]
-  },
   {
     school: "University of Washington",
     knownFor: "Buerk Center for Entrepreneurship",
@@ -832,18 +739,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "Bryant University",
-    knownFor: "Concentrations in Digital Marketing and Financial Services",
-    mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
-    category: "Likely",
-    sat: "1190–1330",
-    gpa: "3.3–3.7",
-    fit: "An accessible AACSB business-only school with real digital marketing and financial-services concentrations that pair reasonably with the sales/fintech interest — a comfortable likely admit.",
-    programs: [
-      { name: "College of Business — Business Administration (BSBA)", url: "https://www.bryant.edu/undergraduate/academics/undergraduate-programs/business-administration" }
-    ]
-  },
-  {
     school: "Elon University",
     highlightColor: "pink",
     knownFor: "Dedicated Entrepreneurship & Innovation major; ~100% internship completion rate",
@@ -884,18 +779,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "High Point University",
-    knownFor: "99.2% graduate placement rate",
-    mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
-    category: "Safety",
-    sat: "1120–1300 (avg ~1198, test-optional)",
-    gpa: "3.0–3.5",
-    fit: "A very accessible, career-services-heavy business school with an adjacent entrepreneurship school for cross-registration — a comfortable safety with real placement outcomes.",
-    programs: [
-      { name: "Earl N. Phillips School of Business — BSBA", url: "https://www.highpoint.edu/business/" }
-    ]
-  },
-  {
     school: "Champlain College",
     knownFor: "Tech-forward business curriculum (Cybersecurity, Information Systems & Technology)",
     mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
@@ -905,60 +788,6 @@ const BEYOND_MBA_RANKING = [
     fit: "Champlain's tech-forward business curriculum and hands-on work with real Vermont companies starting freshman year pair well with the AI/ML coding background at a very accessible admit bar.",
     programs: [
       { name: "Business Administration — BSBA", url: "https://www.champlain.edu/academics/undergraduate-academics/degrees-programs/business-administration/" }
-    ]
-  },
-  {
-    school: "Berklee College of Music",
-    knownFor: "Audition-free business/entrepreneurship track for the creative industries",
-    mbaRank: "Not in MBA top 48; not a business school (specialty music/entertainment college)",
-    category: "Target (niche)",
-    sat: "Test-blind (SAT/ACT not considered); ~43.5% acceptance rate",
-    gpa: "Holistic — GPA is not the primary factor",
-    fit: "A deliberate outlier pick, not a BS/BSBA/BBA. The BA in Music Industry Leadership and Innovation doesn't require an audition (unlike Berklee's performance degrees) and covers entrepreneurship, design thinking, and strategic leadership in the entertainment industry — an unconventional but genuine match to the stand-up comedy and comedy-club operations/marketing thread running through the creative portfolio. Flagged here rather than in the main lists since the degree is a BA, not a business degree in the conventional sense.",
-    sat1450Effect: "Berklee is test-blind, so a 1450 changes nothing in the admissions process — portfolio, essays, and the applicant's creative/business narrative are what matter here.",
-    programs: [
-      { name: "Music Industry Leadership and Innovation — BA (no audition required)", url: "https://college.berklee.edu/music-business-management/bachelor-of-arts-in-music-industry-leadership-and-innovation" }
-    ]
-  },
-  {
-    school: "UC Santa Cruz",
-    knownFor: "Business Management Economics major with a formal Accounting concentration",
-    mbaRank: "UC Santa Cruz has no MBA program and isn't in the US News MBA ranking",
-    category: "Target",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "~3.7–4.1 UC-recalculated weighted GPA in recent snapshots — a less selective UC tier than Berkeley/UCLA/UCSB/UCSD/UCI/Davis",
-    fit: "A real, named business major (not just Economics), blending economics with accounting, management, and business law. No dedicated entrepreneurship or fintech track, but the least selective full 'business' major in the UC system covered here besides Merced, which fits the current GPA profile reasonably well. Note the degree is a BA, not a BS.",
-    sat1450Effect: "Not applicable — UC is currently test-blind either way.",
-    programs: [
-      { name: "Business Management Economics — BA", url: "https://programmaps.ucsc.edu/program/business-management-economics/", syllabusUrl: "https://catalog.ucsc.edu/en/current/general-catalog/academic-units/social-sciences-division/economics/business-management-economics-ba/" }
-    ]
-  },
-  {
-    school: "UC Riverside",
-    knownFor: "Largest undergraduate business program in the UC system; the only Actuarial Science program housed in a UC business school",
-    mbaRank: "UC Riverside has no MBA program and isn't in the US News MBA ranking",
-    category: "Target / Likely",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "High-3.4s–3.9s UC-recalculated weighted GPA in recent snapshots — the most accessible UC campus with a real business school covered here",
-    fit: "A genuine BS business degree at the most accessible admit tier among the larger UC business programs, with Business Analytics and the UC system's only Actuarial Science major as standout options for a quant-leaning profile. One planning note: freshmen enter as 'Pre-Business' and formally declare the major at the end of sophomore year rather than being admitted directly.",
-    sat1450Effect: "Not applicable — UC is currently test-blind either way.",
-    programs: [
-      { name: "Business Administration — BS", url: "https://business.ucr.edu/undergraduate" },
-      { name: "Business Analytics — BS", url: "https://business.ucr.edu/undergraduate" },
-      { name: "Actuarial Science — BS", url: "https://business.ucr.edu/undergraduate" }
-    ]
-  },
-  {
-    school: "UC Merced",
-    knownFor: "Most accessible UC business option; the BS track is the more quantitative path",
-    mbaRank: "UC Merced has no MBA program and isn't in the US News MBA ranking",
-    category: "Likely / Safety",
-    sat: "Test-blind — UC systemwide policy; no SAT/ACT considered under the current cycle's rules",
-    gpa: "Low-3.2s–3.7 UC-recalculated weighted GPA in recent snapshots — the most accessible UC campus overall",
-    fit: "The most realistic safety-tier UC option on this list. Management & Business Economics (BS) is the more quantitative, finance/accounting-and-quant-methods-heavy path and the better fit given the AI/ML background; Business Administration (BA) is the more applied alternative within the same department.",
-    programs: [
-      { name: "Management & Business Economics — BS", url: "https://www.ucmerced.edu/majors-and-minors/management-and-business-economics-bs" },
-      { name: "Business Administration — BA (more applied alternative)", url: "https://www.ucmerced.edu/majors-and-minors/business-administration-ba" }
     ]
   },
 {
@@ -1031,42 +860,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 would sit meaningfully above Moore's average — this would strengthen the assessment to a comfortable Likely.",
     programs: [
       { name: "Darla Moore School of Business — BS", url: "https://sc.edu/study/colleges_schools/moore/" }
-    ]
-  },
-  {
-    school: "Louisiana State University",
-    knownFor: "Stephenson Entrepreneurship Institute",
-    mbaRank: "LSU has no MBA program in the US News full-time top 48",
-    category: "Likely",
-    sat: "University average 1150–1330 (~74% overall acceptance)",
-    gpa: "3.3–3.7",
-    fit: "1360 now sits above LSU's typical range, and the Stephenson Entrepreneurship Institute is a reasonable founder-story fit at a very accessible admit bar. Note the internal business gate (30 credit hours, minimum grades in pre-business core courses) applies after matriculation, but is unrelated to admissions test scores.",
-    programs: [
-      { name: "E.J. Ourso College of Business — BS", url: "https://www.lsu.edu/business/" }
-    ]
-  },
-  {
-    school: "University of Kentucky",
-    knownFor: "Von Allmen Center for Entrepreneurship",
-    mbaRank: "Kentucky has no MBA program in the US News full-time top 48",
-    category: "Likely",
-    sat: "Test-optional; recent class average ~1210",
-    gpa: "3.4–3.7",
-    fit: "1360 sits further above Kentucky's recent average, and the Von Allmen Center gives real entrepreneurship programming at an accessible admit bar. Students enter pre-major and gain full admission sophomore year via College Readiness Indicators.",
-    programs: [
-      { name: "Gatton College of Business & Economics — BSBA", url: "https://gatton.uky.edu/BSBA" }
-    ]
-  },
-  {
-    school: "University of Missouri",
-    knownFor: "Actuarial science and real estate tracks",
-    mbaRank: "Missouri has no MBA program in the US News full-time top 48",
-    category: "Likely",
-    sat: "University average ~1175",
-    gpa: "3.3–3.6",
-    fit: "1360 sits even more comfortably above Mizzou's average, making this an accessible likely; the two-tier admission (undeclared freshman year, then upper-level application at 45–60 credit hours with a 2.6 GPA minimum) is a manageable, low-risk path.",
-    programs: [
-      { name: "Trulaske College of Business — BSBA", url: "https://business.missouri.edu/" }
     ]
   },
   {
@@ -1233,18 +1026,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "University of Tampa",
-    knownFor: "Lowth Entrepreneurship Center — named the world's top university entrepreneurship center (GCEC/Nasdaq, 2017); Spartan Incubator",
-    mbaRank: "Tampa has no MBA program in the US News full-time top 48",
-    category: "Likely / Safety",
-    sat: "Test-blind — SAT/ACT not considered even if submitted; university average ~1070–1300",
-    gpa: "3.0–3.5",
-    fit: "One of the best entrepreneurship-to-accessibility ratios on the entire list: a globally-recognized entrepreneurship center and student startup incubator at Tampa's very accessible (~53%) admit rate. A genuine likely/safety with real founder-relevant resources, not just a fallback.",
-    programs: [
-      { name: "Sykes College of Business — BS", url: "https://www.ut.edu/academics/sykes-college-of-business" }
-    ]
-  },
-  {
     school: "Loyola University Chicago",
     highlightColor: "pink",
     knownFor: "Chicago finance/consulting proximity; Baumhart Center for Social Enterprise",
@@ -1256,31 +1037,6 @@ const BEYOND_MBA_RANKING = [
     clubsDeepDive: "Loyola Future Founders gives a straightforward entrepreneurship home for Orderly, while the Loyola AI Society is a direct, named landing spot for the AI/ML coding background inside the business school. The Rambler Investment Fund — a real, roughly $1.6 million student-managed endowment — and the Rambler Consulting Group offer serious quantitative/analytical credibility beyond pitch competitions alone, and the Quinlan AMA chapter is a natural fit for the marketing experience already built through Bldg18 Comedy Club's promotion work.",
     programs: [
       { name: "Quinlan School of Business — BBA", url: "https://www.luc.edu/quinlan/" }
-    ]
-  },
-  {
-    school: "DePaul University",
-    knownFor: "Coleman Entrepreneurship Center — one of the oldest, most established entrepreneurship centers in the country",
-    mbaRank: "DePaul has no MBA program in the US News full-time top 48",
-    category: "Likely / Safety",
-    sat: "Test-optional; university range ~1100–1300",
-    gpa: "3.2–3.6",
-    fit: "1360 now sits above DePaul's typical range, and the Loop location plus the well-regarded Coleman Entrepreneurship Center make this a very comfortable likely with real founder-relevant programming, not just a fallback.",
-    programs: [
-      { name: "Driehaus College of Business — BS", url: "https://business.depaul.edu/" }
-    ]
-  },
-  {
-    school: "Baylor University",
-    knownFor: "John F. Baugh Center for Entrepreneurship & Free Enterprise — a top-50 global program; Oso Launch Program and 1846 Business Incubator",
-    mbaRank: "Baylor has no MBA program in the US News full-time top 48",
-    category: "Target",
-    sat: "Test-optional; university range ~1210–1400",
-    gpa: "3.5–3.8",
-    fit: "The Baugh Center is one of the more nationally recognized entrepreneurship programs on this entire list, with a real student incubator (1846) and launch program — a strong founder-story fit, with 1360 sitting within Baylor's typical range, now in its upper half.",
-    sat1450Effect: "1450 sits in the upper half of Baylor's range — this would strengthen the assessment toward Likely.",
-    programs: [
-      { name: "Hankamer School of Business — BBA", url: "https://hankamer.baylor.edu/" }
     ]
   },
   {
@@ -1296,18 +1052,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "Already above TCU's typical range at 1360 — 1450 would extend that further, solidifying this as a comfortable Likely.",
     programs: [
       { name: "Neeley School of Business — BBA", url: "https://www.neeley.tcu.edu/" }
-    ]
-  },
-  {
-    school: "Marquette University",
-    knownFor: "Kohler Center for Entrepreneurship; Milwaukee corporate ties (Northwestern Mutual — actuarial/insurance)",
-    mbaRank: "Marquette has no MBA program in the US News full-time top 48",
-    category: "Likely",
-    sat: "Test-optional; university range 1220–1350",
-    gpa: "3.4–3.7",
-    fit: "1360 now sits above Marquette's typical range, with direct-admit into the business college at matriculation. The Kohler Center gives real entrepreneurship programming, and Milwaukee's insurance-industry presence (Northwestern Mutual) adds an actuarial/finance angle.",
-    programs: [
-      { name: "College of Business Administration — BS", url: "https://www.marquette.edu/business/undergraduate/" }
     ]
   },
   {
