@@ -39,20 +39,6 @@ const PROFILE = {
 // Section A: Undergraduate Business Programs (BS, BSBA, and BBA)
 const BS_BUSINESS = [
   {
-    school: "University of Virginia",
-    knownFor: "Team-based consulting projects (Integrated Core)",
-    mbaRank: "#11 (tie)",
-    category: "Reach",
-    sat: "1420–1520",
-    gpa: "~3.85+ UW",
-    fit: "McIntire's team-based 'Integrated Core' mirrors real consulting/startup project work, a natural extension of the Orderly build cycle — but McIntire's secondary-application admit (after a competitive first year) sits well above current stats.",
-    sat1450Effect: "1450 falls within McIntire's middle 50% (1420–1520) — this would shift the assessment from Reach to Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "McIntire School of Commerce — BS in Commerce", url: "https://www.commerce.virginia.edu/bs-commerce/academics" }
-    ]
-  },
-  {
     school: "University of Michigan",
     knownFor: "Entrepreneurship (Zell Lurie Institute) and sales/marketing electives",
     mbaRank: "#13",
@@ -213,23 +199,6 @@ const BS_BUSINESS = [
   },
 ];
 
-// Section B: Business + Technology programs, including dual degrees
-const BUSINESS_TECH = [
-  {
-    school: "Lehigh University",
-    knownFor: "Named, structured dual-BS cohort (business + engineering)",
-    category: "Reach / Target",
-    sat: "1330–1470 (Lehigh overall; IBE cohort admission is more selective)",
-    gpa: "3.7–4.0",
-    fit: "A named, structured dual-BS cohort combining business fundamentals with a full engineering major in four years — matches the 'business and technology, dual degree' brief directly.",
-    sat1450Effect: "1450 sits near the top of Lehigh's overall range (1330–1470) — this would shift the assessment solidly into Target, though the IBE cohort itself remains more selective than Lehigh overall.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Integrated Business and Engineering (IBE) — dual BS degree", url: "https://ibe.lehigh.edu/about/dual-degrees" }
-    ]
-  }
-];
-
 // Schools ranked in the US News MBA Top 48 that don't offer a qualifying BS/BSBA/BBA business degree.
 // The closest real business-related option at each is covered in BA_PROGRAMS below.
 const EXCLUDED_SCHOOLS = [
@@ -264,21 +233,6 @@ const BA_PROGRAMS = [
 // at a range of selectivity levels, plus one niche performing-arts/business crossover pick (Berklee).
 const BEYOND_MBA_RANKING = [
   {
-    school: "Fordham University",
-    highlightColor: "pink",
-    knownFor: "NYC finance/fintech internship density",
-    mbaRank: "Not in MBA top 48; regionally strong AACSB business school",
-    category: "Target",
-    sat: "1310–1470",
-    gpa: "3.6–3.9",
-    fit: "NYC placement gives direct access to the fintech-startup and sales-internship ecosystem that The Founders' Pool (where he now interns) sits in; Gabelli's finance offerings plus NYC internship density fit the sales+fintech spike.",
-    clubsDeepDive: "Fordham's Entrepreneurship Society and the Fordham Foundry (the university's entrepreneurship incubator) give Orderly a natural next home, while the PEVCC (Private Equity/Venture Capital Club) connects directly to the fintech angle behind the Founders' Pool internship. The Fordham Marketing Association, an official collegiate AMA chapter, is also a credible landing spot for the marketing/promotion skills already built running Bldg18 Comedy Club's outreach — and NYC placement means these clubs come with real industry proximity.",
-    sat1450Effect: "1450 sits near the top of Gabelli's range — strengthens this well within Target, close to Likely.",
-    programs: [
-      { name: "Gabelli School of Business — BS", url: "https://www.fordham.edu/gabelli-school-of-business/academic-programs-and-admissions/undergraduate-programs/" }
-    ]
-  },
-  {
     school: "Loyola Marymount University",
     highlightColor: "green",
     knownFor: "LA entertainment-industry ties",
@@ -291,21 +245,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 sits above LMU's typical range entirely — this would flip to Likely.",
     programs: [
       { name: "College of Business Administration — BS/BBA in Business Administration", url: "https://cba.lmu.edu/academics/undergrad/" }
-    ]
-  },
-  {
-    school: "University of Arizona",
-    highlightColor: "pink",
-    knownFor: "McGuire Center for Entrepreneurship",
-    mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
-    category: "Likely",
-    sat: "1140–1350",
-    gpa: "3.5–3.9 (Honors College admission would be a reach)",
-    fit: "Eller's McGuire Center for Entrepreneurship and a direct-admit BSBA pathway make this a comfortable likely with real program depth rather than just a fallback.",
-    clubsDeepDive: "Eller's Professional Sales Club and its Suit Up Sales Challenge (plus entries in the Arizona and National Collegiate Sales Competitions) plug directly into the Founders' Pool sales internship with real, judged 15-minute sales-call competitions — about as literal a translation of that internship into campus life as exists on this list. The Student Entrepreneurship Association, based out of the McGuire Center, adds a general founder-community home for Orderly, rounding out a campus that treats sales as a serious, competitive discipline rather than an afterthought.",
-    programs: [
-      { name: "Eller College of Management — BSBA", url: "https://eller.arizona.edu/programs/undergraduate/academics/business-majors" },
-      { name: "Eller College of Management — BSBA + Management Information Systems (MIS) dual path", url: "https://eller.arizona.edu/programs/undergraduate/academics/business-majors" }
     ]
   },
   {
@@ -410,22 +349,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 would open the door to CU Boulder's separate Business Honors track (1450+/3.9 GPA, not otherwise relevant at current stats) in addition to strengthening the standard Leeds admission.",
     programs: [
       { name: "Leeds School of Business — BSBA", url: "https://www.colorado.edu/business/" }
-    ]
-  },
-  {
-    school: "Syracuse University",
-    highlightColor: "green",
-    knownFor: "#21 US News undergraduate Entrepreneurship ranking; Blackstone LaunchPad + Couri Hatchery incubator",
-    mbaRank: "Syracuse has no MBA program in the US News full-time top 48",
-    category: "Target",
-    sat: "Average ~1349",
-    gpa: "3.5–3.8",
-    fit: "Whitman's Blackstone LaunchPad and Couri Hatchery incubator are real, active startup resources — a strong founder-story fit, and 1360 now sits slightly above Whitman's average SAT, though the ~37% business-school acceptance rate keeps this a genuine (not guaranteed) target.",
-    clubsDeepDive: "Blackstone LaunchPad has a genuine decade-long track record (6,000+ students engaged) and runs the annual Ideas Fest pitch competition, a strong venue for Orderly. The Couri Hatchery Student Business Incubator goes further, offering mentorship, workspace, and funding that feed directly into the Orange Tank Pitch Competition and the Panasci Business Plan Competition — meaning there isn't just one pitch opportunity here but a full pipeline from incubation to competition, a meaningfully deeper level of startup infrastructure than most schools on this list offer.",
-    sat1450Effect: "1450 would extend the lead over Whitman's average further, though the ~37% internal acceptance rate remains the bigger factor regardless of score.",
-    whyEssayUrl: "syracuse-why.html",
-    programs: [
-      { name: "Whitman School of Management — BS", url: "https://whitman.syracuse.edu/" }
     ]
   },
   {

@@ -89,7 +89,6 @@ function renderExcluded() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProfile();
   setupSection("bs-business", "bs-business-grid", "bs-business-controls", BS_BUSINESS, true);
-  setupSection("business-tech", "business-tech-grid", "business-tech-controls", BUSINESS_TECH, false);
   setupSection("ba-programs", "ba-programs-grid", "ba-programs-controls", BA_PROGRAMS, true);
   setupSection("beyond-mba", "beyond-mba-grid", "beyond-mba-controls", BEYOND_MBA_RANKING, true);
   renderExcluded();
