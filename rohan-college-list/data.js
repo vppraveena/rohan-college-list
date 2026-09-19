@@ -84,19 +84,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Texas at Dallas",
-    knownFor: "Dedicated Professional Sales track; AI-integrated business tracks",
-    mbaRank: "#23 (tie)",
-    category: "Target / Likely",
-    sat: "1250–1450",
-    gpa: "3.5–3.9",
-    fit: "Jindal deliberately grants a BS (not a BBA) and runs a dedicated Professional Sales track plus AI-integrated business tracks — a close double match to the active Founders' Pool fintech-sales internship, at a meaningfully more accessible admit bar than the flagship UT Austin campus.",
-    sat1450Effect: "1450 sits well above Jindal's typical range — this would strengthen the assessment to a comfortable Likely.",
-    programs: [
-      { name: "Naveen Jindal School of Management — BS in Business Administration", url: "https://osim.utdallas.edu/bs-ba" }
-    ]
-  },
-  {
     school: "University of Southern California",
     knownFor: "Entrepreneurship (Lloyd Greif Center); LA entertainment-industry ties; also home to the Iovine and Young Academy's portfolio-based Arts+Tech+Business program",
     mbaRank: "#25 (tie)",
@@ -290,20 +277,6 @@ const BS_BUSINESS = [
     sat1450Effect: "1450 sits well above Pitt's typical range (1250–1420) — this would strengthen the assessment to a comfortable Likely.",
     programs: [
       { name: "Pitt Business (College of Business Administration) — BSBA", url: "https://www.cba.pitt.edu/" }
-    ]
-  },
-  {
-    school: "University of Wisconsin-Madison",
-    knownFor: "Actuarial science/risk management and real estate tracks",
-    mbaRank: "#48 (tie)",
-    category: "Target / Reach",
-    sat: "1350–1490",
-    gpa: "3.6–3.9",
-    fit: "Wisconsin's actuarial science/risk management and real estate tracks are unusually strong, but Wisconsin's rising out-of-state selectivity leans this toward the reach side of target.",
-    sat1450Effect: "1450 sits within Wisconsin's upper range (1350–1490) — this would shift the assessment solidly into Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Wisconsin School of Business — BBA", url: "https://business.wisc.edu/undergraduate/" }
     ]
   },
 ];
@@ -600,19 +573,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 sits in the upper half of Auburn's range — this would strengthen the assessment toward Likely.",
     programs: [
       { name: "Harbert College of Business — BSBA", url: "https://harbert.auburn.edu/" }
-    ]
-  },
-  {
-    school: "Clemson University",
-    knownFor: "Unique Graphic Communications major; family-business/entrepreneurship ties",
-    mbaRank: "Clemson has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
-    sat: "University middle 50% 1240–1400 (business is among Clemson's more competitive intended majors)",
-    gpa: "3.5–3.8",
-    fit: "1360 sits within Clemson's overall range, now closer to its upper end, but business is one of the university's more competitive intended majors internally — worth treating as a slight stretch relative to the university-wide numbers.",
-    sat1450Effect: "1450 sits in the upper half of Clemson's range — this would meaningfully improve odds for the more competitive business major specifically.",
-    programs: [
-      { name: "Wilbur O. and Ann Powers College of Business — BS", url: "https://www.clemson.edu/business/" }
     ]
   },
   {
