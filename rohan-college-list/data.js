@@ -478,20 +478,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "Villanova University",
-    knownFor: "New Analytics & AI co-major plus Entrepreneurial Leadership & Innovation minor",
-    mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
-    category: "Reach",
-    sat: "1440–1520",
-    gpa: "~3.8+ UW",
-    fit: "The new AI/Machine Learning minor pairs directly with the coding/AI certification background, and the Entrepreneurial Leadership & Innovation minor fits the founder story — but Villanova's rising selectivity (test-optional pool skews stats higher) makes this a reach at current numbers.",
-    sat1450Effect: "1450 sits right at Villanova's 25th percentile — a meaningful improvement that would shift this from Reach to Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Villanova School of Business — BS (per major, e.g. BS in Finance)", url: "https://www.villanova.edu/university/business/academics/undergraduate-programs.html" }
-    ]
-  },
-  {
     school: "Elon University",
     highlightColor: "pink",
     knownFor: "Dedicated Entrepreneurship & Innovation major; ~100% internship completion rate",
