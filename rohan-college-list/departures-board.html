@@ -553,15 +553,15 @@ footer{margin-top:3rem; font-size:0.78rem; color:var(--ink-muted); font-family:'
 
     {name:"University of Virginia", tier:"reach", platform:"Common App", deadline:"EA/ED Nov 1 (RD Jan 5)", dsort:"2026-11-01", supp:"None — dropped its essay for this cycle", note:"McIntire is NOT direct-admit — apply undecided/A&S, competitive 2nd-year application into Commerce"},
     {name:"University of Michigan", tier:"reach", platform:"Common App", deadline:"ED/EA Nov 1 (RD Feb 1)", dsort:"2026-11-01", supp:"2 essays + Ross Admissions Portfolio (~500w case + ~250w artifact)", note:"Ross is now direct-admit-selectable as a First-Year Admitting Unit"},
-    {name:"University of Southern California", tier:"reach", platform:"Common App", deadline:"EA Nov 1 (RD Jan 10)", dsort:"2026-11-01", supp:"1 essay ~250w + ~10 short answers + 2 optional", note:"Direct-admit — select Business Administration as 1st-choice major"},
+    {name:"University of Southern California", tier:"reach", label:"High Reach", platform:"Common App", deadline:"EA Nov 1 (RD Jan 10)", dsort:"2026-11-01", supp:"1 essay ~250w + ~10 short answers + 2 optional", note:"Direct-admit — select Business Administration as 1st-choice major"},
     {name:"University of Georgia", tier:"reach", platform:"Common App", deadline:"EA Oct 15 (RD Jan 1)", dsort:"2026-10-15", supp:"None — 2nd essay dropped for Fall 2027", note:"NOT direct-admit — intended major only, apply to Terry major later"},
     {name:"Ohio State University", tier:"reach", platform:"Common App", deadline:"EA priority Nov 1", dsort:"2026-11-01", supp:"None beyond personal statement", note:"Direct-admit into Fisher when Business is selected as major"},
-    {name:"Boston University", tier:"reach", platform:"Common App", deadline:"ED I Nov 2 (RD Jan 5, merit best by Dec 1)", dsort:"2026-11-02", supp:"1 essay ≤300w", note:"Direct-admit into Questrom"},
+    {name:"Boston University", tier:"reach", label:"High Reach", platform:"Common App", deadline:"ED I Nov 2 (RD Jan 5, merit best by Dec 1)", dsort:"2026-11-02", supp:"1 essay ≤300w", note:"Direct-admit into Questrom"},
     {name:"Michigan State University", tier:"target", platform:"MSU's own app, Common App, or Coalition", deadline:"EA Nov 1 (Regular rolling to Apr 1)", dsort:"2026-11-01", supp:"None beyond personal statement", note:"Direct-admit for 3.5+ GPA selecting a Broad major (BS as of Fall 2025); must hold 28 credits/3.0 GPA to finalize"},
     {name:"University of Pittsburgh", tier:"target", platform:"Pitt's own app or Common App", deadline:"Rolling — scholarship priority Dec 1", dsort:"2026-12-01", supp:"None required beyond personal statement", note:"Direct-admit into College of Business Administration"},
     {name:"Lehigh University", tier:"reach", platform:"Common App or Coalition", deadline:"ED I Nov 1 (RD Jan 1)", dsort:"2026-11-01", supp:"3 short essays ~200w each", note:"Direct-admit — select College of Business on the application"},
-    {name:"University of Washington", tier:"reach", platform:"Common App", deadline:"Single deadline Nov 15", dsort:"2026-11-15", supp:"None required (2 optional short answers)", note:"NOT direct-admit — Foster is a competitive sophomore-year gate even for Direct-to-College applicants"},
-    {name:"Northeastern University", tier:"reach", platform:"Common App or Coalition", deadline:"ED I/EA Nov 1 (RD Jan 1)", dsort:"2026-11-01", supp:"None beyond personal statement", note:"Direct-admit into D'Amore-McKim, declare concentration after year 1"},
+    {name:"University of Washington", tier:"reach", label:"High Reach", platform:"Common App", deadline:"Single deadline Nov 15", dsort:"2026-11-15", supp:"None required (2 optional short answers)", note:"NOT direct-admit — Foster is a competitive sophomore-year gate even for Direct-to-College applicants"},
+    {name:"Northeastern University", tier:"reach", label:"High Reach", platform:"Common App or Coalition", deadline:"ED I/EA Nov 1 (RD Jan 1)", dsort:"2026-11-01", supp:"None beyond personal statement", note:"Direct-admit into D'Amore-McKim, declare concentration after year 1"},
     {name:"William & Mary", tier:"reach", platform:"Common App only", deadline:"ED I Nov 1 (RD Jan 5, no EA option)", dsort:"2026-11-01", supp:"None required (2 optional short essays)", note:"NOT direct-admit at all — separate BBA application after 39 credits, ~sophomore fall"}
   ];
 
@@ -610,7 +610,7 @@ footer{margin-top:3rem; font-size:0.78rem; color:var(--ink-muted); font-family:'
 
       var tdTier = document.createElement('td');
       tdTier.setAttribute('data-label', 'Tier');
-      tdTier.innerHTML = '<span class="tier '+s.tier+'">'+tierLabel[s.tier]+'</span>';
+      tdTier.innerHTML = '<span class="tier '+s.tier+'">'+(s.label || tierLabel[s.tier])+'</span>';
       tr.appendChild(tdTier);
 
       var tdPlat = document.createElement('td');
