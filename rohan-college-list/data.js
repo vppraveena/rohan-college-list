@@ -141,33 +141,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Minnesota",
-    knownFor: "Marketing analytics",
-    mbaRank: "#32 (tie)",
-    category: "Target",
-    sat: "1320–1480",
-    gpa: "3.6–3.9",
-    fit: "Carlson's marketing analytics track pairs reasonably with the AI/ML and sales interests; 1360 SAT sits near the lower end of Carlson's admitted range.",
-    sat1450Effect: "1450 sits near the top of Carlson's range (1320–1480) — this would strengthen the assessment well within Target.",
-    programs: [
-      { name: "Carlson School of Management — BSB", url: "https://carlsonschool.umn.edu/undergraduate" }
-    ]
-  },
-  {
-    school: "University of Rochester",
-    knownFor: "Business Analytics and Entrepreneurship tracks, taught partly by Simon MBA faculty",
-    mbaRank: "#34 (tie)",
-    category: "Reach",
-    sat: "1420–1520",
-    gpa: "~3.85+ UW",
-    fit: "Taught partly by Simon MBA/MS faculty with dedicated Entrepreneurship and Business Analytics tracks — a genuinely strong match for the founder + AI background and the 4.0 in AP Statistics, but Rochester's overall admissions bar sits above current stats. Confirm current administrative home (College vs. Simon) before applying, since the move was slated for Fall 2026.",
-    sat1450Effect: "1450 falls within Rochester's middle 50% (1420–1520) — this would shift the assessment from Reach to Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Business Program (Florescue, joining Simon Business School) — BS", url: "https://simon.rochester.edu/undergraduate-business-program" }
-    ]
-  },
-  {
     school: "Southern Methodist University",
     highlightColor: "green",
     knownFor: "Entrepreneurship Club; student-run $5M Boulevard Investment Group fund",
@@ -465,18 +438,6 @@ const BEYOND_MBA_RANKING = [
       { name: "Martha and Spencer Love School of Business — BSBA", url: "https://www.elon.edu/u/academics/business/programs/" }
     ]
   },
-  {
-    school: "Champlain College",
-    knownFor: "Tech-forward business curriculum (Cybersecurity, Information Systems & Technology)",
-    mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
-    category: "Likely / Safety",
-    sat: "1170–1370 (test-optional)",
-    gpa: "3.0–3.5",
-    fit: "Champlain's tech-forward business curriculum and hands-on work with real Vermont companies starting freshman year pair well with the AI/ML coding background at a very accessible admit bar.",
-    programs: [
-      { name: "Business Administration — BSBA", url: "https://www.champlain.edu/academics/undergraduate-academics/degrees-programs/business-administration/" }
-    ]
-  },
 {
     school: "Pennsylvania State University",
     highlightColor: "green",
@@ -621,32 +582,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "University of Connecticut",
-    knownFor: "Actuarial science/insurance (Hartford, the insurance capital); new STEM-designated FinTech program",
-    mbaRank: "UConn has no MBA program in the US News full-time top 48",
-    category: "Likely / Target",
-    sat: "Average ~1264; university range 1210–1440",
-    gpa: "3.3+ plus a required accounting-course gate",
-    fit: "The new STEM-designated FinTech program is a strong direct match to the active Founders' Pool internship, and Hartford's insurance-industry density adds real actuarial/finance career access — all at an accessible admit bar given 1360 sits further above UConn's average.",
-    programs: [
-      { name: "School of Business — BS, FinTech program available", url: "https://www.business.uconn.edu/" }
-    ]
-  },
-  {
-    school: "University of Richmond",
-    knownFor: "Dedicated Entrepreneurship & Management Consulting concentrations; ~20-student average class size",
-    mbaRank: "Richmond has no MBA program in the US News full-time top 48",
-    category: "Reach",
-    sat: "Robins average ~1440; university range 1350–1490",
-    gpa: "3.5+ preferred",
-    fit: "Robins' small classes and dedicated entrepreneurship concentration are a strong thematic fit, but the ~22% business-school acceptance rate and high average SAT put current stats well below the typical admit — a clear reach.",
-    sat1450Effect: "1450 sits right at Robins' average — this would meaningfully close the gap and shift the assessment toward Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Robins School of Business — BSBA", url: "https://robins.richmond.edu/" }
-    ]
-  },
-  {
     school: "Loyola University Chicago",
     highlightColor: "pink",
     knownFor: "Chicago finance/consulting proximity; Baumhart Center for Social Enterprise",
@@ -658,21 +593,6 @@ const BEYOND_MBA_RANKING = [
     clubsDeepDive: "Loyola Future Founders gives a straightforward entrepreneurship home for Orderly, while the Loyola AI Society is a direct, named landing spot for the AI/ML coding background inside the business school. The Rambler Investment Fund — a real, roughly $1.6 million student-managed endowment — and the Rambler Consulting Group offer serious quantitative/analytical credibility beyond pitch competitions alone, and the Quinlan AMA chapter is a natural fit for the marketing experience already built through Bldg18 Comedy Club's promotion work.",
     programs: [
       { name: "Quinlan School of Business — BBA", url: "https://www.luc.edu/quinlan/" }
-    ]
-  },
-  {
-    school: "Texas Christian University",
-    highlightColor: "pink",
-    knownFor: "Strong national Entrepreneurship ranking; Values-Based Leadership emphasis",
-    mbaRank: "TCU has no MBA program in the US News full-time top 48",
-    category: "Target / Likely",
-    sat: "University range ~1240–1340 (per TCU's own Fall 2025 figures)",
-    gpa: "3.5–3.8",
-    clubsDeepDive: "TCU's E-ship Club runs FrogShop, an actual pop-up retail experience for students to practice running a business, and the Richards Barrentine Values and Ventures Competition is an international pitch competition for 'conscious capitalism' ventures with $5,000+ in prizes — a strong stage for Orderly. The CREATE Program goes further, running fall workshops into a spring pitch competition for up to $50,000 in funding, a genuinely substantial step up from Blue Ocean and BIZWORLD. The CEO and AMA chapters round out a surprisingly deep club bench for a mid-sized program.",
-    fit: "1360 now sits above TCU's typical range, and Neeley's national entrepreneurship ranking plus its Values-Based Leadership emphasis are a reasonable fit for the founder story, though direct-admit is highly competitive within TCU overall regardless of the university-wide range.",
-    sat1450Effect: "Already above TCU's typical range at 1360 — 1450 would extend that further, solidifying this as a comfortable Likely.",
-    programs: [
-      { name: "Neeley School of Business — BBA", url: "https://www.neeley.tcu.edu/" }
     ]
   },
   {
