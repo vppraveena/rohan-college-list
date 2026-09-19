@@ -156,34 +156,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "Iowa State University",
-    highlightColor: "blue",
-    knownFor: "Entrepreneurship ranked #9 worldwide (Princeton Review)",
-    mbaRank: "#38",
-    category: "Likely / Safety",
-    sat: "1080–1320",
-    gpa: "3.3–3.7",
-    fit: "Ivy's entrepreneurship program is ranked #9 worldwide by the Princeton Review — an unusually strong founder-fit at a very accessible admit bar (Iowa State overall admits ~85%).",
-    clubsDeepDive: "Iowa State's Entrepreneur Club (E-Club) gives direct access to real entrepreneurs and hands-on venture-building conversations, while the Ivy College of Business round of the College-by-College Pitch Off — a fast, 90-second pitch format with $5,000/$2,500/$1,500 prizes run through the Pappajohn Center — rewards exactly the kind of concise, high-energy pitching built through Blue Ocean and BIZWORLD. Combined with Iowa State's very accessible admit bar at current stats, this is a place to lead clubs rather than just join them.",
-    programs: [
-      { name: "Ivy College of Business — BBA", url: "https://www.ivybusiness.iastate.edu/academics/undergraduate-programs/bachelor-of-business-administration/" }
-    ]
-  },
-  {
-    school: "University of Utah",
-    highlightColor: "pink",
-    knownFor: "Goff Strategic Sales Program",
-    mbaRank: "#39 (tie)",
-    category: "Likely",
-    sat: "1150–1350",
-    gpa: "3.4–3.8",
-    fit: "Eccles runs the Goff Strategic Sales Program, a dedicated, technology-driven undergraduate sales curriculum (including sales technology/CRM training) — a very direct match to the active Founders' Pool sales internship, at an accessible admit bar.",
-    clubsDeepDive: "Eccles' Fintech Club is about as direct a match to the Founders' Pool AI-fintech internship as any club on this entire list, and the University Venture Fund lets students make real venture capital investment decisions alongside actual entrepreneurs and investors. The Lassonde Entrepreneur Institute is ranked top-10 nationally and supports 500+ startup teams a year — genuinely serious infrastructure for continuing to build Orderly — while the Crimson Quant Club and Student Investment Fund add further quantitative depth that pairs well with the AI/ML certification.",
-    programs: [
-      { name: "David Eccles School of Business — BS in Business Administration", url: "https://eccles.utah.edu/programs/undergraduate/business-administration/" }
-    ]
-  },
-  {
     school: "University of Maryland, College Park",
     highlightColor: "green",
     knownFor: "Pitch Dingman Competition (student entrepreneurship pitch contest)",
@@ -322,37 +294,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "Santa Clara University",
-    highlightColor: "green",
-    knownFor: "Silicon Valley startup/VC ecosystem access",
-    mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
-    category: "Target (upper end)",
-    sat: "1330–1480",
-    gpa: "3.7–4.0",
-    fit: "25 minutes from home in Fremont and embedded in Silicon Valley's startup/VC ecosystem — Leavey's entrepreneurship programming and tech proximity match the Orderly/CheqIn founder story and AI/ML background directly. Stats sit at/slightly below the middle 50%, so this is the stretchier side of target.",
-    clubsDeepDive: "The Bronco Venture Accelerator is a real, equity-free summer accelerator ending in a VC/angel Demo Day — about as close to a scaled-up version of the Orderly journey as exists on this list, run right in Silicon Valley. The Venture Capital Association gives a club home for the fintech/investing side of the Founders' Pool internship, and the Global Social Benefit Incubator connects social-impact entrepreneurship to the volunteer work already done with Community Seva — a genuine, less-obvious thread tying the whole profile together in one place.",
-    sat1450Effect: "1450 sits comfortably within Leavey's middle 50% — this would move the profile from the stretchier side of Target to a solid, comfortable Target, and would also open the door to the 5-year Commerce+Engineering double degree.",
-    programs: [
-      { name: "Leavey School of Business — BS in Commerce", url: "https://www.scu.edu/business/undergraduates/academics/" },
-      { name: "5-year Double Degree — BS in Commerce + BS in Engineering", url: "https://www.scu.edu/registrar/forms/request-for-double-degree/" }
-    ]
-  },
-  {
-    school: "University of Denver",
-    highlightColor: "pink",
-    knownFor: "Experiential Bridge Project",
-    mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
-    category: "Target / Likely",
-    sat: "1180–1360",
-    gpa: "3.5–3.8",
-    fit: "Daniels' small class sizes and project-based Bridge Project suit a portfolio-heavy, EC-driven applicant; a solid target with good merit-aid potential.",
-    clubsDeepDive: "Daniels' Pioneer Venture Group is DU's first fully student-run venture capital fund — students actually source and evaluate real startup investments, a genuinely rare hands-on credential for an undergraduate. The Pioneer Sales Club is a direct extension of the active Founders' Pool sales internship, and DO U gives a general entrepreneurship home for continuing to build out Orderly. Between a real student-managed VC fund and a dedicated sales club, Daniels offers an unusually concrete path from the current internship and founder experience into resume-ready college credentials.",
-    sat1450Effect: "1450 sits well above Daniels' typical range — this would comfortably flip to Likely.",
-    programs: [
-      { name: "Daniels College of Business — BSBA", url: "https://daniels.du.edu/undergraduate-programs/" }
-    ]
-  },
-  {
     school: "University of Arizona",
     highlightColor: "pink",
     knownFor: "McGuire Center for Entrepreneurship",
@@ -457,20 +398,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "University of Oregon",
-    highlightColor: "blue",
-    knownFor: "Sports Product Management major (Nike/Knight legacy) — a strong entrepreneurship angle",
-    mbaRank: "Oregon has no MBA program in the US News full-time top 48",
-    category: "Likely",
-    sat: "Test-optional; university range ~1130–1360",
-    gpa: "3.0+ UW guarantees major admission — comfortably cleared by current stats",
-    fit: "A 3.0 GPA guarantees admission to the business major outright, which the current 3.4 UW clears comfortably. The Sports Product Management major (tied to Nike's Oregon roots) is a distinctive entrepreneurship-adjacent option.",
-    clubsDeepDive: "The Oregon Founders Club gives early access to entrepreneurship workshops and founder speakers, while the Operations and Business Analytics Club is a natural fit for the AI/ML coding background applied to real business data. The standout is the Oregon Innovation Challenge — a pitch/venture competition that has supported over 750 student startups through the Lundquist Center for Entrepreneurship, the kind of track record Orderly could plug into directly alongside the founder experience already built through Blue Ocean, BIZWORLD, and the Conrad Challenge.",
-    programs: [
-      { name: "Lundquist College of Business — BS", url: "https://business.uoregon.edu/" }
-    ]
-  },
-  {
     school: "University of Colorado Boulder",
     highlightColor: "pink",
     knownFor: "Deming Center for Entrepreneurship — #1 GCEC award for entrepreneurship education, active student venture fund",
@@ -499,20 +426,6 @@ const BEYOND_MBA_RANKING = [
     whyEssayUrl: "syracuse-why.html",
     programs: [
       { name: "Whitman School of Management — BS", url: "https://whitman.syracuse.edu/" }
-    ]
-  },
-  {
-    school: "Loyola University Chicago",
-    highlightColor: "pink",
-    knownFor: "Chicago finance/consulting proximity; Baumhart Center for Social Enterprise",
-    mbaRank: "Loyola Chicago has no MBA program in the US News full-time top 48",
-    category: "Target / Likely",
-    sat: "Test-optional; university range 1180–1370",
-    gpa: "3.4–3.7",
-    fit: "1360 sits within Loyola's typical range, now near its upper end, and Chicago placement adds real finance/consulting internship density at a comfortable (~68%) overall admit rate.",
-    clubsDeepDive: "Loyola Future Founders gives a straightforward entrepreneurship home for Orderly, while the Loyola AI Society is a direct, named landing spot for the AI/ML coding background inside the business school. The Rambler Investment Fund — a real, roughly $1.6 million student-managed endowment — and the Rambler Consulting Group offer serious quantitative/analytical credibility beyond pitch competitions alone, and the Quinlan AMA chapter is a natural fit for the marketing experience already built through Bldg18 Comedy Club's promotion work.",
-    programs: [
-      { name: "Quinlan School of Business — BBA", url: "https://www.luc.edu/quinlan/" }
     ]
   },
   {
