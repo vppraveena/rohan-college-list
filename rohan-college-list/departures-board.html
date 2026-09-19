@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Departures Board</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#F1F2EE;
+  --surface:#FFFFFF;
+  --surface-2:#E7E9E2;
+  --ink:#1C231F;
+  --ink-muted:#5B655F;
+  --accent:#1F5F6B;
+  --accent-soft:#DCEAEA;
+  --line:#D7D9D0;
+  --status-done:#2E7D5B;
+  --status-done-bg:#DFF0E7;
+  --status-progress:#B26E14;
+  --status-progress-bg:#F5E7D0;
+  --status-todo:#767F79;
+  --status-todo-bg:#E7E9E2;
+  --status-urgent:#B4472B;
+  --status-urgent-bg:#F5E0D8;
+  --shadow: 0 1px 2px rgba(28,35,31,0.06), 0 8px 24px -12px rgba(28,35,31,0.18);
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11181A;
+    --surface:#171F21;
+    --surface-2:#1D2628;
+    --ink:#E7ECE9;
+    --ink-muted:#95A19B;
+    --accent:#5FBEC8;
+    --accent-soft:#1D3336;
+    --line:#2A3436;
+    --status-done:#54B589;
+    --status-done-bg:#1B3327;
+    --status-progress:#E3A94B;
+    --status-progress-bg:#3A2E17;
+    --status-todo:#8A948E;
+    --status-todo-bg:#22292B;
+    --status-urgent:#E38367;
+    --status-urgent-bg:#3A2119;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11181A;
+  --surface:#171F21;
+  --surface-2:#1D2628;
+  --ink:#E7ECE9;
+  --ink-muted:#95A19B;
+  --accent:#5FBEC8;
+  --accent-soft:#1D3336;
+  --line:#2A3436;
+  --status-done:#54B589;
+  --status-done-bg:#1B3327;
+  --status-progress:#E3A94B;
+  --status-progress-bg:#3A2E17;
+  --status-todo:#8A948E;
+  --status-todo-bg:#22292B;
+  --status-urgent:#E38367;
+  --status-urgent-bg:#3A2119;
+  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  line-height:1.55;
+}
+h1,h2,h3,.display{
+  font-family:'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+  text-wrap:balance;
+  letter-spacing:0.01em;
+}
+.mono{font-family:'IBM Plex Mono', ui-monospace, Menlo, monospace; font-variant-numeric:tabular-nums;}
+
+.wrap{max-width:1040px; margin:0 auto; padding:2.5rem 1.5rem 5rem;}
+
+.back-link{
+  display:inline-block;
+  margin-bottom:1.5rem;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.03em;
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+.back-link:hover{border-bottom-color:var(--accent);}
+
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:600;
+}
+h1{
+  font-size:clamp(2.1rem, 5vw, 3rem);
+  font-weight:700;
+  margin:0.4rem 0 0.75rem;
+  color:var(--ink);
+}
+.sub{
+  font-size:1.05rem;
+  color:var(--ink-muted);
+  max-width:66ch;
+  margin:0 0 2rem;
+}
+
+/* status board strip */
+.board{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(120px,1fr));
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:2.75rem;
+  box-shadow:var(--shadow);
+}
+.tile{
+  background:var(--surface);
+  padding:1.1rem 1rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.35rem;
+}
+.tile .num{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:1.9rem;
+  font-weight:600;
+  font-variant-numeric:tabular-nums;
+  color:var(--ink);
+}
+.tile.accent .num{color:var(--accent);}
+.tile.warn .num{color:var(--status-progress);}
+.tile .label{
+  font-size:0.68rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--ink-muted);
+  font-family:'IBM Plex Mono', monospace;
+}
+
+section{margin-bottom:3rem;}
+h2{
+  font-size:1.5rem;
+  font-weight:700;
+  margin:0 0 0.35rem;
+  display:flex;
+  align-items:baseline;
+  gap:0.6rem;
+}
+h2 .idx{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.85rem;
+  color:var(--accent);
+  font-weight:600;
+}
+.lede{color:var(--ink-muted); margin:0 0 1.25rem; max-width:68ch; font-size:0.98rem;}
+
+/* panels */
+.panels{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:1rem;
+}
+.panel{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1.25rem 1.3rem 1.4rem;
+}
+.panel.pending{border-left:4px solid var(--status-progress);}
+.panel h3{
+  font-size:0.95rem;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  margin:0 0 0.6rem;
+  color:var(--ink);
+}
+.panel p{margin:0 0 0.9rem; font-size:0.92rem; color:var(--ink-muted);}
+.panel ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.5rem;}
+.panel li{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:0.75rem;
+  font-size:0.9rem;
+  border-top:1px solid var(--line);
+  padding-top:0.5rem;
+}
+.panel li:first-child{border-top:none; padding-top:0;}
+.panel li .k{color:var(--ink);}
+.panel li .v{font-family:'IBM Plex Mono', monospace; font-size:0.82rem; color:var(--ink-muted); white-space:nowrap;}
+
+/* filter tabs */
+.tabs{display:flex; gap:0.5rem; margin-bottom:1rem; flex-wrap:wrap;}
+.tab{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  letter-spacing:0.03em;
+  padding:0.4rem 0.85rem;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--surface);
+  color:var(--ink-muted);
+  cursor:pointer;
+  transition:background .15s, color .15s, border-color .15s;
+}
+.tab:hover{border-color:var(--accent);}
+.tab.active{background:var(--accent); color:var(--surface); border-color:var(--accent);}
+.tab:focus-visible, .rowcheck:focus-visible, button:focus-visible, select:focus-visible{
+  outline:2px solid var(--accent); outline-offset:2px;
+}
+
+/* manifest table */
+.tablewrap{
+  overflow-x:auto;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+table{border-collapse:collapse; width:100%; table-layout:fixed;}
+colgroup .col-school{width:24%;}
+colgroup .col-tier{width:9%;}
+colgroup .col-platform{width:17%;}
+colgroup .col-deadline{width:17%;}
+colgroup .col-supp{width:19%;}
+colgroup .col-status{width:14%;}
+thead th{
+  text-align:left;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.66rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--ink-muted);
+  padding:0.75rem 0.6rem;
+  border-bottom:1px solid var(--line);
+  background:var(--surface-2);
+}
+tbody td{
+  padding:0.7rem 0.6rem;
+  border-bottom:1px solid var(--line);
+  font-size:0.84rem;
+  vertical-align:top;
+  overflow-wrap:break-word;
+}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr.done{opacity:0.6;}
+tbody tr.pending{background:color-mix(in srgb, var(--status-progress-bg) 35%, transparent);}
+.school{font-weight:600; font-family:'Source Serif 4', serif;}
+.school .newtag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.6rem;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:var(--status-progress);
+  border:1px solid var(--status-progress);
+  border-radius:4px;
+  padding:0.05rem 0.3rem;
+  margin-left:0.4rem;
+  vertical-align:middle;
+}
+.admitnote{
+  font-size:0.72rem;
+  color:var(--ink-muted);
+  font-style:italic;
+  margin-top:0.2rem;
+  line-height:1.35;
+}
+.tier{
+  display:inline-block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.66rem;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  padding:0.15rem 0.5rem;
+  border-radius:5px;
+  white-space:nowrap;
+}
+.tier.safety{background:var(--status-done-bg); color:var(--status-done);}
+.tier.target{background:var(--status-progress-bg); color:var(--status-progress);}
+.tier.reach{background:var(--status-urgent-bg); color:var(--status-urgent);}
+.deadline{font-family:'IBM Plex Mono', monospace; font-size:0.78rem; line-height:1.4; word-break:break-word;}
+.deadline.tbd, .badge.tbd{color:var(--status-progress); font-style:italic;}
+.badge{
+  display:inline-block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  letter-spacing:0.02em;
+  line-height:1.4;
+  padding:0.15rem 0.5rem;
+  border-radius:5px;
+  background:var(--surface-2);
+  color:var(--ink-muted);
+  word-break:break-word;
+}
+select.statusSel{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem;
+  padding:0.3rem 0.4rem;
+  border-radius:6px;
+  border:1px solid var(--line);
+  background:var(--surface);
+  color:var(--ink);
+  width:100%;
+  max-width:120px;
+}
+select.statusSel[data-v="done"]{background:var(--status-done-bg); color:var(--status-done); border-color:transparent;}
+select.statusSel[data-v="progress"]{background:var(--status-progress-bg); color:var(--status-progress); border-color:transparent;}
+select.statusSel[data-v="todo"]{background:var(--surface-2); color:var(--ink-muted); border-color:transparent;}
+.note{font-size:0.78rem; color:var(--ink-muted); font-family:'IBM Plex Mono', monospace;}
+
+/* timeline */
+.timeline{display:flex; flex-direction:column; gap:0.9rem;}
+.week{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:1rem;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.2rem;
+}
+.week .when{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  color:var(--accent);
+  font-weight:600;
+  padding-top:0.15rem;
+}
+.week .when .wk{display:block; font-size:0.68rem; color:var(--ink-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.2rem;}
+.week h4{margin:0 0 0.3rem; font-family:'Barlow Semi Condensed', sans-serif; font-size:1.05rem; font-weight:600;}
+.week p{margin:0; font-size:0.9rem; color:var(--ink-muted);}
+.week .schools{margin-top:0.4rem; font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--ink);}
+.week.final{border-color:var(--status-urgent); box-shadow:0 0 0 1px var(--status-urgent) inset;}
+.week.after{opacity:0.85;}
+.week.pending{border-color:var(--status-progress); box-shadow:0 0 0 1px var(--status-progress) inset;}
+.week.pending .when{color:var(--status-progress);}
+
+/* verify callout */
+.callout{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-left:4px solid var(--status-urgent);
+  border-radius:8px;
+  padding:1.2rem 1.4rem;
+}
+.callout h3{margin:0 0 0.7rem; font-size:1rem; font-family:'Barlow Semi Condensed', sans-serif; text-transform:uppercase; letter-spacing:0.04em;}
+.callout ol{margin:0; padding-left:1.2rem; display:flex; flex-direction:column; gap:0.5rem;}
+.callout li{font-size:0.9rem;}
+.callout li b{color:var(--ink);}
+
+footer{margin-top:3rem; font-size:0.78rem; color:var(--ink-muted); font-family:'IBM Plex Mono', monospace; text-align:center;}
+
+@media (max-width:640px){
+  .week{grid-template-columns:1fr;}
+  .week .when{padding-top:0;}
+
+  .tablewrap{overflow-x:visible; border:none; box-shadow:none; background:transparent;}
+  table{table-layout:auto;}
+  thead{display:none;}
+  tbody tr{
+    display:block;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    margin-bottom:0.7rem;
+    padding:0.4rem 0.9rem;
+    box-shadow:var(--shadow);
+  }
+  tbody tr.pending{background:color-mix(in srgb, var(--status-progress-bg) 35%, var(--surface));}
+  tbody td{
+    display:flex;
+    align-items:flex-start;
+    gap:0.6rem;
+    padding:0.5rem 0;
+    border-bottom:1px solid var(--line);
+  }
+  tbody td:last-child{border-bottom:none;}
+  tbody td::before{
+    content:attr(data-label);
+    flex:0 0 84px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.64rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-muted);
+    padding-top:0.15rem;
+  }
+  tbody td.td-school::before{display:none;}
+  tbody td.td-school{padding-top:0.7rem;}
+  select.statusSel{max-width:none; flex:1 1 auto; width:auto;}
+}
+@media (prefers-reduced-motion:no-preference){
+  .tile, .panel, .week, .tablewrap{animation:rise .5s ease both;}
+  .panel:nth-child(2){animation-delay:.05s;}
+  .panel:nth-child(3){animation-delay:.1s;}
+  @keyframes rise{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <a class="back-link" href="index.html">&larr; Back to full college list</a>
+
+  <div class="eyebrow">APPLICATION SEASON · FALL 2026 CYCLE → FALL 2027 ENROLLMENT</div>
+  <h1>The Departures Board</h1>
+  <p class="sub">Twenty-nine schools, all with researched platform, deadline, and supplement data pulled from each school's own admissions pages. A handful of individual facts (marked below) rely on a prior cycle's posted dates or a page that couldn't be fully loaded — everything else is sourced directly.</p>
+
+  <div class="board" id="statBoard">
+    <div class="tile accent"><span class="num mono" id="daysLeft">—</span><span class="label">days to nov 1</span></div>
+    <div class="tile"><span class="num mono">29</span><span class="label">schools total</span></div>
+    <div class="tile"><span class="num mono">24</span><span class="label">nov 1–2 wave</span></div>
+    <div class="tile warn"><span class="num mono">4</span><span class="label">not direct-admit</span></div>
+    <div class="tile"><span class="num mono" id="submittedCount">0</span><span class="label">marked done</span></div>
+  </div>
+
+  <section>
+    <h2><span class="idx">01</span> How the list breaks down</h2>
+    <p class="lede">Four ways to slice all 29 — by login, by clock, by how much writing each one actually costs, and by whether the business degree is even guaranteed once you're admitted.</p>
+    <div class="panels">
+      <div class="panel">
+        <h3>By platform</h3>
+        <p>All 29 schools take the Common App — build the profile once and it cascades to the entire list. Several also offer their own free portal as an alternative.</p>
+        <ul>
+          <li><span class="k">Common App (29 of 29 accept it)</span><span class="v">core</span></li>
+          <li><span class="k">Also offer their own portal</span><span class="v">ASU, Penn St., Mich. St., Pitt</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>By deadline wave</h3>
+        <p>The tier labels (safety/target/reach) don't line up with urgency — reach and safety schools alike land in the same Nov 1–2 wave. Plan the calendar around the wave, not the tier.</p>
+        <ul>
+          <li><span class="k">Oct 15 — EA</span><span class="v">Georgia</span></li>
+          <li><span class="k">Nov 1–2 — EA / Priority / ED I</span><span class="v">24 schools</span></li>
+          <li><span class="k">Nov 15</span><span class="v">Drexel, CU Boulder, U Wash.</span></li>
+          <li><span class="k">Dec 1 — Priority</span><span class="v">Pitt</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>By supplement load</h3>
+        <p>Over half the list needs no new essay beyond the Common App personal statement — clear those first for quick, motivating wins. Spread the essay-heavy schools across weeks instead of stacking them at the end.</p>
+        <ul>
+          <li><span class="k">None / optional only</span><span class="v">14 schools</span></li>
+          <li><span class="k">Light — 1 essay</span><span class="v">6 schools</span></li>
+          <li><span class="k">Moderate — 2–4 essays/short answers</span><span class="v">6 schools</span></li>
+          <li><span class="k">Heavy — Elon, Michigan (Ross)</span><span class="v">2 schools</span></li>
+          <li><span class="k">Unconfirmed — LMU</span><span class="v">1 school</span></li>
+        </ul>
+      </div>
+      <div class="panel pending">
+        <h3>Direct-admit into business?</h3>
+        <p>Verified for the 12 remaining schools added since the board's first version — this varies enormously and matters as much as the deadline. "Not direct-admit" means declaring or transferring into the business major happens after enrollment, competitively, sometimes with a GPA gate.</p>
+        <ul>
+          <li><span class="k">Direct-admit (incl. by major selection)</span><span class="v">8 schools</span></li>
+          <li><span class="k">Not direct-admit — apply/declare later</span><span class="v">4 schools</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="idx">02</span> The full manifest</h2>
+    <p class="lede">Check off status as you go — your progress is saved on this device. The italic note under a school's name flags where the business degree isn't guaranteed on admission (a later application, GPA gate, or competitive transfer); sort by tier with the tabs.</p>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-filter="all">All 29</button>
+      <button class="tab" data-filter="safety">Safety (3)</button>
+      <button class="tab" data-filter="target">Target (8)</button>
+      <button class="tab" data-filter="reach">Reach (18)</button>
+    </div>
+    <div class="tablewrap">
+      <table id="manifest">
+        <colgroup>
+          <col class="col-school"><col class="col-tier"><col class="col-platform"><col class="col-deadline"><col class="col-supp"><col class="col-status">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>School</th><th>Tier</th><th>Platform</th><th>Deadline</th><th>Supplement</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="manifestBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="idx">03</span> Six weeks, week by week</h2>
+    <p class="lede">Nov 1 falls on a Sunday, so treat Friday, Oct 30 as the real cutoff — don't count on a weekend to fix a portal problem. This covers all 29 schools, sequenced by how much writing each one needs rather than by deadline, so essay-heavy schools aren't all crammed into the final days.</p>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section>
+    <h2><span class="idx">04</span> Verify before you submit</h2>
+    <div class="callout">
+      <h3>Ten things to double-check directly on each school's site</h3>
+      <ol>
+        <li><b>Penn State — testing:</b> its test-optional policy was stated as covering "through Fall 2026 entry" only; confirm it still applies to your (Fall 2027) cycle before deciding whether to send scores.</li>
+        <li><b>Purdue — testing:</b> reporting suggests Purdue reinstated a test-score requirement starting with Fall 2026 entry; confirm whether that still applies to your cycle.</li>
+        <li><b>Oregon State — exact dates:</b> the 2026–27 priority deadline wasn't yet posted at research time; confirm once OSU updates its page (should be live by September).</li>
+        <li><b>CU Boulder — EA date:</b> CU's own page says Nov 15; some third-party sites say Nov 1. Plan for Nov 1 to be safe, confirm Nov 15 on cuboulder.edu.</li>
+        <li><b>LMU — platform:</b> very likely Common App only, but not independently confirmed. Check the school's apply page.</li>
+        <li><b>Kelley (Indiana) — supplement:</b> direct-admit applicants historically write no essay beyond the standard Common App one, but this is worth a quick confirm since it can change year to year.</li>
+        <li><b>UVA — cycle dates:</b> used the most recently posted cycle's dates (2026), since Fall 2027 dates weren't up yet at research time; confirm on admission.virginia.edu once it reopens for the new cycle.</li>
+        <li><b>Michigan Ross — portfolio prompt wording:</b> the ~500-word case/artifact requirement is confirmed via Ross's own blog and portfolio subpage, but the live michiganross.umich.edu pages couldn't be directly loaded during research — read the current prompt on-site before drafting.</li>
+        <li><b>Michigan State Broad — direct-admit page:</b> confirmed via cached search results, not a direct page load (broad.msu.edu is JS-rendered) — verify the 3.5 GPA auto-consideration threshold on-site.</li>
+        <li><b>Pittsburgh — Nov 1 date:</b> a Nov 1 "priority" date circulates on third-party sites, but Pitt's own pages confirm only the Dec 1 scholarship deadline — treat Dec 1 as the real target unless Pitt's own site says otherwise.</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>built for a 29-school list · Safety 3 · Target 8 · Reach 18 · 8 direct-admit into business · 4 not direct-admit · your checkbox state is stored only in this browser</footer>
+</div>
+
+<script>
+(function(){
+  var SCHOOLS = [
+    {name:"Oregon State University", tier:"safety", platform:"Common App or own app", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"None"},
+    {name:"Arizona State University", tier:"safety", platform:"Own app or Common App", deadline:"Priority Nov 1", dsort:"2026-11-01", supp:"None"},
+    {name:"University of Cincinnati", tier:"safety", platform:"Common App", deadline:"EA Nov 1 (rolling after)", dsort:"2026-11-01", supp:"None"},
+
+    {name:"Fordham University", tier:"target", platform:"Common App", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"Light — 3 optional"},
+    {name:"Drexel University", tier:"target", platform:"Common App or Coalition", deadline:"EA Nov 15", dsort:"2026-11-15", supp:"Light — 1 essay"},
+    {name:"Elon University", tier:"target", platform:"Common App", deadline:"EA/ED I Nov 1", dsort:"2026-11-01", supp:"Heavy — ~5 prompts"},
+    {name:"University of Arizona", tier:"target", platform:"Common App", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"None"},
+    {name:"CU Boulder", tier:"target", platform:"Common App", deadline:"EA Nov 15", dsort:"2026-11-15", supp:"Light — 1 short"},
+    {name:"Purdue University", tier:"target", platform:"Common App", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"Moderate — 2 essays"},
+
+    {name:"Indiana University (Kelley)", tier:"reach", platform:"Common App or Coalition", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"None (verify)"},
+    {name:"Penn State University", tier:"reach", platform:"Common App or MyPennState", deadline:"Priority Nov 1", dsort:"2026-11-01", supp:"None"},
+    {name:"University of Maryland", tier:"reach", platform:"Common App or own app", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"Light — 1 essay"},
+    {name:"SMU", tier:"reach", platform:"Common App", deadline:"EA/ED I Nov 1", dsort:"2026-11-01", supp:"Moderate — 2 essays"},
+    {name:"Syracuse University", tier:"reach", platform:"Common App", deadline:"EA/ED I Nov 1", dsort:"2026-11-01", supp:"Light — 1 short"},
+    {name:"Virginia Tech", tier:"reach", platform:"Common App", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"Moderate — 4 short"},
+    {name:"UMass Amherst", tier:"reach", platform:"Common App", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"Moderate — 3 essays"},
+    {name:"LMU", tier:"reach", platform:"Common App (likely)", deadline:"EA Nov 1", dsort:"2026-11-01", supp:"Unconfirmed — verify"},
+
+    {name:"University of Virginia", tier:"reach", platform:"Common App", deadline:"EA/ED Nov 1 (RD Jan 5)", dsort:"2026-11-01", supp:"None — dropped its essay for this cycle", note:"McIntire is NOT direct-admit — apply undecided/A&S, competitive 2nd-year application into Commerce"},
+    {name:"University of Michigan", tier:"reach", platform:"Common App", deadline:"ED/EA Nov 1 (RD Feb 1)", dsort:"2026-11-01", supp:"2 essays + Ross Admissions Portfolio (~500w case + ~250w artifact)", note:"Ross is now direct-admit-selectable as a First-Year Admitting Unit"},
+    {name:"University of Southern California", tier:"reach", platform:"Common App", deadline:"EA Nov 1 (RD Jan 10)", dsort:"2026-11-01", supp:"1 essay ~250w + ~10 short answers + 2 optional", note:"Direct-admit — select Business Administration as 1st-choice major"},
+    {name:"University of Georgia", tier:"reach", platform:"Common App", deadline:"EA Oct 15 (RD Jan 1)", dsort:"2026-10-15", supp:"None — 2nd essay dropped for Fall 2027", note:"NOT direct-admit — intended major only, apply to Terry major later"},
+    {name:"Ohio State University", tier:"reach", platform:"Common App", deadline:"EA priority Nov 1", dsort:"2026-11-01", supp:"None beyond personal statement", note:"Direct-admit into Fisher when Business is selected as major"},
+    {name:"Boston University", tier:"reach", platform:"Common App", deadline:"ED I Nov 2 (RD Jan 5, merit best by Dec 1)", dsort:"2026-11-02", supp:"1 essay ≤300w", note:"Direct-admit into Questrom"},
+    {name:"Michigan State University", tier:"target", platform:"MSU's own app, Common App, or Coalition", deadline:"EA Nov 1 (Regular rolling to Apr 1)", dsort:"2026-11-01", supp:"None beyond personal statement", note:"Direct-admit for 3.5+ GPA selecting a Broad major (BS as of Fall 2025); must hold 28 credits/3.0 GPA to finalize"},
+    {name:"University of Pittsburgh", tier:"target", platform:"Pitt's own app or Common App", deadline:"Rolling — scholarship priority Dec 1", dsort:"2026-12-01", supp:"None required beyond personal statement", note:"Direct-admit into College of Business Administration"},
+    {name:"Lehigh University", tier:"reach", platform:"Common App or Coalition", deadline:"ED I Nov 1 (RD Jan 1)", dsort:"2026-11-01", supp:"3 short essays ~200w each", note:"Direct-admit — select College of Business on the application"},
+    {name:"University of Washington", tier:"reach", platform:"Common App", deadline:"Single deadline Nov 15", dsort:"2026-11-15", supp:"None required (2 optional short answers)", note:"NOT direct-admit — Foster is a competitive sophomore-year gate even for Direct-to-College applicants"},
+    {name:"Northeastern University", tier:"reach", platform:"Common App or Coalition", deadline:"ED I/EA Nov 1 (RD Jan 1)", dsort:"2026-11-01", supp:"None beyond personal statement", note:"Direct-admit into D'Amore-McKim, declare concentration after year 1"},
+    {name:"William & Mary", tier:"reach", platform:"Common App only", deadline:"ED I Nov 1 (RD Jan 5, no EA option)", dsort:"2026-11-01", supp:"None required (2 optional short essays)", note:"NOT direct-admit at all — separate BBA application after 39 credits, ~sophomore fall"}
+  ];
+
+  var TIMELINE = [
+    {wk:"Week 1", when:"Sep 18 – 24", title:"Foundations, fast", body:"Open the Common App and add all 29 schools now, even the ones you won't touch for weeks. Request transcripts and confirm 2+ teacher recommendation letters are moving — they need the longest lead time of anything on this list. Get a full first draft of the main personal essay done.", schools:""},
+    {wk:"Week 2", when:"Sep 25 – Oct 1", title:"Lock the core essay + no-essay schools, part 1", body:"Finalize the personal statement after one round of feedback. Draft one reusable “why this school/major” paragraph template — most supplements below are variations on it. Then clear the first half of the no-new-essay schools — just portal fields and intended-major selection.", schools:"Oregon State · ASU · Cincinnati · Arizona · Virginia · Georgia · Ohio State · Michigan State · Pittsburgh · Northeastern"},
+    {wk:"Week 3", when:"Oct 2 – 8", title:"No-essay schools, part 2", body:"The rest of the no-new-essay group, plus Fordham's three short optional essays since they're genuinely quick. Confirm Common App vs. own portal where a choice exists (ASU, Penn State, Michigan State, Pittsburgh).", schools:"Kelley (IU) · Penn State · William & Mary · Univ. of Washington · Fordham"},
+    {wk:"Week 4", when:"Oct 9 – 15", title:"One-essay and two-essay schools", body:"Schools with exactly one new essay, plus Purdue and SMU's two-essay supplements — the lightest real tier of actual writing, tackled together to keep momentum.", schools:"Drexel · Maryland · CU Boulder · Syracuse · Purdue · SMU · Boston University"},
+    {wk:"Week 5", when:"Oct 16 – 22", title:"Multi-part and heaviest supplements", body:"Everything with 2–5 essays or a portfolio component, including the two heaviest items on the whole list: Elon's five prompts and Michigan Ross's two essays plus its Admissions Portfolio (a business case discussion and an artifact explanation). Give this week the most writing time and start it early in the week.", schools:"UMass Amherst · Virginia Tech · LMU · USC · Lehigh · Elon · Michigan (Ross)"},
+    {wk:"Week 6", when:"Oct 23 – 29", title:"Proofread and submit — no new essays", body:"No new writing this week. Have someone else read the heaviest essays (Elon, Michigan, USC, Lehigh). Confirm every portal shows transcripts, letters, and test scores (if required) received. Submit everything by Friday, Oct 30 — don't wait for Sunday, Nov 1 itself.", schools:"All 24 schools in the Nov 1–2 wave", final:true},
+    {wk:"After Nov 1", when:"Nov 2 – Dec 1", title:"The stragglers", body:"The Nov 15 group should already have essays drafted from earlier weeks — just do a final review and submit. Pittsburgh (Dec 1) needs no new essay at all.", schools:"Nov 15 — Drexel · CU Boulder · Univ. of Washington    |    Dec 1 — Pittsburgh", after:true}
+  ];
+
+  var tierLabel = {safety:"Safety", target:"Target", reach:"Reach"};
+  var STORAGE_KEY = "departuresBoardStatus_v1";
+
+  function loadStatus(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    }catch(e){ return {}; }
+  }
+  function saveStatus(obj){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }catch(e){}
+  }
+
+  var statusMap = loadStatus();
+
+  function renderManifest(filter){
+    var body = document.getElementById('manifestBody');
+    body.innerHTML = "";
+    SCHOOLS.forEach(function(s, i){
+      if(filter !== 'all' && s.tier !== filter) return;
+      var tr = document.createElement('tr');
+      var st = statusMap[s.name] || 'todo';
+      var classes = [];
+      if(st === 'done') classes.push('done');
+      if(s.needsResearch) classes.push('pending');
+      tr.className = classes.join(' ');
+
+      var tdName = document.createElement('td');
+      tdName.className = 'td-school';
+      tdName.setAttribute('data-label', 'School');
+      tdName.innerHTML = '<span class="school">'+s.name+'</span>'+(s.note ? '<div class="admitnote">'+s.note+'</div>' : '');
+      tr.appendChild(tdName);
+
+      var tdTier = document.createElement('td');
+      tdTier.setAttribute('data-label', 'Tier');
+      tdTier.innerHTML = '<span class="tier '+s.tier+'">'+tierLabel[s.tier]+'</span>';
+      tr.appendChild(tdTier);
+
+      var tdPlat = document.createElement('td');
+      tdPlat.setAttribute('data-label', 'Platform');
+      tdPlat.innerHTML = '<span class="badge'+(s.needsResearch?' tbd':'')+'">'+s.platform+'</span>';
+      tr.appendChild(tdPlat);
+
+      var tdDead = document.createElement('td');
+      tdDead.setAttribute('data-label', 'Deadline');
+      tdDead.innerHTML = '<span class="deadline'+(s.needsResearch?' tbd':'')+'">'+s.deadline+'</span>';
+      tr.appendChild(tdDead);
+
+      var tdSupp = document.createElement('td');
+      tdSupp.setAttribute('data-label', 'Supplement');
+      tdSupp.innerHTML = '<span class="badge'+(s.needsResearch?' tbd':'')+'">'+s.supp+'</span>';
+      tr.appendChild(tdSupp);
+
+      var tdStatus = document.createElement('td');
+      tdStatus.setAttribute('data-label', 'Status');
+      var sel = document.createElement('select');
+      sel.className = 'statusSel';
+      sel.setAttribute('data-v', st);
+      sel.setAttribute('aria-label', 'Status for '+s.name);
+      ['todo','progress','done'].forEach(function(v){
+        var opt = document.createElement('option');
+        opt.value = v;
+        opt.textContent = v === 'todo' ? 'Not started' : (v === 'progress' ? 'In progress' : 'Submitted');
+        if(v === st) opt.selected = true;
+        sel.appendChild(opt);
+      });
+      sel.addEventListener('change', function(){
+        statusMap[s.name] = sel.value;
+        sel.setAttribute('data-v', sel.value);
+        saveStatus(statusMap);
+        renderManifest(currentFilter);
+        updateCounts();
+      });
+      tdStatus.appendChild(sel);
+      tr.appendChild(tdStatus);
+
+      body.appendChild(tr);
+    });
+  }
+
+  function updateCounts(){
+    var done = SCHOOLS.filter(function(s){ return statusMap[s.name] === 'done'; }).length;
+    document.getElementById('submittedCount').textContent = done;
+  }
+
+  var currentFilter = 'all';
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active');
+      currentFilter = t.getAttribute('data-filter');
+      renderManifest(currentFilter);
+    });
+  });
+
+  function renderTimeline(){
+    var el = document.getElementById('timeline');
+    el.innerHTML = "";
+    TIMELINE.forEach(function(w){
+      var card = document.createElement('div');
+      card.className = 'week' + (w.final ? ' final' : '') + (w.after ? ' after' : '') + (w.pending ? ' pending' : '');
+      card.innerHTML =
+        '<div class="when"><span class="wk">'+w.wk+'</span>'+w.when+'</div>'+
+        '<div><h4>'+w.title+'</h4><p>'+w.body+'</p>'+
+        (w.schools ? '<div class="schools">'+w.schools+'</div>' : '')+
+        '</div>';
+      el.appendChild(card);
+    });
+  }
+
+  function renderCountdown(){
+    var target = new Date('2026-11-01T23:59:59-04:00');
+    var now = new Date();
+    var diff = Math.ceil((target - now) / (1000*60*60*24));
+    document.getElementById('daysLeft').textContent = diff > 0 ? diff : 0;
+  }
+
+  renderManifest('all');
+  renderTimeline();
+  renderCountdown();
+  updateCounts();
+})();
+</script>
+</body>
+</html>
