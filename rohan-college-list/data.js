@@ -67,20 +67,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Texas at Austin",
-    knownFor: "Canfield Business Honors Program; Austin's fintech/startup scene",
-    mbaRank: "#18 (tie)",
-    category: "Reach",
-    sat: "1400–1520",
-    gpa: "~3.8+ UW",
-    fit: "McCombs' Canfield Business Honors Program and Austin's booming fintech/startup scene are a good fit, but the direct-admit BBA (Texas top-6% auto-admit applies only to Texas residents; out-of-state review is fully holistic and highly selective) sits above current stats.",
-    sat1450Effect: "1450 falls within McCombs' middle 50% (1400–1520) — this would shift the assessment from Reach to Target, though out-of-state review remains holistic regardless of score.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "McCombs School of Business — BBA", url: "https://catalog.utexas.edu/undergraduate/business/general-information/" }
-    ]
-  },
-  {
     school: "Indiana University Bloomington",
     highlightColor: "green",
     knownFor: "One of the only dedicated undergraduate Professional Sales programs in the country",
@@ -94,34 +80,6 @@ const BS_BUSINESS = [
     becomesTargetAt1450: true,
     programs: [
       { name: "Kelley School of Business — BS", url: "https://kelley.iu.edu/undergraduate/" }
-    ]
-  },
-  {
-    school: "University of North Carolina at Chapel Hill",
-    knownFor: "High double-major rate; consulting/finance/entrepreneurship tracks",
-    mbaRank: "#21 (tie)",
-    category: "Reach",
-    sat: "1400–1500",
-    gpa: "~3.85+ UW",
-    fit: "Kenan-Flagler's high double-major rate suits a student who already pairs business with AI/ML coursework, but its secondary-application admit process is highly competitive relative to current stats — a reach, more so for out-of-state applicants.",
-    sat1450Effect: "1450 falls within Kenan-Flagler's middle 50% (1400–1500) — this would shift the assessment from Reach to Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Kenan-Flagler Business School — BSBA", url: "https://catalog.unc.edu/undergraduate/programs-study/business-administration-major-bsba/" }
-    ]
-  },
-  {
-    school: "Emory University",
-    knownFor: "Experiential consulting (IMPACT program)",
-    mbaRank: "#23 (tie)",
-    category: "Reach",
-    sat: "1420–1540",
-    gpa: "~3.85+ UW",
-    fit: "Goizueta's IMPACT experiential consulting projects reward the kind of real-world building already shown with Orderly/CheqIn, but Emory's overall selectivity sits above current stats.",
-    sat1450Effect: "1450 falls within Goizueta's middle 50% (1420–1540) — this would shift the assessment from Reach to Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Goizueta Business School — BBA", url: "https://goizueta.emory.edu/undergraduate-business-degree" }
     ]
   },
   {
@@ -163,19 +121,6 @@ const BS_BUSINESS = [
     becomesTargetAt1450: true,
     programs: [
       { name: "Terry College of Business — BBA", url: "https://www.terry.uga.edu/undergraduate/" }
-    ]
-  },
-  {
-    school: "Washington University in St. Louis",
-    knownFor: "Consulting (Taylor Community Consulting Program)",
-    mbaRank: "#27 (tie)",
-    category: "Reach",
-    sat: "1500–1560",
-    gpa: "~3.9+ UW",
-    fit: "Olin's Taylor Community Consulting Program is a good experiential-learning match, but WashU is among the most selective schools on this list relative to current stats.",
-    sat1450Effect: "Still below Olin's range (1500+) — 1450 doesn't meaningfully change this; still a reach.",
-    programs: [
-      { name: "Olin Business School — BSBA", url: "https://olin.washu.edu/programs/bs-business-administration/index.php" }
     ]
   },
   {
