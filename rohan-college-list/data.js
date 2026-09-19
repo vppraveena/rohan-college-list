@@ -170,19 +170,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "Brigham Young University",
-    knownFor: "Sales and entrepreneurship placement record",
-    mbaRank: "#39 (tie)",
-    category: "Target",
-    sat: "1280–1440",
-    gpa: "3.6–3.9",
-    fit: "Marriott's sales and entrepreneurship placement record is strong, but note BYU requires an ecclesiastical endorsement and honor code commitment for admission regardless of academic fit — a real practical factor to weigh, not just a stats question.",
-    sat1450Effect: "1450 sits above Marriott's typical range (1280–1440) — this would move the assessment into Likely, honor-code/endorsement considerations aside.",
-    programs: [
-      { name: "Marriott School of Business — BS in Business Management", url: "https://catalog.byu.edu/business/management/business-management-bs" }
-    ]
-  },
-  {
     school: "University of Utah",
     highlightColor: "pink",
     knownFor: "Goff Strategic Sales Program",
@@ -304,20 +291,6 @@ const BA_PROGRAMS = [
 // considering given Srinivas's profile: strong co-op/entrepreneurship/tech-forward business programs
 // at a range of selectivity levels, plus one niche performing-arts/business crossover pick (Berklee).
 const BEYOND_MBA_RANKING = [
-  {
-    school: "Babson College",
-    knownFor: "#1-ranked entrepreneurship program in the country (US News specialty ranking)",
-    mbaRank: "Not a nationally ranked full-time MBA program; #1 nationally for entrepreneurship",
-    category: "Target",
-    sat: "1290–1450",
-    gpa: "3.5–3.9 (holistic, EC-weighted)",
-    fit: "Best fit on the entire list. Babson's admissions process explicitly rewards founder experience, competition results, and a demonstrated business track record — directly rewarding the Orderly/CheqIn CEO role, Blue Ocean Top 100 finish, BIZWORLD final, and Conrad Challenge. A 1360 SAT sits right at Babson's median.",
-    sat1450Effect: "1450 sits at the very top of Babson's range — this would push the profile from a comfortable Target toward Likely, especially combined with the founder-story extracurriculars.",
-    programs: [
-      { name: "BS in Business Administration — Entrepreneurship concentration", url: "https://www.babson.edu/undergraduate/academics/concentrations/entrepreneurship/" },
-      { name: "BS in Business Administration — Technology, Entrepreneurship & Design minor", url: "https://www.babson.edu/undergraduate/academics/concentrations/entrepreneurship/" }
-    ]
-  },
   {
     school: "Fordham University",
     highlightColor: "pink",
@@ -469,20 +442,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "Rutgers University–New Brunswick",
-    knownFor: "Financial Data Analytics & FinTech concentration; NYC/Wall Street proximity",
-    mbaRank: "Rutgers has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
-    sat: "Optional but recommended; submitters average ~1416",
-    gpa: "3.5–3.8",
-    fit: "The Financial Data Analytics & FinTech concentration is one of the most direct academic matches on this entire list to the active Founders' Pool fintech-sales internship, and NYC proximity means dense internship access — but the submitter average sits above current stats.",
-    sat1450Effect: "1450 sits right at Rutgers' submitter average — this would shift the assessment solidly into Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Rutgers Business School — BS, Financial Data Analytics & FinTech concentration", url: "https://www.business.rutgers.edu/" }
-    ]
-  },
-  {
     school: "University of Massachusetts Amherst",
     highlightColor: "green",
     knownFor: "#1-ranked Sport Management program; strong retailing track",
@@ -495,45 +454,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 would sit right at Isenberg's average — a further, though now marginal, improvement over the already-close 1360.",
     programs: [
       { name: "Isenberg School of Management — BBA", url: "https://www.isenberg.umass.edu/admissions" }
-    ]
-  },
-  {
-    school: "University of South Carolina",
-    knownFor: "Perennial #1-ranked undergraduate International Business program (US News)",
-    mbaRank: "South Carolina has no MBA program in the US News full-time top 48",
-    category: "Target / Likely",
-    sat: "Moore School average SAT ~1294 — now meaningfully above current stats",
-    gpa: "3.5–3.8",
-    fit: "1360 sits comfortably above Moore's average admitted SAT (~1294) — one of the more favorable stats comparisons on the entire list — and the #1-ranked International Business program (with heavy study-abroad integration) is a genuine standout credential.",
-    sat1450Effect: "1450 would sit meaningfully above Moore's average — this would strengthen the assessment to a comfortable Likely.",
-    programs: [
-      { name: "Darla Moore School of Business — BS", url: "https://sc.edu/study/colleges_schools/moore/" }
-    ]
-  },
-  {
-    school: "University of Iowa",
-    knownFor: "Guaranteed freshman direct-admit business program; Actuarial Science/Enterprise Leadership tracks",
-    mbaRank: "Iowa has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
-    sat: "Direct-admit threshold: SAT 1230+ / ACT 26+",
-    gpa: "Iowa's stated direct-admit GPA threshold is 3.6+ unweighted — worth flagging directly, since current unweighted GPA is 3.4, meaning the guaranteed direct-admit path may not apply even though the SAT (1360) clears the floor; this would need verifying directly with Tippie admissions rather than assumed.",
-    fit: "Tippie's guaranteed direct-admit business program is attractive on paper, and 1360 clears the stated SAT floor with more room to spare — but the stated 3.6 unweighted GPA threshold is above the current 3.4 unweighted, which is the real risk factor here, not the test score.",
-    sat1450Effect: "The SAT isn't the limiting factor for Tippie's direct-admit threshold — the stated 3.6 unweighted GPA bar matters more here, and a higher SAT wouldn't offset a GPA below that threshold.",
-    programs: [
-      { name: "Tippie College of Business — BBA", url: "https://tippie.uiowa.edu/undergraduate/admissions" }
-    ]
-  },
-  {
-    school: "Auburn University",
-    knownFor: "Top-ranked Supply Chain Management program; family-business/entrepreneurship ties",
-    mbaRank: "Auburn has no MBA program in the US News full-time top 48",
-    category: "Target",
-    sat: "University middle 50% ~1240–1390",
-    gpa: "3.4–3.7",
-    fit: "1360 sits within Auburn's typical range, now in its upper half, and the Harbert supply-chain program is nationally strong — a solid target with a manageable pre-business-then-declare structure.",
-    sat1450Effect: "1450 sits in the upper half of Auburn's range — this would strengthen the assessment toward Likely.",
-    programs: [
-      { name: "Harbert College of Business — BSBA", url: "https://harbert.auburn.edu/" }
     ]
   },
   {
