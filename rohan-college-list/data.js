@@ -69,17 +69,18 @@ const BS_BUSINESS = [
   {
     school: "Indiana University Bloomington",
     highlightColor: "green",
-    knownFor: "One of the only dedicated undergraduate Professional Sales programs in the country",
+    knownFor: "One of the only dedicated undergraduate Professional Sales programs in the country; also runs a newly launched combined Business Intelligence & Data Science BS (2025)",
     mbaRank: "#21 (tie)",
     category: "Target / Reach",
     sat: "1220–1420 (IU overall; Kelley direct-admit skews higher)",
     gpa: "~3.6–3.9 (IU overall admits ~80%; Kelley direct-admit is the harder bar)",
-    fit: "Kelley runs one of the only dedicated undergraduate Professional Sales programs in the country — a direct match to the now-active Founders' Pool AI-finance sales internship. IU's overall accessibility plus a competitive-but-reachable Kelley direct-admit bar make this the strongest reach-with-real-upside on the list.",
+    fit: "Kelley runs one of the only dedicated undergraduate Professional Sales programs in the country — a direct match to the now-active Founders' Pool AI-finance sales internship. IU's overall accessibility plus a competitive-but-reachable Kelley direct-admit bar make this the strongest reach-with-real-upside on the list. The newly launched Kelley + Luddy combined Business Intelligence & Data Science BS is a purpose-built alternative that fits the AI/ML certification and coding background directly.",
     clubsDeepDive: "Kelley's Sales Club, run through the Center for Global Sales Leadership, is as close to a formal extension of the Founders' Pool internship as any club on this list, and the selective 60-student Global Sales Workshop cohort (weekly meetings, competitions, corporate site visits) turns that experience into structured, repeatable skill-building. Kelley also hosts the National Team Selling Competition itself — 24 teams, a $6,000 prize pool — tied directly to its Professional Sales major, making this less a club to join and more a discipline to formally study.",
     sat1450Effect: "1450 sits well above Kelley's typical direct-admit range — this would solidify the assessment as a clear Target rather than Target/Reach.",
     becomesTargetAt1450: true,
     programs: [
-      { name: "Kelley School of Business — BS", url: "https://kelley.iu.edu/undergraduate/" }
+      { name: "Kelley School of Business — BS", url: "https://kelley.iu.edu/undergraduate/" },
+      { name: "Kelley + Luddy Schools — BS in Business Intelligence & Data Science", url: "https://luddy.iu.edu/academics/undergraduate/bs-business-intelligence-data-science.html" }
     ]
   },
   {
@@ -97,16 +98,17 @@ const BS_BUSINESS = [
   },
   {
     school: "University of Southern California",
-    knownFor: "Entrepreneurship (Lloyd Greif Center); LA entertainment-industry ties",
+    knownFor: "Entrepreneurship (Lloyd Greif Center); LA entertainment-industry ties; also home to the Iovine and Young Academy's portfolio-based Arts+Tech+Business program",
     mbaRank: "#25 (tie)",
     category: "Reach",
-    sat: "1400–1530",
-    gpa: "~3.85+ UW",
-    fit: "USC's Lloyd Greif Center for Entrepreneurial Studies and LA's entertainment-industry adjacency match the comedy-club + startup dual track well, but overall selectivity is steep at current stats.",
-    sat1450Effect: "1450 falls within Marshall's middle 50% (1400–1530) — this would shift the assessment from Reach to Target.",
+    sat: "Marshall: 1400–1530. Iovine and Young Academy uses holistic, portfolio + interview-weighted admission instead of a numeric SAT range.",
+    gpa: "~3.85+ UW (Marshall); Iovine and Young typical ~3.7+, though portfolio/interview carry more weight than test scores",
+    fit: "USC's Lloyd Greif Center for Entrepreneurial Studies and LA's entertainment-industry adjacency match the comedy-club + startup dual track well, but overall selectivity is steep at current stats. The Iovine and Young Academy's BS in Arts, Technology and the Business of Innovation is purpose-built for students who blend creative production, technology, and entrepreneurship — arguably the closest bespoke match to the creative portfolio and Orderly/CheqIn founder background of anything on this list, admitted through a separate, more holistic portfolio + interview process.",
+    sat1450Effect: "For Marshall: 1450 falls within its middle 50% (1400–1530) — this would shift the assessment from Reach to Target. For Iovine and Young: portfolio and interview matter more than test scores, so 1450 helps only marginally.",
     becomesTargetAt1450: true,
     programs: [
-      { name: "Marshall School of Business — BS in Business Administration", url: "https://www.marshall.usc.edu/programs/undergraduate-programs/undergraduate-degrees/business-administration-program" }
+      { name: "Marshall School of Business — BS in Business Administration", url: "https://www.marshall.usc.edu/programs/undergraduate-programs/undergraduate-degrees/business-administration-program" },
+      { name: "Iovine and Young Academy — BS in Arts, Technology and the Business of Innovation", url: "https://iovine-young.usc.edu/learn/undergraduate/bs-arts-technology-and-the-business-of-innovation" }
     ]
   },
   {
@@ -194,20 +196,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "Texas A&M University",
-    knownFor: "Sales Leadership Institute / Professional Selling Initiative",
-    mbaRank: "#36 (tie)",
-    category: "Target",
-    sat: "1180–1400 (Texas A&M overall; out-of-state applicants skew higher)",
-    gpa: "3.5–3.8",
-    fit: "Mays houses the Sales Leadership Institute and Professional Selling Initiative — one of the most direct matches on this list to the now-active Founders' Pool AI-finance sales internship. Admission to the BBA is a competitive internal 'gateway' process after prerequisite coursework, but overall stats put this in target range.",
-    sat1450Effect: "1450 sits above Mays' typical range — this would move the assessment into Likely.",
-    programs: [
-      { name: "Mays Business School — BBA", url: "https://mays.tamu.edu/undergraduate/bba/" },
-      { name: "Mays Business School — BBA, Marketing / Professional Selling & Sales Management track", url: "https://mays.tamu.edu/undergraduate/bba/marketing/" }
-    ]
-  },
-  {
     school: "Iowa State University",
     highlightColor: "blue",
     knownFor: "Entrepreneurship ranked #9 worldwide (Princeton Review)",
@@ -235,19 +223,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Miami",
-    knownFor: "#1 entrepreneurship program in the South; real estate #11 nationally",
-    mbaRank: "#39 (tie)",
-    category: "Target",
-    sat: "1340–1470",
-    gpa: "3.6–3.9",
-    fit: "Herbert is ranked #1 in the South for entrepreneurship — a direct match to the founder story — plus a strong real estate track; 1360 SAT sits at the lower end of the admitted range.",
-    sat1450Effect: "1450 sits above Herbert's typical range (1340–1470) — this would strengthen the assessment toward Likely.",
-    programs: [
-      { name: "Herbert Business School — General Business (BBA; BSBA track available for more quantitative majors)", url: "https://www.herbert.miami.edu/undergraduate/degrees-majors-minors/bba-in-general-business.html" }
-    ]
-  },
-  {
     school: "University of Utah",
     highlightColor: "pink",
     knownFor: "Goff Strategic Sales Program",
@@ -255,7 +230,7 @@ const BS_BUSINESS = [
     category: "Likely",
     sat: "1150–1350",
     gpa: "3.4–3.8",
-    fit: "Eccles runs the Goff Strategic Sales Program, a dedicated undergraduate sales curriculum — a very direct match to the active Founders' Pool sales internship, at an accessible admit bar.",
+    fit: "Eccles runs the Goff Strategic Sales Program, a dedicated, technology-driven undergraduate sales curriculum (including sales technology/CRM training) — a very direct match to the active Founders' Pool sales internship, at an accessible admit bar.",
     clubsDeepDive: "Eccles' Fintech Club is about as direct a match to the Founders' Pool AI-fintech internship as any club on this entire list, and the University Venture Fund lets students make real venture capital investment decisions alongside actual entrepreneurs and investors. The Lassonde Entrepreneur Institute is ranked top-10 nationally and supports 500+ startup teams a year — genuinely serious infrastructure for continuing to build Orderly — while the Crimson Quant Club and Student Investment Fund add further quantitative depth that pairs well with the AI/ML certification.",
     programs: [
       { name: "David Eccles School of Business — BS in Business Administration", url: "https://eccles.utah.edu/programs/undergraduate/business-administration/" }
@@ -336,18 +311,6 @@ const BS_BUSINESS = [
 // Section B: Business + Technology programs, including dual degrees
 const BUSINESS_TECH = [
   {
-    school: "University of Southern California",
-    knownFor: "Arts + Technology + Business hybrid, portfolio-based admission",
-    category: "Reach",
-    sat: "Holistic; test-optional common, portfolio + interview weighted heavily",
-    gpa: "~3.7+ typical, but portfolio/interview carry major weight over test scores",
-    fit: "Purpose-built for students who blend creative production, technology, and entrepreneurship — arguably the closest bespoke match to the creative portfolio and Orderly/CheqIn founder background of anything on this list. Admission is unusually holistic, but USC's overall ~10% admit rate still makes it a reach.",
-    sat1450Effect: "USC Iovine and Young weighs portfolio and interview more heavily than test scores, so a 1450 helps marginally but wouldn't be the deciding factor — the creative portfolio and interview performance matter more here.",
-    programs: [
-      { name: "Iovine and Young Academy — BS in Arts, Technology and the Business of Innovation", url: "https://iovine-young.usc.edu/learn/undergraduate/bs-arts-technology-and-the-business-of-innovation" }
-    ]
-  },
-  {
     school: "Lehigh University",
     knownFor: "Named, structured dual-BS cohort (business + engineering)",
     category: "Reach / Target",
@@ -358,44 +321,6 @@ const BUSINESS_TECH = [
     becomesTargetAt1450: true,
     programs: [
       { name: "Integrated Business and Engineering (IBE) — dual BS degree", url: "https://ibe.lehigh.edu/about/dual-degrees" }
-    ]
-  },
-  {
-    school: "Indiana University Bloomington",
-    highlightColor: "green",
-    knownFor: "Newly launched combined Business Intelligence & Data Science BS (2025)",
-    category: "Target / Reach (newly launched program, 2025)",
-    sat: "1250–1430",
-    gpa: "3.6–3.9",
-    fit: "A purpose-built combined BS spanning Kelley's business strategy and Luddy's data science curriculum — fits the AI/ML certification and coding background directly, and the 4.0 in AP Statistics directly supports the data-science half of this degree.",
-    sat1450Effect: "1450 sits above the typical range (1250–1430) — this would strengthen the assessment to a solid Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Kelley + Luddy Schools — BS in Business Intelligence & Data Science", url: "https://luddy.iu.edu/academics/undergraduate/bs-business-intelligence-data-science.html" }
-    ]
-  },
-  {
-    school: "Texas A&M University",
-    knownFor: "Sales Leadership Institute's sales technology/CRM training",
-    category: "Target",
-    sat: "1180–1400 (Texas A&M overall; out-of-state applicants skew higher)",
-    gpa: "3.5–3.8",
-    fit: "The Sales Leadership Institute layers structured sales technology/CRM training onto the BBA — the most direct academic match on either list to an AI-finance sales internship track.",
-    sat1450Effect: "1450 sits above Mays' typical range — this would move the assessment into Likely.",
-    programs: [
-      { name: "Mays Business School — BBA in Marketing, Professional Selling & Sales Management track", url: "https://mays.tamu.edu/undergraduate/bba/marketing/" }
-    ]
-  },
-  {
-    school: "University of Utah",
-    highlightColor: "pink",
-    knownFor: "Goff Strategic Sales Program's technology/CRM curriculum",
-    category: "Likely",
-    sat: "1150–1350",
-    gpa: "3.4–3.8",
-    fit: "A dedicated, technology-driven sales curriculum layered onto an accessible BS — directly matches the active fintech-sales internship at a comfortable admit bar.",
-    programs: [
-      { name: "David Eccles School of Business — BS + Goff Strategic Sales Program (sales technology/CRM curriculum)", url: "https://eccles.utah.edu/programs/undergraduate/business-administration/" }
     ]
   }
 ];
@@ -448,20 +373,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "Bentley University",
-    knownFor: "Computer Information Systems (CIS) — every business major is tech-infused",
-    mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
-    category: "Target / Likely",
-    sat: "1210–1390",
-    gpa: "3.5–3.8",
-    fit: "A business-only campus with a strong Information Design & Corporate Communication / Computer Information Systems pipeline that plays to the AI/ML coding background; 1360 SAT sits comfortably above Bentley's median.",
-    sat1450Effect: "1450 sits well above Bentley's typical admitted range — this would comfortably flip the profile to Likely.",
-    programs: [
-      { name: "BS in Corporate Finance and Accounting", url: "https://www.bentley.edu/academics/undergraduate-programs/corporate-finance-accounting" },
-      { name: "BS in Business — Computer Information Systems emphasis", url: "https://www.bentley.edu/academics/undergraduate-programs/corporate-finance-accounting" }
-    ]
-  },
-  {
     school: "Fordham University",
     highlightColor: "pink",
     knownFor: "NYC finance/fintech internship density",
@@ -474,19 +385,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 sits near the top of Gabelli's range — strengthens this well within Target, close to Likely.",
     programs: [
       { name: "Gabelli School of Business — BS", url: "https://www.fordham.edu/gabelli-school-of-business/academic-programs-and-admissions/undergraduate-programs/" }
-    ]
-  },
-  {
-    school: "Chapman University",
-    knownFor: "Formal bridge with Dodge College of Film & Media (business + entertainment)",
-    mbaRank: "Not a nationally ranked full-time MBA program; regionally strong AACSB business school",
-    category: "Target",
-    sat: "1220–1400",
-    gpa: "3.6–3.9",
-    fit: "Chapman pairs a real business school with Dodge College of Film & Media — one of the few formal bridges between entertainment/creative production and business, mirroring the comedy-club + startup dual identity in the creative portfolio.",
-    sat1450Effect: "1450 sits above Chapman's typical range entirely — this would flip to Likely.",
-    programs: [
-      { name: "Argyros School of Business & Economics — BS in Business Administration", url: "https://www.chapman.edu/business/academic-programs/undergraduate/business-administration.aspx" }
     ]
   },
   {
