@@ -39,19 +39,6 @@ const PROFILE = {
 // Section A: Undergraduate Business Programs (BS, BSBA, and BBA)
 const BS_BUSINESS = [
   {
-    school: "University of Pennsylvania",
-    knownFor: "Deepest student entrepreneurship ecosystem in the country (Venture Lab)",
-    mbaRank: "#2",
-    category: "Reach",
-    sat: "1500–1560",
-    gpa: "~3.9+ UW (most admits near 4.0)",
-    fit: "Wharton lines up with the Orderly/CheqIn founder story and the active Founders' Pool sales internship, but sub-6% admit rates and a near-4.0 UW GPA norm put current stats well outside the middle 50% — a lottery-ticket reach. Note: a B in AP Microeconomics is a modest data point for a school whose degree is literally a BS in Economics; AP Statistics' 4.0 helps offset this on the quantitative side.",
-    sat1450Effect: "Still below Wharton's 25th percentile (1500) — a 1450 doesn't change the assessment; still a lottery-ticket reach given sub-6% admit rates.",
-    programs: [
-      { name: "Wharton School — BS in Economics", url: "https://undergrad.wharton.upenn.edu/academics/" }
-    ]
-  },
-  {
     school: "University of Virginia",
     knownFor: "Team-based consulting projects (Integrated Core)",
     mbaRank: "#11 (tie)",
@@ -303,20 +290,6 @@ const BS_BUSINESS = [
     ]
   },
   {
-    school: "University of Florida",
-    knownFor: "Finance/insurance track",
-    mbaRank: "#39 (tie)",
-    category: "Target / Reach",
-    sat: "1350–1490",
-    gpa: "3.7–3.95",
-    fit: "Warrington's finance/insurance track is strong, but UF's admissions bar has risen sharply in recent cycles, putting this at the reach end of target.",
-    sat1450Effect: "1450 sits within Warrington's upper range (1350–1490) — this would solidify the assessment as a comfortable Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Warrington College of Business — BSBA", url: "https://warrington.ufl.edu/undergraduate/" }
-    ]
-  },
-  {
     school: "University of Miami",
     knownFor: "#1 entrepreneurship program in the South; real estate #11 nationally",
     mbaRank: "#39 (tie)",
@@ -418,18 +391,6 @@ const BS_BUSINESS = [
 // Section B: Business + Technology programs, including dual degrees
 const BUSINESS_TECH = [
   {
-    school: "University of Pennsylvania",
-    knownFor: "The single best-branded business+tech dual degree in the country",
-    category: "Reach (extreme, <5%)",
-    sat: "1520+",
-    gpa: "~3.95+ UW",
-    fit: "A near-perfect thematic match to the founder/AI story on paper — but arguably the most competitive undergraduate admit in the US.",
-    sat1450Effect: "Still below M&T's range (1520+) — 1450 doesn't meaningfully change this; still an extreme reach.",
-    programs: [
-      { name: "M&T — Management & Technology dual degree (Wharton BS-Econ + SEAS Engineering BSE)", url: "https://fisher.wharton.upenn.edu/learn/dual-degree/" }
-    ]
-  },
-  {
     school: "University of Southern California",
     knownFor: "Arts + Technology + Business hybrid, portfolio-based admission",
     category: "Reach",
@@ -497,8 +458,7 @@ const BUSINESS_TECH = [
 // Schools ranked in the US News MBA Top 48 that don't offer a qualifying BS/BSBA/BBA business degree.
 // The closest real business-related option at each is covered in BA_PROGRAMS below.
 const EXCLUDED_SCHOOLS = [
-  { school: "University of Washington (Foster) — MBA #20", reason: "Foster does offer a full undergraduate business major, but the degree conferred is officially a BA (Bachelor of Arts in Business Administration), not a BS/BSBA/BBA." },
-  { school: "Rice University (Jones) — MBA #29 (tie)", reason: "Rice launched a real undergraduate business major in 2021 (Finance, Management, or Marketing concentrations), but the degree conferred is a BA, not a BS/BSBA/BBA. See the BA-level section below for its program and syllabus links." }
+  { school: "University of Washington (Foster) — MBA #20", reason: "Foster does offer a full undergraduate business major, but the degree conferred is officially a BA (Bachelor of Arts in Business Administration), not a BS/BSBA/BBA." }
 ];
 
 // Section D: BA-level and business-adjacent programs at schools whose undergraduate side does not
@@ -518,19 +478,6 @@ const BA_PROGRAMS = [
     becomesTargetAt1450: true,
     programs: [
       { name: "Foster School of Business — BA in Business Administration (BABA)", url: "https://foster.uw.edu/academics/degree-programs/undergraduate-programs/", syllabusUrl: "https://foster.uw.edu/academics/degree-programs/undergraduate-programs/curriculum" }
-    ]
-  },
-  {
-    school: "Rice University",
-    knownFor: "Newest elite undergrad business major (launched 2021); Lilie entrepreneurship center",
-    mbaRank: "MBA #29 (tie)",
-    category: "Reach",
-    sat: "1470–1560",
-    gpa: "~3.85+ UW",
-    fit: "A strong founder-story fit given the adjacent Lilie entrepreneurship center. Still a reach given Rice's ~9% admit rate.",
-    sat1450Effect: "Still below Rice's range (1470–1560) — 1450 doesn't meaningfully change this much; still a reach given Rice's ~9% admit rate, though it narrows the gap.",
-    programs: [
-      { name: "Undergraduate Business Major — Finance / Management / Marketing concentrations (BA)", url: "https://business.rice.edu/undergraduate-business-major", syllabusUrl: "https://business.rice.edu/undergraduate-business-major/undergraduate-business-major-requirements" }
     ]
   }
 ];
@@ -674,30 +621,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "Menlo College",
-    knownFor: "In-house startup accelerator",
-    mbaRank: "Not a nationally ranked full-time MBA program; small AACSB-track business college",
-    category: "Safety",
-    sat: "Test-optional / not required",
-    gpa: "Flexible, holistic review",
-    fit: "Atherton, CA — 30 minutes from Fremont, small and entrepreneurship-focused with an in-house startup accelerator. A genuine safety net that still offers real Silicon Valley startup access.",
-    programs: [
-      { name: "BS in Business — Entrepreneurship option", url: "https://www.menlo.edu/degree/entrepreneurship/" }
-    ]
-  },
-  {
-    school: "University of the Pacific",
-    knownFor: "Small classes; accessible in-state safety",
-    mbaRank: "Not a nationally ranked full-time MBA program; small AACSB-track business school",
-    category: "Safety",
-    sat: "1080–1300",
-    gpa: "3.3–3.8",
-    fit: "Stockton, CA — in-state, small classes, accessible safety with a real accredited business school.",
-    programs: [
-      { name: "Eberhardt School of Business — BS in Business Administration", url: "https://www.pacific.edu/business/academics/business-administration-major" }
-    ]
-  },
-  {
     school: "Northeastern University",
     knownFor: "Nationally renowned 6-month paid co-op program (95%+ of students complete at least one)",
     mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
@@ -726,19 +649,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "Miami University (Ohio)",
-    knownFor: "Strong direct-admit Midwest business brand with solid job placement",
-    mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
-    category: "Target / Likely",
-    sat: "1230–1370 (avg ~1236)",
-    gpa: "3.5–3.8",
-    fit: "A well-regarded, moderately selective business school with solid finance/marketing/entrepreneurship options — a good target at a more accessible bar than the coastal private schools on this list, with strong 'public ivy' brand recognition.",
-    sat1450Effect: "1450 sits well above Farmer's typical admitted range — this would comfortably flip the profile to Likely/Safety.",
-    programs: [
-      { name: "Farmer School of Business — BS", url: "https://miamioh.edu/fsb/index.html" }
-    ]
-  },
-  {
     school: "Elon University",
     highlightColor: "pink",
     knownFor: "Dedicated Entrepreneurship & Innovation major; ~100% internship completion rate",
@@ -751,31 +661,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 sits well above Elon's typical admitted average — this would flip the profile solidly to Likely.",
     programs: [
       { name: "Martha and Spencer Love School of Business — BSBA", url: "https://www.elon.edu/u/academics/business/programs/" }
-    ]
-  },
-  {
-    school: "University of San Diego",
-    knownFor: "Fowler Business Concept Challenge (entrepreneurship competition); test-blind admissions",
-    mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
-    category: "Target",
-    sat: "Test-blind — SAT/ACT not considered even if submitted",
-    gpa: "3.5–3.8",
-    fit: "The Fowler Business Concept Challenge is a direct parallel to the Blue Ocean/BIZWORLD/Conrad Challenge track already on the resume, and USD doesn't even consider SAT scores in admission — a strong target regardless of test score, with small capped classes (~35 students).",
-    sat1450Effect: "USD is test-blind, so a 1450 wouldn't change anything in the admissions process itself — GPA, essays, and activities (like the competition record) carry all the weight here.",
-    programs: [
-      { name: "Knauss School of Business — BBA", url: "https://www.sandiego.edu/business/academics/majors-and-minors/" }
-    ]
-  },
-  {
-    school: "Butler University",
-    knownFor: "Students launch and run a real business with $1,000 seed funding by end of sophomore year",
-    mbaRank: "Not in MBA top 48; not nationally ranked for full-time MBA",
-    category: "Likely",
-    sat: "1170–1330 (avg ~1256, test-optional)",
-    gpa: "3.4–3.7",
-    fit: "Butler's Entrepreneurship & Innovation major — where students launch and run a real funded business by sophomore year, plus coursework in 'salesmanship' — is one of the most hands-on founder-focused programs on this entire list, and it's a comfortable admit at current stats.",
-    programs: [
-      { name: "Andre B. Lacy School of Business — Entrepreneurship & Innovation (BS)", url: "https://www.butler.edu/lacy-business/undergraduate-programs/" }
     ]
   },
   {
@@ -860,31 +745,6 @@ const BEYOND_MBA_RANKING = [
     sat1450Effect: "1450 would sit meaningfully above Moore's average — this would strengthen the assessment to a comfortable Likely.",
     programs: [
       { name: "Darla Moore School of Business — BS", url: "https://sc.edu/study/colleges_schools/moore/" }
-    ]
-  },
-  {
-    school: "University of South Florida",
-    knownFor: "New STEM-designated FinTech certificate; Tampa Bay financial-services hub",
-    mbaRank: "USF has no MBA program in the US News full-time top 48",
-    category: "Target / Likely",
-    sat: "Average ~1230–1350",
-    gpa: "3.4–3.7",
-    fit: "USF's new undergraduate FinTech certificate is a direct academic complement to the active Founders' Pool sales internship, and Tampa Bay's financial-services industry density adds real internship access at an accessible admit bar.",
-    programs: [
-      { name: "Muma College of Business — BSBA, FinTech certificate available", url: "https://www.usf.edu/business/" }
-    ]
-  },
-  {
-    school: "Florida State University",
-    knownFor: "Nationally strong Real Estate and Risk Management/Insurance tracks",
-    mbaRank: "FSU has no MBA program in the US News full-time top 48",
-    category: "Target",
-    sat: "University middle 50% 1240–1390",
-    gpa: "3.5–3.8",
-    fit: "1360 sits within FSU's typical range, now in its upper half. Admission works by certifying into the business major after general FSU admission, adding a manageable second step rather than a separate competitive gate.",
-    sat1450Effect: "1450 sits in the upper half of FSU's range — this would strengthen the assessment toward Likely.",
-    programs: [
-      { name: "College of Business (Wertheim) — BS", url: "https://wertheim.fsu.edu/" }
     ]
   },
   {
@@ -984,20 +844,6 @@ const BEYOND_MBA_RANKING = [
     ]
   },
   {
-    school: "University of Delaware",
-    knownFor: "Dedicated FinTech B.S. major — one of the rare stand-alone undergraduate fintech degrees in the country",
-    mbaRank: "Delaware has no MBA program in the US News full-time top 48",
-    category: "Target / Reach",
-    sat: "Lerner average ~1277",
-    gpa: "3.5–3.8",
-    fit: "The dedicated FinTech B.S. is arguably the single most literal academic match to the active Founders' Pool AI-finance sales internship on this entire list — but Lerner admits internally at roughly 12%, considerably more selective than the modest average SAT alone suggests.",
-    sat1450Effect: "1450 sits well above Lerner's average — this would meaningfully improve the odds against that internally competitive ~12% admit rate, likely shifting the assessment to Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Lerner College of Business & Economics — BS, dedicated FinTech major", url: "https://lerner.udel.edu/" }
-    ]
-  },
-  {
     school: "University of Richmond",
     knownFor: "Dedicated Entrepreneurship & Management Consulting concentrations; ~20-student average class size",
     mbaRank: "Richmond has no MBA program in the US News full-time top 48",
@@ -1009,20 +855,6 @@ const BEYOND_MBA_RANKING = [
     becomesTargetAt1450: true,
     programs: [
       { name: "Robins School of Business — BSBA", url: "https://robins.richmond.edu/" }
-    ]
-  },
-  {
-    school: "Bucknell University",
-    knownFor: "Unique Markets, Innovation & Design major (branding/product design) — a genuine creative+business crossover",
-    mbaRank: "Bucknell has no MBA program in the US News full-time top 48",
-    category: "Reach",
-    sat: "Test-optional pilot through 2026–27; Freeman average ~1372",
-    gpa: "~3.6 average; ~25% Freeman acceptance",
-    fit: "The Markets, Innovation & Design major is one of the more distinctive creative/business hybrids on this whole list — a real thematic match to the creative portfolio — but the ~25% acceptance rate and average SAT sit above current stats.",
-    sat1450Effect: "1450 sits above Freeman's average — this would meaningfully improve the odds, shifting the assessment toward Target.",
-    becomesTargetAt1450: true,
-    programs: [
-      { name: "Freeman College of Management — BSBA, Markets, Innovation & Design major", url: "https://www.bucknell.edu/academics/freeman-college-management" }
     ]
   },
   {
@@ -1098,6 +930,21 @@ const BEYOND_MBA_RANKING = [
     communityEssayUrl: "purdue-community-essay.html",
     programs: [
       { name: "Mitchell E. Daniels, Jr. School of Business — BS", url: "https://business.purdue.edu/undergraduate/" }
+    ]
+  },
+  {
+    school: "William & Mary",
+    knownFor: "Alan B. Miller Entrepreneurship Center — Tribe Ventures startup launch program",
+    mbaRank: "William & Mary has no MBA program in the US News full-time top 48",
+    category: "Reach",
+    sat: "Mason BBA-specific average ~1412; internal acceptance rate ~24.9%",
+    gpa: "3.6–3.9",
+    fit: "Mason is the only selective undergraduate major at William & Mary, with a holistic secondary-application process (leadership, communication, resilience, collaborative potential) layered on top of an already-selective university. The internal average admitted SAT (~1412) sits above 1360, and a ~25% internal acceptance rate makes this a genuine reach even for students who clear William & Mary's general admission bar. Starting Fall 2026, students can apply to Mason after 39 credit hours (often by the end of freshman year), which is worth knowing as a planning detail regardless of the reach classification.",
+    sat1450Effect: "1450 would sit right around Mason's internal average SAT — this would meaningfully improve the odds and shift the assessment toward Target, though the ~25% internal acceptance rate keeps this competitive regardless of score.",
+    becomesTargetAt1450: true,
+    clubsDeepDive: "The Alan B. Miller Entrepreneurship Center — a dedicated co-working space with 50+ students, coaches, and faculty — runs Tribe Ventures, a program that pairs current students with expert guidance and coaching to actually launch a company, plus the Launchpad Incubator and the StartupTree platform for connecting with other student entrepreneurs. This is a close match to the Orderly/CheqIn founder story, with real staff support rather than just a club meeting space.",
+    programs: [
+      { name: "Raymond A. Mason School of Business — BBA", url: "https://mason.wm.edu/undergraduate/admissions/" }
     ]
   }
 ];
