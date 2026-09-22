@@ -321,7 +321,11 @@ select.statusSel{
   max-width:120px;
 }
 select.statusSel[data-v="done"]{background:var(--status-done-bg); color:var(--status-done); border-color:transparent;}
-select.statusSel[data-v="progress"]{background:var(--status-progress-bg); color:var(--status-progress); border-color:transparent;}
+select.statusSel[data-v="essay_done"]{background:var(--accent-soft); color:var(--accent); border-color:transparent;}
+select.statusSel[data-v="no_essay"]{background:var(--accent-soft); color:var(--accent); border-color:transparent;}
+select.statusSel[data-v="writing_essay"]{background:var(--status-progress-bg); color:var(--status-progress); border-color:transparent;}
+select.statusSel[data-v="course_selected"]{background:var(--status-progress-bg); color:var(--status-progress); border-color:transparent;}
+select.statusSel[data-v="in_comm_app"]{background:var(--status-progress-bg); color:var(--status-progress); border-color:transparent;}
 select.statusSel[data-v="todo"]{background:var(--surface-2); color:var(--ink-muted); border-color:transparent;}
 .note{font-size:0.78rem; color:var(--ink-muted); font-family:'IBM Plex Mono', monospace;}
 
@@ -570,6 +574,15 @@ footer{margin-top:3rem; font-size:0.78rem; color:var(--ink-muted); font-family:'
   ];
 
   var tierLabel = {safety:"Safety", target:"Target", reach:"Reach"};
+  var STATUS_OPTIONS = [
+    {value:"todo", label:"Not started"},
+    {value:"in_comm_app", label:"In Comm App"},
+    {value:"course_selected", label:"Course Selected"},
+    {value:"no_essay", label:"No Essay"},
+    {value:"writing_essay", label:"Writing Essay"},
+    {value:"essay_done", label:"Essay Done"},
+    {value:"done", label:"Submitted"}
+  ];
   var STORAGE_KEY = "departuresBoardStatus_v1";
 
   function loadStatus(){
@@ -628,11 +641,11 @@ footer{margin-top:3rem; font-size:0.78rem; color:var(--ink-muted); font-family:'
       sel.className = 'statusSel';
       sel.setAttribute('data-v', st);
       sel.setAttribute('aria-label', 'Status for '+s.name);
-      ['todo','progress','done'].forEach(function(v){
+      STATUS_OPTIONS.forEach(function(o){
         var opt = document.createElement('option');
-        opt.value = v;
-        opt.textContent = v === 'todo' ? 'Not started' : (v === 'progress' ? 'In progress' : 'Submitted');
-        if(v === st) opt.selected = true;
+        opt.value = o.value;
+        opt.textContent = o.label;
+        if(o.value === st) opt.selected = true;
         sel.appendChild(opt);
       });
       sel.addEventListener('change', function(){
